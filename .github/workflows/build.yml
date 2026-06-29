@@ -18,8 +18,8 @@ jobs:
       - run: cp config.xml app/config.xml
       - run: cd app && cordova platform add android@13.0.0
       - run: cd app && cordova build android --release
-      - run: ls -la app/platforms/android/app/build/outputs/apk/release/
+      - run: find app -name "*.apk"
       - uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+          path: app/platforms/android/app/build/outputs/apk/release/*.apk
