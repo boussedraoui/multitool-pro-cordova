@@ -1,0 +1,24 @@
+name: Build APK
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install -g cordova
+      - run: cordova create app com.multitool.pro "MultiTool Pro"
+      - run: cp index.html app/www/index.html
+      - run: cp config.xml app/config.xml
+      - run: cd app && cordova platform add android@13.0.0
+      - run: cd app && cordova build android --release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-release
+          path: app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
