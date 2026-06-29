@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.multitool.pro" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>MultiTool Pro</name>
+    <description>50+ tools, AI Hub, all-in-one</description>
+    <author email="support@multitool.com" href="https://multitool.pro">MultiTool Pro</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+</widget>
