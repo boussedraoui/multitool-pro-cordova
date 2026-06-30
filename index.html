@@ -223,11 +223,6 @@
         .random-btn.hide-random { visibility: hidden; opacity: 0; }
         .random-btn .arrow-down { display: inline-block; margin-left: 10px; font-size: 1.2rem; animation: bounceArrow 1s infinite; }
         @keyframes bounceArrow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
-        .tool-reco-banner { background: linear-gradient(135deg, #6c5ce7, #00cec9); color: white; border-radius: 28px; padding: 18px 28px; margin: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; box-shadow: 0 12px 28px rgba(0,0,0,0.2); animation: fadeInBanner 0.5s ease; }
-        .tool-reco-banner .reco-text { font-weight: 700; font-size: 1.15rem; flex: 1 1 auto; margin-right: 16px; }
-        .tool-reco-banner .reco-try-btn { background: white; color: #6c5ce7; border: none; padding: 10px 22px; border-radius: 40px; font-weight: bold; cursor: pointer; font-size: 1rem; display: inline-flex; align-items: center; gap: 6px; }
-        .reco-try-btn .arrow-down-different { display: inline-block; font-size: 1.5rem; font-weight: bold; margin-left: 4px; animation: wiggle 0.8s infinite; }
-        @keyframes wiggle { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(12deg); } 75% { transform: rotate(-12deg); } }
         .timezone-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; font-size: 1rem; }
         .timezone-item { padding: 10px 12px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 0.95rem; }
         .imagine-tools-grid, .shortener-grid, .online-grid, .ai-grid, .search-grid, .sites-grid, .media-grid, .tvradio-grid, .browsers-grid, .convert-grid, .games-grid, .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; margin-top: 28px; }
@@ -249,6 +244,17 @@
         .internal-tab-controls { display: flex; gap: 12px; align-items: center; flex: 1; }
         .internal-tab-iframe { flex: 1; border: none; background: white; width: 100%; transition: max-width 0.2s, border 0.2s; }
         .internal-tab-iframe.mobile-view { max-width: 420px; width: 100%; margin: 0 auto; border-left: 5px solid #333; border-right: 5px solid #333; box-shadow: 0 0 16px rgba(0,0,0,0.3); }
+        .pull-to-refresh {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: var(--text3);
+            display: none;
+            transition: opacity 0.2s;
+        }
+        .pull-to-refresh.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -318,7 +324,7 @@
     </div>
     <div class="search-container"><input type="text" id="globalSearch" class="search-input" placeholder="🔍 Search any tool... calculator, world clock, translator..."><div id="searchResults" class="search-results" style="display:none;"></div></div>
     
-    <div id="pullToRefresh" class="pull-to-refresh">⬇️ Pull to refresh</div>
+    <div id="pullToRefresh" class="pull-to-refresh"></div>
     
     <div class="tools-grid" id="toolsGrid"></div>
     
@@ -329,7 +335,6 @@
     <p style="text-align:center; font-size:1rem;">© 2026 MultiTool Pro · Ultimate toolkit | <a href="https://sites.google.com/view/multitool-pro/" target="_self" style="color:var(--primary); font-weight:600;">Privacy Policy</a></p>
     <div class="footer-love-line"><span id="scrollUpArrow" class="scroll-up-arrow" onclick="scrollToTop()" title="Go to top">↑</span><span>Made with <span class="heart-beat">💕</span></span><span class="footer-arrow-down" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})" title="Go to bottom">↓</span></div>
     <div class="random-trigger"><button id="randomToolBtn" class="random-btn">🎲 Random Tool <span class="arrow-down">⬇️</span></button></div>
-    <div id="toolRecoBanner" class="tool-reco-banner" style="display:none;"><span class="reco-text" id="recoMessage">🧮 Try the Advanced Calculator</span><button class="reco-try-btn" id="recoTryBtn">Try it <span class="arrow-down-different">▼</span></button><button class="reco-close" id="recoCloseBtn">✕</button></div>
 </footer>
 <div id="toast" class="toast"></div>
 
@@ -2763,7 +2768,7 @@ document.getElementById('globalSearch').addEventListener('input', function(e) {
 
 document.addEventListener('click', (e) => { if (!e.target.closest('.search-container')) document.getElementById('searchResults').style.display = 'none'; });
 
-// ===== PULL TO REFRESH =====
+// ===== PULL TO REFRESH (Removed Text, Kept Logic) =====
 let startY = 0;
 let pullToRefresh = document.getElementById('pullToRefresh');
 
@@ -2851,7 +2856,7 @@ document.addEventListener('touchend', function() {
         { action: 'openOnlineOverlay', name: 'Online Tools (Canva, Remove.bg, SmallPDF, etc.)', keywords: ['online tools', 'canva', 'remove bg', 'smallpdf', 'ilovepdf', 'grammarly', 'quillbot'] },
         { action: 'openImagineOverlay', name: 'IMAGINE (25 Unique Tools)', keywords: ['imagine', 'ocr', 'morse', 'uuid', 'hash', 'unix timestamp'] },
         { action: 'openShortenerOverlay', name: 'URL Shorteners', keywords: ['url shortener', 'tinyurl', 'bitly', 'short link'] },
-        { action: 'openOtherTools', name: 'All Other Tools (Notes, Weather, Todo, Translator, Wikipedia)', keywords: ['notes', 'weather', 'todo', 'random fact', 'password strength', 'wikipedia'] },
+        { action: 'openOtherTools', name: 'All Other Tools (Notes, Weather, Todo, Translator)', keywords: ['notes', 'weather', 'todo', 'random fact', 'password strength'] },
         { action: 'openAiTools', name: 'AI Hub (ChatGPT, Gemini, Claude, etc.)', keywords: ['ai', 'chatgpt', 'gemini', 'claude', 'copilot', 'midjourney', 'dall e'] },
         { action: 'openMediaOverlay', name: 'MEDIA & Video Platforms (Netflix, YouTube, Twitch)', keywords: ['media', 'video', 'netflix', 'youtube', 'twitch'] },
         { action: 'openSitesOverlay', name: 'Popular Websites (Reddit, Pinterest, WhatsApp Web)', keywords: ['popular sites', 'reddit', 'pinterest', 'whatsapp web'] },
@@ -3254,82 +3259,6 @@ const linkObserver = new MutationObserver(function(mutations) {
 });
 linkObserver.observe(document.body, { childList: true, subtree: true });
 
-// ===== TOOL RECOMMENDATION BANNER =====
-(function() {
-    const banner = document.getElementById('toolRecoBanner');
-    const msgEl = document.getElementById('recoMessage');
-    const tryBtn = document.getElementById('recoTryBtn');
-    const closeBtn = document.getElementById('recoCloseBtn');
-    if (!banner || !msgEl || !tryBtn || !closeBtn) return;
-
-    const toolSuggestions = [
-        { name: "🧮 Advanced Calculator", toolId: "calculator" },
-        { name: "🔐 Password Generator", toolId: "password" },
-        { name: "📝 Word Counter", toolId: "wordcount" },
-        { name: "🎨 Color Picker", toolId: "colorpicker" },
-        { name: "📏 Unit Converter", toolId: "unitconverter" },
-        { name: "⏱️ Stopwatch", toolId: "stopwatch" },
-        { name: "📱 QR Code Generator", toolId: "qrcode" },
-        { name: "⚖️ BMI Calculator", toolId: "bmi" },
-        { name: "🎲 Random Number", toolId: "random" },
-        { name: "⏳ Countdown Timer", toolId: "countdown" },
-        { name: "📅 Date Difference", toolId: "datediff" },
-        { name: "🔣 Base64 Encoder", toolId: "base64" },
-        { name: "🔗 URL Encoder", toolId: "urlencode" },
-        { name: "📋 JSON Formatter", toolId: "jsonformat" },
-        { name: "📄 Lorem Ipsum", toolId: "lorem" },
-        { name: "💱 Currency Converter", toolId: "currency" },
-        { name: "📊 Percentage Calc", toolId: "percentcalc" },
-        { name: "🎂 Age Calculator", toolId: "agecalc" },
-        { name: "💻 Binary/Hex Converter", toolId: "binhex" },
-        { name: "🏛️ Roman Numerals", toolId: "roman" },
-        { name: "💰 Tip Calculator", toolId: "tipcalc" },
-        { name: "🕐 World Clock", toolId: "worldclock" },
-        { name: "😂 Joke Generator", toolId: "joke" },
-        { name: "🌍 IP Lookup", toolId: "ip" },
-        { name: "✨ AI Text Enhancer", toolId: "premium_ai" }
-    ];
-
-    let currentTool = null;
-    let bannerTimer = null;
-    const SHOW_INTERVAL = 2 * 60 * 60 * 1000; // 2 hours
-
-    function showRandomTool() {
-        const randomIndex = Math.floor(Math.random() * toolSuggestions.length);
-        currentTool = toolSuggestions[randomIndex];
-        msgEl.textContent = currentTool.name;
-        banner.style.display = 'flex';
-        banner.style.animation = 'fadeInBanner 0.5s ease';
-    }
-
-    function hideBanner() {
-        banner.style.display = 'none';
-    }
-
-    // Show immediately on load
-    setTimeout(showRandomTool, 1000);
-
-    // Then keep cycling
-    bannerTimer = setInterval(showRandomTool, SHOW_INTERVAL);
-
-    tryBtn.addEventListener('click', function() {
-        if (currentTool && currentTool.toolId) {
-            if (typeof window.selectTool === 'function') {
-                window.selectTool(currentTool.toolId);
-            }
-        }
-        hideBanner();
-        clearInterval(bannerTimer);
-        bannerTimer = setInterval(showRandomTool, SHOW_INTERVAL);
-    });
-
-    closeBtn.addEventListener('click', function() {
-        hideBanner();
-        clearInterval(bannerTimer);
-        bannerTimer = setInterval(showRandomTool, SHOW_INTERVAL);
-    });
-})();
-
 // ===== INIT =====
 renderGrid();
 renderSidebar();
@@ -3356,7 +3285,7 @@ randomBtn.addEventListener('click', function() {
     }
 });
 
-console.log('MultiTool Pro loaded – all links forced to open inside the app. Banner shown.');
+console.log('MultiTool Pro loaded – all links forced to open inside the app.');
 </script>
 </body>
 </html>
