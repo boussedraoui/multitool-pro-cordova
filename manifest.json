@@ -1,0 +1,11 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "boussedraoui.github",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "boussedraoui.github",
+  "start_url": "/https://boussedraoui.github.io/multitool-pro-cordova/",
+  "theme_color": "#ffffff"
+}
