@@ -11,4 +11,7 @@
     <preference name="Orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
+    
+    <!-- Added plugin to handle links inside the app -->
+    <plugin name="cordova-plugin-inappbrowser" spec="5.0.0" />
 </widget>
