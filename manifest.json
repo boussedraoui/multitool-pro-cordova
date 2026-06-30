@@ -1,12 +1,24 @@
 {
   "background_color": "#ffffff",
   "dir": "ltr",
-  "display": "minimal-ui",
-  "name": "Multitool Pro",
+  "display": "standalone",
+  "name": "MultiTool Pro",
   "orientation": "any",
   "scope": "/",
-  "short_name": "Multitool",
+  "short_name": "MultiTool",
   "start_url": "https://boussedraoui.github.io/multitool-pro-cordova/",
   "theme_color": "#ffffff",
-  "description": "50+ tools, AI Hub, all-in-one utility toolkit."
+  "description": "50+ tools, AI Hub, all-in-one utility toolkit.",
+  "icons": [
+    {
+      "src": "image.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "image2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
