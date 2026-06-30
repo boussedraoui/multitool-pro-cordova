@@ -1272,7 +1272,6 @@ function toggleInternalMobileView() {
 
 // ===== RENDER FUNCTIONS FOR OVERLAYS =====
 function renderConvertGrid() {
-    // (full implementation from original – included below)
     const container = document.getElementById('convertGrid');
     const convertSites = [
         { name: 'PDFescape', icon: '📄', url: 'https://www.pdfescape.com', category: 'PDF Tools' },
@@ -3391,6 +3390,37 @@ window.searchWikipedia = function() {
     document.getElementById('wikiOut').innerHTML = `Opening Wikipedia page for "${query}"...`;
 };
 
+// ===== DEMO AI ENHANCER (for premium_ai) =====
+window.demoAIEnhanceAdvanced = function() {
+    let txt = document.getElementById('aiDemoText').value;
+    let mode = document.getElementById('aiMode').value;
+    if (!txt) { document.getElementById('aiDemoResult').innerHTML = 'Enter some text first.'; return; }
+    let result = txt;
+    if (mode === 'grammar') result = txt.replace(/(i) /gi, 'I ').replace(/(\w+?) (is|are|am) /gi, '$1 $2 ').replace(/ +/g, ' ');
+    else if (mode === 'professional') result = '✨ Enhanced: ' + txt + ' (professional tone)';
+    else if (mode === 'friendly') result = '🙂 ' + txt + ' (friendly)';
+    else if (mode === 'shorten') result = txt.split(' ').slice(0, 15).join(' ') + (txt.split(' ').length > 15 ? '...' : '');
+    else if (mode === 'expand') result = txt + ' In addition, this tool helps you achieve more.';
+    else if (mode === 'simplify') result = txt.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase();
+    document.getElementById('aiDemoResult').innerHTML = result;
+};
+
+// ===================================================================
+//  FIX: INTERCEPT ALL ANCHOR CLICKS TO OPEN INSIDE APP
+// ===================================================================
+document.addEventListener('click', function(e) {
+    let target = e.target.closest('a');
+    if (target && target.href) {
+        // Allow only http/https, ignore mailto, tel, etc.
+        if (!target.href.startsWith('http://') && !target.href.startsWith('https://')) {
+            return; // let default for non-web links
+        }
+        // Prevent external browser; use window.location to load inside WebView
+        e.preventDefault();
+        window.location.href = target.href;
+    }
+});
+
 // ===== INIT =====
 renderGrid();
 renderSidebar();
@@ -3417,36 +3447,7 @@ randomBtn.addEventListener('click', function() {
     }
 });
 
-// ===== DEMO AI ENHANCER (for premium_ai) =====
-window.demoAIEnhanceAdvanced = function() {
-    let txt = document.getElementById('aiDemoText').value;
-    let mode = document.getElementById('aiMode').value;
-    if (!txt) { document.getElementById('aiDemoResult').innerHTML = 'Enter some text first.'; return; }
-    let result = txt;
-    if (mode === 'grammar') result = txt.replace(/(i) /gi, 'I ').replace(/(\w+?) (is|are|am) /gi, '$1 $2 ').replace(/ +/g, ' ');
-    else if (mode === 'professional') result = '✨ Enhanced: ' + txt + ' (professional tone)';
-    else if (mode === 'friendly') result = '🙂 ' + txt + ' (friendly)';
-    else if (mode === 'shorten') result = txt.split(' ').slice(0, 15).join(' ') + (txt.split(' ').length > 15 ? '...' : '');
-    else if (mode === 'expand') result = txt + ' In addition, this tool helps you achieve more.';
-    else if (mode === 'simplify') result = txt.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase();
-    document.getElementById('aiDemoResult').innerHTML = result;
-};
-
-// ===== INTERCEPT ALL ANCHOR CLICKS TO OPEN INSIDE APP =====
-document.addEventListener('click', function(e) {
-    let target = e.target.closest('a');
-    if (target && target.href) {
-        if (target.target === '_blank' || target.href.startsWith('http') && !target.href.includes(window.location.hostname)) {
-            return;
-        }
-        e.preventDefault();
-        window.location.href = target.href;
-    }
-});
-
-// ===== SIDEBAR ITEMS (already rendered) =====
-
-console.log('MultiTool Pro loaded successfully.');
+console.log('MultiTool Pro loaded – all links open inside the app.');
 </script>
 </body>
 </html>
