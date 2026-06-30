@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.multitool.proz" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>MultiTool Pro</name>
+    <name xml:lang="zh-rCN">多功能工具专业版</name>
     <description>50+ tools, AI Hub, all-in-one</description>
     <author email="support@multitool.com" href="https://multitool.pro">MultiTool Pro</author>
     <content src="index.html" />
