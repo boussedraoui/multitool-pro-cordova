@@ -1270,7 +1270,7 @@ function toggleInternalMobileView() {
     }
 }
 
-// ===== RENDER FUNCTIONS FOR OVERLAYS =====
+// ===== RENDER FUNCTIONS FOR OVERLAYS (full) =====
 function renderConvertGrid() {
     const container = document.getElementById('convertGrid');
     const convertSites = [
@@ -2281,7 +2281,7 @@ function renderToolPanel(tid) {
         setInterval(refreshWorldClock, 60000); }
 }
 
-// ===== INDIVIDUAL TOOL FUNCTIONS =====
+// ===== INDIVIDUAL TOOL FUNCTIONS (full) =====
 let calcHistory = [];
 
 function appendCalc(v) {
@@ -3406,8 +3406,17 @@ window.demoAIEnhanceAdvanced = function() {
 };
 
 // ===================================================================
-//  FIX: INTERCEPT ALL ANCHOR CLICKS TO OPEN INSIDE APP
+//  FIX: FORCE ALL LINKS TO OPEN INSIDE THE WEBVIEW
 // ===================================================================
+
+// 1. Override window.open
+window.open = function(url, target, features) {
+    // Ignore target and features – always load in the same WebView
+    window.location.href = url;
+    return window; // mimic a window reference
+};
+
+// 2. Intercept all anchor clicks
 document.addEventListener('click', function(e) {
     let target = e.target.closest('a');
     if (target && target.href) {
@@ -3420,6 +3429,11 @@ document.addEventListener('click', function(e) {
         window.location.href = target.href;
     }
 });
+
+// Also set base target to _self (fallback)
+const base = document.createElement('base');
+base.target = '_self';
+document.head.appendChild(base);
 
 // ===== INIT =====
 renderGrid();
@@ -3447,7 +3461,7 @@ randomBtn.addEventListener('click', function() {
     }
 });
 
-console.log('MultiTool Pro loaded – all links open inside the app.');
+console.log('MultiTool Pro loaded – all links forced to open inside the app.');
 </script>
 </body>
 </html>
