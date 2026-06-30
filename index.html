@@ -1270,7 +1270,7 @@ function toggleInternalMobileView() {
     }
 }
 
-// ===== RENDER FUNCTIONS FOR OVERLAYS (full) =====
+// ===== RENDER FUNCTIONS FOR OVERLAYS =====
 function renderConvertGrid() {
     const container = document.getElementById('convertGrid');
     const convertSites = [
@@ -2281,7 +2281,7 @@ function renderToolPanel(tid) {
         setInterval(refreshWorldClock, 60000); }
 }
 
-// ===== INDIVIDUAL TOOL FUNCTIONS (full) =====
+// ===== INDIVIDUAL TOOL FUNCTIONS =====
 let calcHistory = [];
 
 function appendCalc(v) {
@@ -3406,34 +3406,126 @@ window.demoAIEnhanceAdvanced = function() {
 };
 
 // ===================================================================
-//  FIX: FORCE ALL LINKS TO OPEN INSIDE THE WEBVIEW
+//  FINAL FIX: FORCE ALL LINKS TO OPEN INSIDE THE WEBVIEW
 // ===================================================================
 
-// 1. Override window.open
-window.open = function(url, target, features) {
-    // Ignore target and features – always load in the same WebView
+// 1. Override window.open – always use the same WebView
+window.open = function(url) {
     window.location.href = url;
-    return window; // mimic a window reference
+    return window;
 };
 
-// 2. Intercept all anchor clicks
+// 2. Intercept every anchor click – prevent external browsers
 document.addEventListener('click', function(e) {
     let target = e.target.closest('a');
     if (target && target.href) {
-        // Allow only http/https, ignore mailto, tel, etc.
+        // Only handle http/https links
         if (!target.href.startsWith('http://') && !target.href.startsWith('https://')) {
-            return; // let default for non-web links
+            return; // mailto, tel, etc. – let default
         }
-        // Prevent external browser; use window.location to load inside WebView
+        // Prevent default and load in the same WebView
         e.preventDefault();
         window.location.href = target.href;
     }
 });
 
-// Also set base target to _self (fallback)
+// 3. Set base target to _self to enforce same window
 const base = document.createElement('base');
 base.target = '_self';
 document.head.appendChild(base);
+
+// 4. MutationObserver to catch dynamically added links and force their target
+const linkObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        mutation.addedNodes.forEach(function(node) {
+            if (node.nodeType === 1 && node.tagName === 'A') {
+                node.target = '_self';
+            }
+            if (node.nodeType === 1 && node.querySelectorAll) {
+                node.querySelectorAll('a').forEach(function(link) {
+                    link.target = '_self';
+                });
+            }
+        });
+    });
+});
+linkObserver.observe(document.body, { childList: true, subtree: true });
+
+// ===== TOOL RECOMMENDATION BANNER (FIX: ensure it appears) =====
+(function() {
+    const banner = document.getElementById('toolRecoBanner');
+    const msgEl = document.getElementById('recoMessage');
+    const tryBtn = document.getElementById('recoTryBtn');
+    const closeBtn = document.getElementById('recoCloseBtn');
+    if (!banner || !msgEl || !tryBtn || !closeBtn) return;
+
+    const toolSuggestions = [
+        { name: "🧮 Advanced Calculator", toolId: "calculator" },
+        { name: "🔐 Password Generator", toolId: "password" },
+        { name: "📝 Word Counter", toolId: "wordcount" },
+        { name: "🎨 Color Picker", toolId: "colorpicker" },
+        { name: "📏 Unit Converter", toolId: "unitconverter" },
+        { name: "⏱️ Stopwatch", toolId: "stopwatch" },
+        { name: "📱 QR Code Generator", toolId: "qrcode" },
+        { name: "⚖️ BMI Calculator", toolId: "bmi" },
+        { name: "🎲 Random Number", toolId: "random" },
+        { name: "⏳ Countdown Timer", toolId: "countdown" },
+        { name: "📅 Date Difference", toolId: "datediff" },
+        { name: "🔣 Base64 Encoder", toolId: "base64" },
+        { name: "🔗 URL Encoder", toolId: "urlencode" },
+        { name: "📋 JSON Formatter", toolId: "jsonformat" },
+        { name: "📄 Lorem Ipsum", toolId: "lorem" },
+        { name: "💱 Currency Converter", toolId: "currency" },
+        { name: "📊 Percentage Calc", toolId: "percentcalc" },
+        { name: "🎂 Age Calculator", toolId: "agecalc" },
+        { name: "💻 Binary/Hex Converter", toolId: "binhex" },
+        { name: "🏛️ Roman Numerals", toolId: "roman" },
+        { name: "💰 Tip Calculator", toolId: "tipcalc" },
+        { name: "🕐 World Clock", toolId: "worldclock" },
+        { name: "😂 Joke Generator", toolId: "joke" },
+        { name: "🌍 IP Lookup", toolId: "ip" },
+        { name: "✨ AI Text Enhancer", toolId: "premium_ai" }
+    ];
+
+    let currentTool = null;
+    let bannerTimer = null;
+    const SHOW_INTERVAL = 2 * 60 * 60 * 1000; // 2 hours
+
+    function showRandomTool() {
+        const randomIndex = Math.floor(Math.random() * toolSuggestions.length);
+        currentTool = toolSuggestions[randomIndex];
+        msgEl.textContent = currentTool.name;
+        banner.style.display = 'flex';
+        banner.style.animation = 'fadeInBanner 0.5s ease';
+    }
+
+    function hideBanner() {
+        banner.style.display = 'none';
+    }
+
+    // Show immediately on load
+    setTimeout(showRandomTool, 1000);
+
+    // Then keep cycling
+    bannerTimer = setInterval(showRandomTool, SHOW_INTERVAL);
+
+    tryBtn.addEventListener('click', function() {
+        if (currentTool && currentTool.toolId) {
+            if (typeof window.selectTool === 'function') {
+                window.selectTool(currentTool.toolId);
+            }
+        }
+        hideBanner();
+        clearInterval(bannerTimer);
+        bannerTimer = setInterval(showRandomTool, SHOW_INTERVAL);
+    });
+
+    closeBtn.addEventListener('click', function() {
+        hideBanner();
+        clearInterval(bannerTimer);
+        bannerTimer = setInterval(showRandomTool, SHOW_INTERVAL);
+    });
+})();
 
 // ===== INIT =====
 renderGrid();
@@ -3461,7 +3553,7 @@ randomBtn.addEventListener('click', function() {
     }
 });
 
-console.log('MultiTool Pro loaded – all links forced to open inside the app.');
+console.log('MultiTool Pro loaded – all links forced to open inside the app. Banner shown.');
 </script>
 </body>
 </html>
