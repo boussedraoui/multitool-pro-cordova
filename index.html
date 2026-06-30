@@ -3555,5 +3555,41 @@ randomBtn.addEventListener('click', function() {
 
 console.log('MultiTool Pro loaded – all links forced to open inside the app. Banner shown.');
 </script>
+    // ============================================================
+// FORCE ALL LINKS TO OPEN INSIDE THE APP (Cordova InAppBrowser)
+// ============================================================
+(function() {
+    // Wait for Cordova to be ready
+    document.addEventListener('deviceready', function() {
+        // If the InAppBrowser plugin is available, use it
+        if (typeof cordova !== 'undefined' && cordova.InAppBrowser) {
+            // Override window.open to use the plugin
+            window.open = function(url, target, options) {
+                // Force all http/https links to open inside the app (_self)
+                if (url.startsWith('http://') || url.startsWith('https://')) {
+                    return cordova.InAppBrowser.open(url, '_self', options || '');
+                }
+                // For other schemes (mailto:, tel:, etc.), let the system handle them
+                return window.open(url, target, options);
+            };
+
+            // Intercept every click on anchor tags
+            document.addEventListener('click', function(e) {
+                var target = e.target.closest('a');
+                if (target && target.href) {
+                    var url = target.href;
+                    if (url.startsWith('http://') || url.startsWith('https://')) {
+                        e.preventDefault();
+                        cordova.InAppBrowser.open(url, '_self', '');
+                    }
+                }
+            });
+            console.log('✅ All links are now forced to stay inside the app.');
+        } else {
+            console.warn('⚠️ InAppBrowser plugin not found. Links may open externally.');
+        }
+    }, false);
+})();
+// ============================================================
 </body>
 </html>
