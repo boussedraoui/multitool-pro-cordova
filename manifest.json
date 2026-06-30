@@ -2,10 +2,11 @@
   "background_color": "#ffffff",
   "dir": "ltr",
   "display": "minimal-ui",
-  "name": "boussedraoui.github",
+  "name": "Multitool Pro",
   "orientation": "any",
   "scope": "/",
-  "short_name": "boussedraoui.github",
+  "short_name": "Multitool",
   "start_url": "https://boussedraoui.github.io/multitool-pro-cordova/",
-  "theme_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "description": "50+ tools, AI Hub, all-in-one utility toolkit."
 }
