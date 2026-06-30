@@ -2,13 +2,13 @@
   "background_color": "#ffffff",
   "dir": "ltr",
   "display": "standalone",
-  "name": "MultiTool Pro",
+  "name": "多功能工具专业版",
   "orientation": "any",
   "scope": "/",
-  "short_name": "MultiTool",
+  "short_name": "多功能工具",
   "start_url": "https://boussedraoui.github.io/multitool-pro-cordova/",
   "theme_color": "#ffffff",
-  "description": "50+ tools, AI Hub, all-in-one utility toolkit.",
+  "description": "50多种工具，AI中心，一体化实用工具包。",
   "icons": [
     {
       "src": "image.png",
@@ -20,5 +20,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "lang": "zh"
 }
