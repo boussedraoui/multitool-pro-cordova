@@ -3,132 +3,253 @@
 <head>
     <link rel="manifest" href="manifest.json">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="多功能工具专业版 - 34种实用工具，包括计算器、密码生成器、单位转换等。完全免费。">
     <title>多功能工具专业版 | 完整工具包</title>
+    <link rel="canonical" href="https://play.google.com/store/apps/details?id=multitool.pro2" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="keywords" content="多功能工具, 工具包, 计算器, 实用工具, 免费, 生产力, 世界时钟, 翻译, QR码, 转换器">
+    <meta name="author" content="多功能工具专业版">
+    <meta property="og:title" content="多功能工具专业版 - 34种免费实用工具">
+    <meta property="og:description" content="所有工具完全免费。计算器、密码生成器、转换器、计时器、二维码等。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://play.google.com/store/apps/details?id=multitool.pro2">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/pik7zbGQG-Szd44vuAkkWxVCrl6LIJk4e_r8RrmjU7CAVcvtHVgNlB39QMD7xcPfvQS1GtTZLJ-UE8zfjLlTvqI=h180">
+    <meta property="og:image:width" content="180">
+    <meta property="og:image:height" content="180">
+    <meta property="og:site_name" content="多功能工具专业版">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="多功能工具专业版 - 完整工具包">
+    <meta name="twitter:description" content="34种免费工具，计算器、世界时钟、笑话等。">
+    <meta name="twitter:image" content="https://lh3.googleusercontent.com/pik7zbGQG-Szd44vuAkkWxVCrl6LIJk4e_r8RrmjU7CAVcvtHVgNlB39QMD7xcPfvQS1GtTZLJ-UE8zfjLlTvqI=h180">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "多功能工具专业版",
+      "description": "所有工具完全免费。34种实用工具，包括计算器、世界时钟、笑话、翻译、二维码等。",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Android",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "url": "https://play.google.com/store/apps/details?id=multitool.pro2",
+      "downloadUrl": "https://apk.e-droid.net/apk/app4024601-9udb5a.apk?v=36",
+      "image": "https://lh3.googleusercontent.com/pik7zbGQG-Szd44vuAkkWxVCrl6LIJk4e_r8RrmjU7CAVcvtHVgNlB39QMD7xcPfvQS1GtTZLJ-UE8zfjLlTvqI=h180",
+      "author": { "@type": "Person", "name": "多功能工具专业版" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1500" }
+    }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        :root { --bg:#f4f6fc; --surface:#fff; --surface2:#f8faff; --text:#0a0a2a; --text2:#2d2d5a; --text3:#6c6c8a; --primary:#6c5ce7; --border:#e2e2ec; --shadow:0 10px 30px -12px rgba(0,0,0,0.1); --shadow-lg:0 20px 40px -12px rgba(0,0,0,0.2); }
-        [data-theme="dark"] { --bg:#0f0f1a; --surface:#18182a; --surface2:#202036; --text:#f0f0fc; --text2:#c0c0e0; --text3:#9090b0; --primary:#a29bfe; --border:#2e2e4a; }
-        body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); font-size:18px; line-height:1.4; transition:background .3s,color .3s; }
-        .main-container { max-width:1400px; margin:0 auto; padding:30px 24px 40px; }
-        .hero { text-align:center; padding:20px; }
-        .title-line1, .title-line2 { font-family:'Poppins',sans-serif; font-weight:900; letter-spacing:-.02em; line-height:1.1; font-size:6rem; }
-        .pro-line { display:inline-block; background:linear-gradient(145deg,#FFD700,#FFA500); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; font-weight:900; font-size:2.6rem; border:2px solid rgba(255,215,0,.9); border-radius:80px; padding:.1em .7em; margin:.2rem 0 .5rem; box-shadow:0 0 12px rgba(255,215,0,.8); }
-        .full-complete-badge { font-size:1.4rem; font-weight:800; background:linear-gradient(0deg,#CC0000,#CC5500,#B8860B,#006400,#004466,#0000CC,#660066); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; animation:horizontalSlide 1.2s infinite alternate; }
-        @keyframes horizontalSlide { 0%{transform:translateX(-6px)} 100%{transform:translateX(6px)} }
-        .subtitle { font-size:1.4rem; color:var(--text2); margin-top:12px; }
-        .more-text { text-align:center; font-size:1.2rem; font-weight:700; color:var(--primary); margin-top:12px; }
-        .star-rating { display:flex; justify-content:center; gap:12px; margin-top:16px; flex-wrap:wrap; }
-        .star-box { width:48px; height:48px; background:var(--surface2); border:2px solid #FFC107; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:2rem; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,.1); }
-        .star-box .star.empty { color:#ccc; } .star-box .star.filled { color:#FFC107; text-shadow:0 0 4px gold; }
-        .star-box.explode { animation:starExplode .6s cubic-bezier(.34,1.2,.64,1) forwards; }
-        @keyframes starExplode { 0%{transform:scale(1);background:#FFC107;box-shadow:0 0 0 0 rgba(255,193,7,.7)} 30%{transform:scale(1.6);background:radial-gradient(circle,#ff0000,#ff7f00,#ffff00)} 70%{transform:scale(1.3);background:radial-gradient(circle,#00ff00,#00ffff,#0000ff)} 100%{transform:scale(1);background:var(--surface2);border-color:#FFC107} }
-        .firework-particle { position:fixed; width:6px; height:6px; border-radius:50%; pointer-events:none; z-index:10000; animation:particleFly .8s ease-out forwards; }
-        @keyframes particleFly { 0%{transform:translate(0,0) scale(1); opacity:1} 100%{transform:translate(var(--dx),var(--dy)) scale(0); opacity:0} }
-        .love-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:1.8rem; font-weight:900; background:linear-gradient(135deg,#ff0844,#ffb199,#ff4e50,#f9d423,#00b4db,#0083b0,#6a11cb,#2575fc); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; animation:rainbowBeat 4s infinite, heartbeatPulse 1.2s infinite; white-space:nowrap; }
-        @keyframes rainbowBeat { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
-        @keyframes heartbeatPulse { 0%,100%{transform:translate(-50%,-50%) scale(1)} 25%{transform:translate(-50%,-50%) scale(1.1)} 35%{transform:translate(-50%,-50%) scale(1.05)} 45%{transform:translate(-50%,-50%) scale(1.12)} 55%{transform:translate(-50%,-50%) scale(1)} }
-        .premium-ribbon { background:linear-gradient(135deg,#f7b731,#f0c060); color:#1a1a2e; font-weight:800; padding:10px 24px; border-radius:60px; font-size:1.1rem; display:inline-block; box-shadow:0 4px 12px rgba(0,0,0,.1); animation:ribbonBounce 1.4s infinite; }
-        @keyframes ribbonBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
-        .premium-container { position:relative; display:inline-block; margin:20px 0; }
-        .orbiting-love { position:absolute; top:50%; left:50%; width:180px; height:180px; margin:-90px 0 0 -90px; pointer-events:none; z-index:1; animation:orbit 8s linear infinite; }
-        @keyframes orbit { 0%{transform:rotate(0deg) translateX(120px) rotate(0deg)} 100%{transform:rotate(360deg) translateX(120px) rotate(-360deg)} }
-        .love-phrase { text-align:center; margin:20px 0 12px; position:relative; min-height:140px; display:flex; justify-content:center; align-items:center; }
-        @media (max-width:740px) { body{font-size:16px} .title-line1,.title-line2{font-size:3.6rem} .pro-line{font-size:1.8rem} .full-complete-badge{font-size:1.1rem} .orbiting-love{width:140px;height:140px;margin:-70px 0 0 -70px} @keyframes orbit{0%{transform:rotate(0deg) translateX(90px) rotate(0deg)}100%{transform:rotate(360deg) translateX(90px) rotate(-360deg)}} .love-text{font-size:1.3rem} .tools-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:16px} .tool-card .tool-name{font-size:1rem} .tool-panel{padding:24px 20px} .tool-btn{padding:12px 24px;font-size:.9rem} .star-box{width:40px;height:40px;font-size:1.6rem} }
-        .search-container { max-width:640px; margin:24px auto 30px; }
-        .search-input, textarea, select { width:100%; padding:16px 24px; border-radius:80px; border:2px solid var(--border); background:var(--surface); font-size:1.05rem; font-family:inherit; }
-        .search-results { background:var(--surface); border-radius:28px; margin-top:12px; border:1px solid var(--border); box-shadow:var(--shadow); max-height:480px; overflow-y:auto; }
-        .tools-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:20px; margin:36px 0; }
-        .tool-card { background:var(--surface); border-radius:32px; padding:20px 10px; text-align:center; cursor:pointer; border:2px solid transparent; transition:.25s; box-shadow:var(--shadow); }
-        .tool-card:hover { transform:translateY(-8px); border-color:var(--primary); box-shadow:var(--shadow-lg); }
-        .tool-card .tool-name { font-size:1.2rem; font-weight:700; margin-top:12px; }
-        .tool-panel { background:var(--surface); border-radius:40px; padding:32px 28px; margin:32px 0 40px; box-shadow:var(--shadow-lg); border:1px solid var(--border); }
-        .tool-btn { background:var(--primary); border:none; padding:14px 28px; border-radius:60px; font-weight:700; color:#fff; cursor:pointer; transition:.2s; margin:8px; display:inline-block; font-size:1rem; box-shadow:0 2px 6px rgba(0,0,0,.1); }
-        .tool-btn:hover { background:#4834d4; transform:scale(.97); }
-        .calc-btn { width:100%; padding:14px 4px!important; border-radius:16px; font-weight:700; font-size:1rem; margin:0!important; }
-        .tool-output { background:var(--surface2); padding:16px 20px; border-radius:28px; margin-top:20px; border:1px solid var(--border); max-height:500px; overflow-y:auto; }
-        .toast { position:fixed; bottom:40px; left:50%; transform:translateX(-50%) translateY(100px); background:var(--surface); color:var(--text); padding:16px 32px; border-radius:80px; font-weight:600; transition:.3s; z-index:10000; box-shadow:0 10px 30px rgba(0,0,0,.2); pointer-events:none; }
-        .toast.show { transform:translateX(-50%) translateY(0); }
-        .sidebar { position:fixed; top:0; left:0; width:320px; height:100%; background:var(--surface); z-index:1001; transform:translateX(-100%); transition:.3s; overflow-y:auto; padding:24px 0; }
-        .sidebar.active { transform:translateX(0); }
-        .sidebar-overlay { position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:1000; opacity:0; pointer-events:none; transition:.3s; }
-        .sidebar-overlay.active { opacity:1; pointer-events:auto; }
-        .sidebar-item { padding:16px 28px; cursor:pointer; border-bottom:1px solid var(--border); display:flex; gap:16px; align-items:center; font-weight:500; }
-        .footer-widget { background:var(--surface); border-top:2px solid var(--border); padding:28px 24px; text-align:center; margin-top:60px; }
-        .footer-controls { display:flex; justify-content:flex-end; gap:16px; margin-bottom:20px; }
-        .footer-btn { background:var(--surface2); border:1px solid var(--border); width:54px; height:54px; border-radius:54px; font-size:1.4rem; cursor:pointer; }
-        .footer-love-line { display:flex; align-items:center; justify-content:center; gap:28px; margin-top:24px; font-size:1.3rem; font-weight:600; }
-        .scroll-up-arrow, .footer-arrow-down { font-size:2rem; cursor:pointer; animation:arrowBlink 1.2s infinite; }
-        @keyframes arrowBlink { 0%,100%{opacity:.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.15)} }
-        .heart-beat { display:inline-block; animation:heartbeat 1.2s infinite; margin:0 6px; }
-        @keyframes heartbeat { 0%,100%{transform:scale(1)} 25%{transform:scale(1.2)} 35%{transform:scale(1.1)} 45%{transform:scale(1.3)} 55%{transform:scale(1)} }
-        .random-trigger { text-align:left; margin:16px 0 8px; }
-        .random-btn { background:linear-gradient(135deg,#ff9800,#f44336); border:none; color:#fff; font-weight:700; padding:12px 24px; border-radius:60px; font-size:1.2rem; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,.2); display:inline-block; visibility:visible; opacity:1; }
-        .random-btn.hide-random { visibility:hidden; opacity:0; }
-        .random-btn .arrow-down { display:inline-block; margin-left:10px; animation:bounceArrow 1s infinite; }
-        @keyframes bounceArrow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(4px)} }
-        .timezone-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:12px; }
-        .timezone-item { padding:10px 12px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; font-size:.95rem; }
-        /* Overlays minimal style */
-        .premium-page-overlay, .imagine-overlay, .shortener-overlay, .online-overlay, .convert-overlay, .browsers-overlay, .internal-tab-overlay { position:fixed; inset:0; background:var(--bg); z-index:1100; overflow-y:auto; display:none; padding:24px; }
-        .active { display:block!important; }
-        .browser-frame { width:100%; height:70vh; border:2px solid var(--border); border-radius:28px; margin-top:20px; background:#fff; }
-        .browser-frame.fullscreen { position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:2000; border:none; border-radius:0; margin:0; }
-        .browser-frame.mobile-view { max-width:420px; width:100%; margin:0 auto; border:5px solid #333; border-radius:28px; display:block; }
-        .browsers-controls { display:flex; flex-wrap:wrap; gap:16px; margin-bottom:28px; align-items:center; }
-        .fullscreen-float-bar { position:fixed; top:0; left:0; right:0; background:var(--surface); border-bottom:1px solid var(--border); padding:12px 20px; display:flex; gap:12px; align-items:center; z-index:2100; display:none; }
-        .fullscreen-float-bar.active { display:flex; }
-        .internal-tab-container { display:flex; flex-direction:column; width:100%; height:100%; background:var(--surface); overflow:hidden; }
-        .internal-tab-header { display:flex; align-items:center; padding:16px 24px; border-bottom:2px solid var(--border); gap:16px; }
-        .internal-tab-iframe { flex:1; border:none; background:#fff; width:100%; }
-        .internal-tab-iframe.mobile-view { max-width:420px; width:100%; margin:0 auto; border-left:5px solid #333; border-right:5px solid #333; }
-        .chat-widget { position:fixed; bottom:30px; left:25px; right:auto; z-index:100000; font-family:inherit; }
-        .chat-button { width:70px; height:70px; background:radial-gradient(circle at 30% 20%,#ff7e5e,#f34e6f); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,.3),0 0 0 4px rgba(255,255,200,.6); position:relative; }
-        .chat-button:hover { transform:scale(1.08); }
-        .chat-badge { position:absolute; top:-8px; right:-10px; background:#00e5ff; color:#000; font-size:.75rem; font-weight:700; padding:3px 8px; border-radius:30px; box-shadow:0 0 6px cyan; }
-        .chat-panel { position:absolute; bottom:85px; left:0; right:auto; width:450px; max-width:85vw; background:rgba(20,20,40,.96); backdrop-filter:blur(20px); border-radius:32px; box-shadow:0 25px 45px rgba(0,0,0,.5); border:1px solid rgba(255,215,0,.5); display:none; flex-direction:column; overflow:hidden; z-index:100001; }
-        .chat-panel.active { display:flex; }
-        .chat-panel.fullscreen { position:fixed; top:0; left:0; width:100vw; height:100vh; max-width:none; border-radius:0; z-index:200000; background:rgba(10,10,25,.98); }
-        .chat-header { background:linear-gradient(95deg,#2b2d5c,#1e1f3a); padding:16px 18px; font-weight:700; font-size:1.2rem; display:flex; justify-content:space-between; color:#ffecb3; border-bottom:1px solid #ffb347; }
-        .chat-header-actions button { background:none; border:none; color:#ffd966; font-size:1.3rem; cursor:pointer; margin-left:15px; }
-        .chat-messages { height:450px; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:12px; background:rgba(0,0,0,.2); }
-        .chat-message { max-width:85%; padding:10px 14px; border-radius:24px; font-size:.9rem; word-wrap:break-word; }
-        .chat-message.user { align-self:flex-end; background:#6c5ce7; color:#fff; border-bottom-right-radius:4px; }
-        .chat-message.bot { align-self:flex-start; background:#2d2d4a; color:#f0f0fa; border-bottom-left-radius:4px; border-left:3px solid #ffaa44; }
-        .chat-message.bot .chat-btn { display:inline-block; background:#ffaa44; color:#1e1e2a; font-size:.8rem; padding:6px 14px; margin:4px 6px 4px 0; border:none; border-radius:40px; cursor:pointer; font-weight:700; }
-        .chat-message.bot .chat-btn:hover { transform:scale(.98); background:#ffcc66; }
-        .chat-input-area { display:flex; padding:12px; gap:10px; background:#10101e; border-top:1px solid #3a3a60; }
-        .chat-input-area input { flex:1; padding:12px 16px; border:none; border-radius:60px; background:#202036; color:#fff; font-size:.9rem; outline:none; }
-        .chat-input-area button { background:#ff8c42; border:none; border-radius:50px; width:48px; font-size:1.3rem; cursor:pointer; color:#fff; }
-        .chat-voice-btn { background:#4c9aff!important; }
-        .chat-voice-status { font-size:.7rem; text-align:center; padding:4px; background:#1e1e30; color:#aaf; }
-        @media(max-width:550px){ .chat-panel{width:95vw;left:0;bottom:80px} .chat-messages{height:55vh} }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        :root { 
+            --bg: #f4f6fc; 
+            --surface: #ffffff; 
+            --surface2: #f8faff; 
+            --text: #0a0a2a; 
+            --text2: #2d2d5a; 
+            --text3: #6c6c8a; 
+            --primary: #6c5ce7; 
+            --primary-light: #a29bfe; 
+            --primary-dark: #4834d4; 
+            --accent: #00cec9; 
+            --accent2: #fd79a8; 
+            --border: #e2e2ec; 
+            --shadow: 0 10px 30px -12px rgba(0,0,0,0.1); 
+            --shadow-lg: 0 20px 40px -12px rgba(0,0,0,0.2); 
+            --radius: 28px; 
+        }
+        [data-theme="dark"] { 
+            --bg: #0f0f1a; 
+            --surface: #18182a; 
+            --surface2: #202036; 
+            --text: #f0f0fc; 
+            --text2: #c0c0e0; 
+            --text3: #9090b0; 
+            --primary: #a29bfe; 
+            --border: #2e2e4a; 
+        }
+        body { 
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            transition: background 0.3s, color 0.3s; 
+            top: 0 !important;
+            font-size: 18px;
+            line-height: 1.4;
+            overflow-x: hidden;
+        }
+        .main-container { max-width: 1400px; margin: 0 auto; padding: 30px 24px 40px; }
+        .hero { text-align: center; padding: 20px 20px 16px; }
+        .hero-title { margin-bottom: 0.25rem; }
+        .title-line1, .title-line2 {
+            display: block;
+            font-family: 'Poppins', 'Montserrat', system-ui, sans-serif;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        .title-line1 { font-size: 6rem; margin-bottom: 0.05em; }
+        .title-line2 { font-size: 6rem; }
+        .multi-letter { display: inline-block; font-weight: 900; }
+        .letter-m { color: #FF3366; }
+        .letter-u { color: #FF9933; }
+        .letter-l { color: #FFCC00; }
+        .letter-t { color: #33CC66; }
+        .letter-i { color: #3399FF; }
+        .letter-o { color: #9933FF; }
+        .letter-o2 { color: #FF33CC; }
+        .letter-l2 { color: #FF6633; }
+        .pro-line {
+            display: inline-block;
+            background: linear-gradient(145deg, #FFD700, #FFA500, #FFD700, #FFC125);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            font-size: 2.6rem;
+            border: 2px solid rgba(255, 215, 0, 0.9);
+            border-radius: 80px;
+            padding: 0.1em 0.7em;
+            margin-top: 0.2rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            box-shadow: 0 0 12px rgba(255,215,0,0.8), inset 0 1px 2px rgba(255,255,200,0.9);
+            vertical-align: middle;
+        }
+        .full-complete-badge { 
+            font-size: 1.4rem;
+            font-weight: 800; 
+            background: linear-gradient(0deg, #CC0000, #CC5500, #B8860B, #006400, #004466, #0000CC, #660066);
+            background-size: 100% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block; 
+            margin: 12px 0 8px; 
+            letter-spacing: 2px;
+            white-space: nowrap;
+            animation: horizontalSlide 1.2s ease-in-out infinite alternate;
+        }
+        @keyframes horizontalSlide { 0% { transform: translateX(-6px); } 100% { transform: translateX(6px); } }
+        .subtitle { font-size: 1.4rem; color: var(--text2); margin-top: 12px; font-weight: 500; }
+        .more-text { text-align: center; font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-top: 12px; letter-spacing: 1px; }
+        .star-rating { display: flex; justify-content: center; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+        .star-box { width: 48px; height: 48px; background: var(--surface2); border: 2px solid #FFC107; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        .star-box .star.empty { color: #ccc; }
+        .star-box .star.filled { color: #FFC107; text-shadow: 0 0 4px gold; }
+        .star-box.explode { animation: starExplode 0.6s cubic-bezier(0.34,1.2,0.64,1) forwards; }
+        @keyframes starExplode {
+            0% { transform: scale(1); background: #FFC107; box-shadow: 0 0 0 0 rgba(255,193,7,0.7); }
+            30% { transform: scale(1.6); background: radial-gradient(circle, #ff0000, #ff7f00, #ffff00); }
+            70% { transform: scale(1.3); background: radial-gradient(circle, #00ff00, #00ffff, #0000ff); }
+            100% { transform: scale(1); background: var(--surface2); border-color: #FFC107; }
+        }
+        .firework-particle { position: fixed; width: 6px; height: 6px; border-radius: 50%; pointer-events: none; z-index: 10000; animation: particleFly 0.8s ease-out forwards; }
+        @keyframes particleFly { 0% { transform: translate(0,0) scale(1); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)) scale(0); opacity: 0; } }
+        .love-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff0844, #ffb199, #ff4e50, #f9d423, #00b4db, #0083b0, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbowBeat 4s ease infinite, heartbeatPulse 1.2s ease-in-out infinite;
+            white-space: nowrap;
+        }
+        @keyframes rainbowBeat { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        @keyframes heartbeatPulse { 0%,100%{ transform: translate(-50%, -50%) scale(1); } 25%{ transform: translate(-50%, -50%) scale(1.1); } 35%{ transform: translate(-50%, -50%) scale(1.05); } 45%{ transform: translate(-50%, -50%) scale(1.12); } 55%{ transform: translate(-50%, -50%) scale(1); } }
+        .premium-ribbon { background: linear-gradient(135deg, #f7b731, #f0c060); color: #1a1a2e; font-weight: 800; padding: 10px 24px; border-radius: 60px; font-size: 1.1rem; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: relative; z-index: 2; animation: ribbonBounce 1.4s ease-in-out infinite; }
+        @keyframes ribbonBounce { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
+        .premium-container { position: relative; display: inline-block; margin-top: 20px; margin-bottom: 20px; }
+        .orbiting-love { position: absolute; top: 50%; left: 50%; width: 180px; height: 180px; margin: -90px 0 0 -90px; pointer-events: none; z-index: 1; animation: orbit 8s linear infinite; }
+        @keyframes orbit { 0% { transform: rotate(0deg) translateX(120px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); } }
+        .love-phrase { text-align: center; margin: 20px 0 12px; position: relative; display: flex; justify-content: center; align-items: center; min-height: 140px; }
+        @media (max-width: 740px) {
+            body { font-size: 16px; }
+            .title-line1, .title-line2 { font-size: 3.6rem; }
+            .pro-line { font-size: 1.8rem; padding: 0.05em 0.6em; border-width: 1.5px; }
+            .full-complete-badge { font-size: 1.1rem; white-space: nowrap; letter-spacing: 1px; }
+            .orbiting-love { width: 140px; height: 140px; margin: -70px 0 0 -70px; }
+            @keyframes orbit { 0% { transform: rotate(0deg) translateX(90px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(90px) rotate(-360deg); } }
+            .love-text { font-size: 1.3rem; }
+            .tools-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 16px; }
+            .tool-card .tool-name { font-size: 1rem; }
+            .tool-panel { padding: 24px 20px; }
+            .tool-btn { padding: 12px 24px; font-size: 0.9rem; }
+            .star-box { width: 40px; height: 40px; font-size: 1.6rem; }
+        }
+        .search-container { max-width: 640px; margin: 24px auto 30px; }
+        .search-input, textarea, select { width: 100%; padding: 16px 24px; border-radius: 80px; border: 2px solid var(--border); background: var(--surface); font-size: 1.05rem; transition: all 0.2s; font-family: inherit; }
+        .search-results { background: var(--surface); border-radius: 28px; margin-top: 12px; border: 1px solid var(--border); box-shadow: var(--shadow); max-height: 480px; overflow-y: auto; font-size: 1rem; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 20px; margin: 36px 0; }
+        .tool-card { background: var(--surface); border-radius: 32px; padding: 20px 10px; text-align: center; cursor: pointer; border: 2px solid transparent; transition: all 0.25s ease; box-shadow: var(--shadow); position: relative; }
+        .tool-card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: var(--shadow-lg); }
+        .tool-card .tool-name { font-size: 1.2rem; font-weight: 700; margin-top: 12px; }
+        .tool-panel { background: var(--surface); border-radius: 40px; padding: 32px 28px; margin: 32px 0 40px; box-shadow: var(--shadow-lg); border: 1px solid var(--border); overflow: hidden; }
+        .tool-btn { background: var(--primary); border: none; padding: 14px 28px; border-radius: 60px; font-weight: 700; color: white; cursor: pointer; transition: 0.2s; margin: 8px; display: inline-block; font-size: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        .tool-btn:hover { background: var(--primary-dark); transform: scale(0.97); }
+        .calc-btn { min-width: 0; width: 100%; box-sizing: border-box; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 !important; padding: 14px 4px !important; border-radius: 16px; font-weight: 700; font-size: 1rem; }
+        .tool-output { background: var(--surface2); padding: 16px 20px; border-radius: 28px; margin-top: 20px; word-break: break-word; border: 1px solid var(--border); max-height: 500px; overflow-y: auto; font-size: 1rem; }
+        .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--surface); color: var(--text); padding: 16px 32px; border-radius: 80px; font-weight: 600; transition: 0.3s; z-index: 10000; box-shadow: 0 10px 30px rgba(0,0,0,0.2); pointer-events: none; font-size: 1rem; }
+        .toast.show { transform: translateX(-50%) translateY(0); }
+        .sidebar { position: fixed; top: 0; left: 0; width: 320px; height: 100%; background: var(--surface); z-index: 1001; transform: translateX(-100%); transition: 0.3s; overflow-y: auto; padding: 24px 0; font-size: 1.05rem; }
+        .sidebar.active { transform: translateX(0); }
+        .sidebar-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; opacity: 0; pointer-events: none; transition: 0.3s; }
+        .sidebar-overlay.active { opacity: 1; pointer-events: auto; }
+        .sidebar-item { padding: 16px 28px; cursor: pointer; border-bottom: 1px solid var(--border); display: flex; gap: 16px; align-items: center; font-size: 1.05rem; font-weight: 500; }
+        .footer-widget { background: var(--surface); border-top: 2px solid var(--border); padding: 28px 24px; text-align: center; margin-top: 60px; position: relative; font-size: 1rem; z-index: 100; }
+        .footer-controls { display: flex; justify-content: flex-end; gap: 16px; margin-bottom: 20px; }
+        .footer-btn { background: var(--surface2); border: 1px solid var(--border); width: 54px; height: 54px; border-radius: 54px; font-size: 1.4rem; cursor: pointer; }
+        .footer-love-line { display: flex; align-items: center; justify-content: center; gap: 28px; margin-top: 24px; font-size: 1.3rem; font-weight: 600; }
+        .scroll-up-arrow, .footer-arrow-down { font-size: 2rem; cursor: pointer; transition: transform 0.2s, opacity 0.3s; display: inline-block; user-select: none; animation: arrowBlink 1.2s ease-in-out infinite; }
+        @keyframes arrowBlink { 0%,100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.15); text-shadow: 0 0 6px currentColor; } }
+        .scroll-up-arrow.visible { opacity: 1; visibility: visible; animation: arrowBlink 1.2s ease-in-out infinite; }
+        .footer-arrow-down { animation: arrowBlink 1.2s ease-in-out infinite; }
+        .heart-beat { display: inline-block; animation: heartbeat 1.2s ease-in-out infinite; margin: 0 6px; }
+        @keyframes heartbeat { 0%,100%{transform:scale(1)}25%{transform:scale(1.2)}35%{transform:scale(1.1)}45%{transform:scale(1.3)}55%{transform:scale(1)} }
+        .random-trigger { text-align: left; margin: 16px 0 8px; }
+        .random-btn { background: linear-gradient(135deg, #ff9800, #f44336); border: none; color: white; font-weight: bold; padding: 12px 24px; border-radius: 60px; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.2s; display: inline-block; visibility: visible; opacity: 1; }
+        .random-btn.hide-random { visibility: hidden; opacity: 0; }
+        .random-btn .arrow-down { display: inline-block; margin-left: 10px; font-size: 1.2rem; animation: bounceArrow 1s infinite; }
+        @keyframes bounceArrow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+        .timezone-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; font-size: 1rem; }
+        .timezone-item { padding: 10px 12px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 0.95rem; }
+        .pull-to-refresh { text-align: center; padding: 10px; font-size: 0.9rem; color: var(--text3); display: none; transition: opacity 0.2s; }
+        .pull-to-refresh.active { display: block; }
     </style>
 </head>
 <body>
 <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
-<aside class="sidebar" id="sidebar"><div style="padding:20px 28px;font-size:1.8rem;font-weight:700;">🛠️ MultiTool Pro</div><div id="sidebarList"></div></aside>
-
-<!-- Overlays (simplified) -->
-<div id="premiumOverlay" class="premium-page-overlay"><div style="max-width:800px;margin:auto;background:var(--surface);border-radius:48px;padding:32px;" id="premiumContent"></div></div>
-<div id="otherToolsOverlay" class="premium-page-overlay"><div id="otherToolsContainer" style="max-width:1200px;margin:auto;background:var(--surface);border-radius:48px;padding:32px;"></div></div>
-<div id="aiToolsOverlay" class="premium-page-overlay"><div id="aiToolsContainer" style="max-width:1400px;margin:auto;background:var(--surface);border-radius:48px;padding:32px;"></div></div>
-<div id="browsersOverlay" class="browsers-overlay"><div style="max-width:1400px;margin:auto;background:var(--surface);border-radius:48px;padding:32px;" id="browsersContentWrapper"><h2 style="text-align:center;font-size:2rem;">🌐 浏览器</h2><p style="text-align:center;margin-bottom:12px;">输入网址，选择浏览器风格</p><div class="browsers-controls" id="browsersControls"><input type="text" id="browserUrlInput" class="search-input" placeholder="输入网址" style="flex:1;min-width:240px;"><button class="tool-btn" onclick="loadBrowserUrl()">🌍 前往</button><button class="tool-btn" onclick="toggleBrowserFullscreen()" id="fullscreenBtn">⛶ 全屏</button><button class="tool-btn" id="mobileViewBtn" onclick="toggleMobileView()">💻 桌面模式</button></div><div class="browsers-grid" id="browsersList"></div><iframe id="browserFrame" class="browser-frame mobile-view" src="about:blank" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe><div style="text-align:center;margin-top:20px;"><button class="tool-btn" onclick="openInternalTab()">📂 打开内部标签页</button><button class="tool-btn" onclick="closeBrowsersOverlay()">← 返回</button></div></div><div id="fullscreenFloatBar" class="fullscreen-float-bar"><input type="text" id="fullscreenUrlInput" class="search-input" placeholder="网址" style="flex:1;"><button class="tool-btn" onclick="loadBrowserUrlFromFullscreen()">🌍</button><button class="tool-btn" id="fullscreenMobileBtn" onclick="toggleMobileView()">💻</button><button class="tool-btn" onclick="toggleBrowserFullscreen()">✕ 退出</button></div></div>
-<div id="internalTabOverlay" class="internal-tab-overlay"><div class="internal-tab-container"><div class="internal-tab-header"><h3>📂 内部标签页</h3><div class="internal-tab-controls"><input type="text" id="internalTabUrlInput" class="search-input" placeholder="输入网址"><button class="tool-btn" onclick="loadInternalTabUrl()">🌍 前往</button><button class="tool-btn" id="internalTabMobileBtn" onclick="toggleInternalMobileView()">💻 桌面模式</button></div><button class="tool-btn" onclick="closeInternalTab()" style="margin-left:auto;">✕ 关闭</button></div><iframe id="internalTabFrame" class="internal-tab-iframe mobile-view" src="about:blank" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe></div></div>
-<div id="convertOverlay" class="convert-overlay"><div style="max-width:1400px;margin:auto;background:var(--surface);border-radius:48px;padding:32px;"><h2 style="text-align:center;font-size:2.2rem;">🔄 转换 · 编辑</h2><p style="text-align:center;margin-bottom:20px;">一体化转换与编辑工具</p><div id="convertGrid" class="convert-grid"></div><div style="text-align:center;margin-top:40px;"><button class="tool-btn" onclick="closeConvertOverlay()">← 返回</button></div></div></div>
-<div id="allAiTranslatorOverlay" class="premium-page-overlay"><div style="max-width:1400px;margin:auto;background:var(--surface);border-radius:48px;padding:32px;"><h2 style="text-align:center;font-size:2.2rem;">🌐 AI 翻译工具</h2><p style="text-align:center;margin-bottom:20px;">点击任意工具打开</p><div id="allAiTranslatorGrid" class="convert-grid"></div><div style="text-align:center;margin-top:40px;"><button class="tool-btn" onclick="closeAllAiTranslatorOverlay()">← 返回</button></div></div></div>
+<aside class="sidebar" id="sidebar"><div style="padding: 20px 28px; font-size: 1.8rem; font-weight: bold;">🛠️ 多功能工具专业版</div><div id="sidebarList"></div></aside>
 
 <main class="main-container" id="mainPage">
     <div class="hero">
         <div class="hero-title">
-            <div class="title-line1">🄼🅄🄻🅃🄸</div>
-            <div class="title-line2">🅃🄾🄾🄻</div>
+            <div class="title-line1">
+                <span class="multi-letter letter-m">多</span>
+                <span class="multi-letter letter-u">功</span>
+                <span class="multi-letter letter-l">能</span>
+                <span class="multi-letter letter-t">工</span>
+                <span class="multi-letter letter-i">具</span>
+            </div>
+            <div class="title-line2">
+                <span class="multi-letter letter-o">专</span>
+                <span class="multi-letter letter-o2">业</span>
+                <span class="multi-letter letter-l2">版</span>
+            </div>
         </div>
-        <span class="pro-line">专业版</span>
-        <div class="full-complete-badge">完整 + 全部功能</div>
-        <p class="subtitle">所有工具 · AI 中心 · 高级免费</p>
-        <div class="more-text">& 更多...</div>
+        <div class="pro-line">Pro</div>
+        <div class="full-complete-badge">完整工具包</div>
+        <p class="subtitle">所有工具 · 完全免费</p>
+        <div class="more-text">及更多...</div>
         <div class="star-rating" id="starRating">
             <div class="star-box" data-index="0"><span class="star empty">☆</span></div>
             <div class="star-box" data-index="1"><span class="star empty">☆</span></div>
@@ -136,476 +257,1149 @@
             <div class="star-box" data-index="3"><span class="star empty">☆</span></div>
             <div class="star-box" data-index="4"><span class="star empty">☆</span></div>
         </div>
-        <div class="love-phrase"><div class="premium-container"><span class="premium-ribbon">💎 100% 免费高级版</span><div class="orbiting-love"><div class="love-text">我 💗 工具</div></div></div></div>
+        <div class="love-phrase"><div class="premium-container"><span class="premium-ribbon">💎 100% 免费专业版</span><div class="orbiting-love"><div class="love-text">我 💗 工具</div></div></div></div>
     </div>
-    <div class="search-container"><input type="text" id="globalSearch" class="search-input" placeholder="🔍 搜索任何工具... 计算器、世界时钟、翻译器..."><div id="searchResults" class="search-results" style="display:none;"></div></div>
+    <div class="search-container"><input type="text" id="globalSearch" class="search-input" placeholder="🔍 搜索任何工具... 计算器, 世界时钟, 翻译..."><div id="searchResults" class="search-results" style="display:none;"></div></div>
+    
+    <div id="pullToRefresh" class="pull-to-refresh"></div>
+    
     <div class="tools-grid" id="toolsGrid"></div>
+    
     <div class="tool-panel" id="toolPanel"><h2 id="toolPanelTitle" style="font-size:1.8rem; margin-bottom:16px;">✨ 选择一个工具</h2><div id="toolContent"></div></div>
 </main>
 <footer class="footer-widget">
     <div class="footer-controls"><button class="footer-btn" onclick="toggleTheme()">🌓</button><button class="footer-btn" onclick="toggleSidebar()">☰</button><button class="footer-btn" id="muteBtn">🔊</button></div>
-    <p style="text-align:center;font-size:1rem;">© 2026 MultiTool Pro · 终极工具包 | <a href="#" style="color:var(--primary);font-weight:600;">隐私政策</a></p>
-    <div class="footer-love-line"><span id="scrollUpArrow" class="scroll-up-arrow" onclick="scrollToTop()" title="回到顶部">↑</span><span id="footerLove"><span class="heart-beat">💕</span> 用心制作</span><span class="footer-arrow-down" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">↓</span></div>
+    <p style="text-align:center; font-size:1rem;">© 2026 多功能工具专业版 · 终极工具包 | <a href="https://sites.google.com/view/multitool-pro/" target="_self" style="color:var(--primary); font-weight:600;">隐私政策</a></p>
+    <div class="footer-love-line"><span id="scrollUpArrow" class="scroll-up-arrow" onclick="scrollToTop()" title="回到顶部">↑</span><span>用 <span class="heart-beat">💕</span> 制作</span><span class="footer-arrow-down" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})" title="到底部">↓</span></div>
     <div class="random-trigger"><button id="randomToolBtn" class="random-btn">🎲 随机工具 <span class="arrow-down">⬇️</span></button></div>
 </footer>
 <div id="toast" class="toast"></div>
 
-<div id="smartChatWidget" class="chat-widget">
-    <div class="chat-button" id="chatButton">💬 <span class="chat-badge">AI</span></div>
-    <div class="chat-panel" id="chatPanel">
-        <div class="chat-header"><span id="chatHeaderTitle">🤖 MultiTool AI 助手</span><div class="chat-header-actions"><button class="chat-fullscreen-btn" id="chatFullscreenBtn" title="全屏">⛶</button><button class="chat-close-btn" id="chatCloseBtn">✕</button></div></div>
-        <div class="chat-messages" id="chatMessages"><div class="chat-message bot">👋 欢迎！我知道每个工具，输入名称即可。</div></div>
-        <div class="chat-input-area"><button class="chat-voice-btn" id="chatVoiceBtn">🎤</button><input type="text" id="chatInput" placeholder="例如 '计算器'、'pdf'"><button class="chat-send-btn" id="chatSendBtn">➤</button></div>
-        <div class="chat-voice-status" id="voiceStatus"></div>
-    </div>
-</div>
-
 <script>
-// ===== FULL SCRIPT – ALL TOOLS, CHINESE ONLY =====
+// ===================================================================
+// 完整脚本 – 仅保留34个核心工具，已删除所有多余覆盖层
+// ===================================================================
+
 let darkMode = localStorage.getItem('theme') === 'dark';
 if (darkMode) document.documentElement.setAttribute('data-theme', 'dark');
 let muted = localStorage.getItem('soundMuted') === 'true';
 let audioCtx = null;
 let calcExpr = '';
 
-function showToast(msg) { let t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2500); }
-function playSound() { if(muted)return; if(!audioCtx) audioCtx=new(window.AudioContext||window.webkitAudioContext)(); let osc=audioCtx.createOscillator(), gain=audioCtx.createGain(); osc.connect(gain); gain.connect(audioCtx.destination); osc.type='sine'; osc.frequency.value=660; gain.gain.setValueAtTime(0.08,audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.0001,audioCtx.currentTime+0.1); osc.start(); osc.stop(audioCtx.currentTime+0.1); }
-
-document.addEventListener('DOMContentLoaded',function(){ let muteBtn=document.getElementById('muteBtn'); if(muted)muteBtn.innerText='🔇'; muteBtn.onclick=function(){ muted=!muted; localStorage.setItem('soundMuted',muted); this.innerText=muted?'🔇':'🔊'; showToast(muted?'已静音':'已开启声音'); }; });
-
-function scrollToTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
-function toggleSidebar(){ document.getElementById('sidebar').classList.toggle('active'); document.getElementById('sidebarOverlay').classList.toggle('active'); }
-function closeSidebar(){ document.getElementById('sidebar').classList.remove('active'); document.getElementById('sidebarOverlay').classList.remove('active'); }
-function toggleTheme(){ darkMode=!darkMode; document.documentElement.setAttribute('data-theme',darkMode?'dark':'light'); localStorage.setItem('theme',darkMode?'dark':'light'); }
-
-let currentStar=0; const starBoxes=document.querySelectorAll('.star-box'); const totalStars=starBoxes.length;
-function fillNextStar(){ if(currentStar>=totalStars)return; const box=starBoxes[currentStar]; const starSpan=box.querySelector('.star'); starSpan.classList.remove('empty'); starSpan.classList.add('filled'); starSpan.textContent='★'; if(currentStar===totalStars-1)triggerFireworks(box); currentStar++; if(currentStar<totalStars)setTimeout(fillNextStar,400); }
-function triggerFireworks(starBox){ starBox.classList.add('explode'); const rect=starBox.getBoundingClientRect(); const cx=rect.left+rect.width/2, cy=rect.top+rect.height/2; const colors=['#ff0000','#ff7f00','#ffff00','#00ff00','#00ffff','#0000ff','#8b00ff','#ff33cc']; for(let i=0;i<60;i++){ const angle=Math.random()*Math.PI*2; const speed=3+Math.random()*6; const dx=Math.cos(angle)*speed*8, dy=Math.sin(angle)*speed*8; const p=document.createElement('div'); p.className='firework-particle'; p.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)]; p.style.left=cx+'px'; p.style.top=cy+'px'; p.style.setProperty('--dx',dx+'px'); p.style.setProperty('--dy',dy+'px'); document.body.appendChild(p); setTimeout(()=>p.remove(),800); } setTimeout(()=>starBox.classList.remove('explode'),600); }
-window.addEventListener('load',function(){ setTimeout(fillNextStar,500); });
-
-// Overlay functions
-function openConvertOverlay(){ document.getElementById('convertOverlay').classList.add('active'); renderConvertGrid(); }
-function closeConvertOverlay(){ document.getElementById('convertOverlay').classList.remove('active'); }
-function openAllAiTranslatorOverlay(){ document.getElementById('allAiTranslatorOverlay').classList.add('active'); renderAllAiTranslatorGrid(); }
-function closeAllAiTranslatorOverlay(){ document.getElementById('allAiTranslatorOverlay').classList.remove('active'); }
-function openOtherTools(){ document.getElementById('otherToolsOverlay').classList.add('active'); renderOtherToolsFull(); }
-function closeOtherOverlay(){ document.getElementById('otherToolsOverlay').classList.remove('active'); }
-function openAiTools(){ document.getElementById('aiToolsOverlay').classList.add('active'); renderAiToolsFull(); }
-function closeAiOverlay(){ document.getElementById('aiToolsOverlay').classList.remove('active'); }
-function closePremium(){ document.getElementById('premiumOverlay').classList.remove('active'); }
-function openBrowsersOverlay(){ document.getElementById('browsersOverlay').classList.add('active'); isFullscreen=false; isMobileView=true; document.getElementById('mobileViewBtn').textContent='💻 桌面模式'; document.getElementById('fullscreenMobileBtn').textContent='💻'; document.getElementById('browserFrame').src='about:blank'; document.getElementById('browserUrlInput').value=''; const frame=document.getElementById('browserFrame'); frame.classList.add('mobile-view'); frame.classList.remove('fullscreen'); document.getElementById('exitFullscreenBtn').style.display='none'; document.getElementById('fullscreenFloatBar').classList.remove('active'); document.getElementById('browsersControls').classList.remove('hidden'); renderBrowsersList(); }
-function closeBrowsersOverlay(){ if(isFullscreen)toggleBrowserFullscreen(); isMobileView=true; document.getElementById('browsersOverlay').classList.remove('active'); document.getElementById('browserFrame').src='about:blank'; }
-function renderBrowsersList(){ const container=document.getElementById('browsersList'); const browsers=[{name:'Google Chrome',icon:'🌐',color:'#4285F4'},{name:'Mozilla Firefox',icon:'🦊',color:'#FF7139'},{name:'Microsoft Edge',icon:'🔷',color:'#0078D7'},{name:'Opera',icon:'🔴',color:'#FF1B2D'},{name:'Brave',icon:'🦁',color:'#FB542B'},{name:'Safari',icon:'🧭',color:'#006CFF'},{name:'Vivaldi',icon:'🌊',color:'#EF3939'},{name:'Tor',icon:'🧅',color:'#7D4698'}]; container.innerHTML=browsers.map(b=>`<div class="browsers-card-item" onclick="selectBrowser('${b.name}')" style="border-bottom:4px solid ${b.color};"><div style="font-size:2.6rem;">${b.icon}</div><div style="font-weight:700;font-size:1.2rem;">${b.name}</div><div style="font-size:0.9rem;">点击选择</div></div>`).join(''); }
-function selectBrowser(name){ showToast(`浏览器模式: ${name}.`); }
-let isFullscreen=false,isMobileView=true;
-function loadBrowserUrl(){ let url=document.getElementById('browserUrlInput').value.trim(); if(!url){showToast('请输入网址');return;} if(!/^https?:\/\//i.test(url)) url='https://'+url; document.getElementById('browserFrame').src=url; if(isFullscreen)document.getElementById('fullscreenUrlInput').value=url; }
-function loadBrowserUrlFromFullscreen(){ let url=document.getElementById('fullscreenUrlInput').value.trim(); if(!url)return; if(!/^https?:\/\//i.test(url)) url='https://'+url; document.getElementById('browserFrame').src=url; document.getElementById('browserUrlInput').value=url; }
-function toggleBrowserFullscreen(){ const frame=document.getElementById('browserFrame'); if(!isFullscreen){ frame.classList.add('fullscreen'); document.getElementById('fullscreenFloatBar').classList.add('active'); document.getElementById('fullscreenUrlInput').value=document.getElementById('browserUrlInput').value||''; document.getElementById('fullscreenMobileBtn').textContent=isMobileView?'💻':'📱'; document.getElementById('browsersControls').classList.add('hidden'); isFullscreen=true; }else{ frame.classList.remove('fullscreen'); document.getElementById('fullscreenFloatBar').classList.remove('active'); document.getElementById('browsersControls').classList.remove('hidden'); isFullscreen=false; } }
-function toggleMobileView(){ if(isFullscreen){showToast('请先退出全屏');return;} isMobileView=!isMobileView; const frame=document.getElementById('browserFrame'); if(isMobileView){ frame.classList.add('mobile-view'); document.getElementById('mobileViewBtn').textContent='💻 桌面模式'; document.getElementById('fullscreenMobileBtn').textContent='💻'; }else{ frame.classList.remove('mobile-view'); document.getElementById('mobileViewBtn').textContent='📱 移动端模式'; document.getElementById('fullscreenMobileBtn').textContent='📱'; } }
-function openInternalTab(){ let url=document.getElementById('browserUrlInput').value.trim(); if(!url){showToast('请先输入网址');return;} if(!/^https?:\/\//i.test(url)) url='https://'+url; document.getElementById('internalTabUrlInput').value=url; document.getElementById('internalTabFrame').src=url; internalMobileView=true; document.getElementById('internalTabFrame').classList.add('mobile-view'); document.getElementById('internalTabMobileBtn').textContent='💻 桌面模式'; document.getElementById('internalTabOverlay').classList.add('active'); }
-function closeInternalTab(){ document.getElementById('internalTabOverlay').classList.remove('active'); document.getElementById('internalTabFrame').src='about:blank'; }
-function loadInternalTabUrl(){ let url=document.getElementById('internalTabUrlInput').value.trim(); if(!url)return; if(!/^https?:\/\//i.test(url)) url='https://'+url; document.getElementById('internalTabFrame').src=url; }
-let internalMobileView=true;
-function toggleInternalMobileView(){ const frame=document.getElementById('internalTabFrame'); internalMobileView=!internalMobileView; if(internalMobileView){ frame.classList.add('mobile-view'); document.getElementById('internalTabMobileBtn').textContent='💻 桌面模式'; }else{ frame.classList.remove('mobile-view'); document.getElementById('internalTabMobileBtn').textContent='📱 移动端模式'; } }
-
-function renderConvertGrid(){ const container=document.getElementById('convertGrid'); const sites=[{name:'PDFescape',icon:'📄',url:'https://www.pdfescape.com'},{name:'Sejda PDF',icon:'📑',url:'https://www.sejda.com'},{name:'PDF24',icon:'📋',url:'https://tools.pdf24.org'},{name:'PDF Candy',icon:'🍬',url:'https://pdfcandy.com'},{name:'PDF2Go',icon:'📤',url:'https://www.pdf2go.com'},{name:'Soda PDF',icon:'🥤',url:'https://www.sodapdf.com'},{name:'Foxit',icon:'🦊',url:'https://www.foxit.com/pdf-editor/'},{name:'DocHub',icon:'✍️',url:'https://dochub.com'},{name:'Fotor',icon:'🖼️',url:'https://www.fotor.com'},{name:'BeFunky',icon:'🎨',url:'https://www.befunky.com'},{name:'LunaPic',icon:'🌙',url:'https://www.lunapic.com'},{name:'Sumopaint',icon:'🖌️',url:'https://www.sumopaint.com'},{name:'Google Docs',icon:'📝',url:'https://docs.google.com'},{name:'Microsoft Office',icon:'📊',url:'https://www.office.com'},{name:'Zoho Writer',icon:'📃',url:'https://www.zoho.com/writer/'},{name:'OnlyOffice',icon:'🏢',url:'https://www.onlyoffice.com'},{name:'Zamzar',icon:'🔄',url:'https://www.zamzar.com'},{name:'Online-Convert',icon:'🔁',url:'https://www.online-convert.com'},{name:'FileZigZag',icon:'⚡',url:'https://www.filezigzag.com'},{name:'Aconvert',icon:'🔄',url:'https://www.aconvert.com'},{name:'FreeFileConvert',icon:'📂',url:'https://www.freefileconvert.com'},{name:'Media.io',icon:'🎬',url:'https://www.media.io'},{name:'VEED.io',icon:'✂️',url:'https://www.veed.io'},{name:'Clipchamp',icon:'🎞️',url:'https://clipchamp.com'}]; container.innerHTML=sites.map(s=>`<div class="convert-card" onclick="window.open('${s.url}','_self');"><div style="font-size:2.8rem;">${s.icon}</div><div style="font-weight:700;font-size:1.2rem;">${s.name}</div><div style="font-size:0.9rem;">点击打开</div></div>`).join(''); }
-
-function renderAllAiTranslatorGrid(){ const container=document.getElementById('allAiTranslatorGrid'); const sites=[{name:'谷歌翻译',icon:'🌐🔤',url:'https://translate.google.com'},{name:'Reverso',icon:'🔄',url:'https://www.reverso.net'},{name:'微软翻译',icon:'🪟',url:'https://www.bing.com/translator'},{name:'DeepL',icon:'🌐',url:'https://www.deepl.com'},{name:'百度翻译',icon:'🔵',url:'https://fanyi.baidu.com/'}]; container.innerHTML=sites.map(s=>`<div class="convert-card" onclick="window.open('${s.url}','_self');"><div style="font-size:2.8rem;">${s.icon}</div><div style="font-weight:700;font-size:1.2rem;">${s.name}</div><div style="font-size:0.9rem;">点击打开</div></div>`).join(''); }
-
-// Tools data
-const tools = [
-    {id:'calculator', icon:'🧮', name:'高级计算器'},
-    {id:'password', icon:'🔐', name:'密码生成器'},
-    {id:'wordcount', icon:'📝', name:'字数统计'},
-    {id:'caseconverter', icon:'🔤', name:'大小写转换'},
-    {id:'colorpicker', icon:'🎨', name:'颜色拾取器'},
-    {id:'unitconverter', icon:'📏', name:'单位转换器'},
-    {id:'stopwatch', icon:'⏱️', name:'秒表'},
-    {id:'qrcode', icon:'📱', name:'二维码生成'},
-    {id:'bmi', icon:'⚖️', name:'BMI 计算器'},
-    {id:'random', icon:'🎲', name:'随机数生成'},
-    {id:'countdown', icon:'⏳', name:'倒计时器'},
-    {id:'datediff', icon:'📅', name:'日期差计算'},
-    {id:'base64', icon:'🔣', name:'Base64 编解码'},
-    {id:'urlencode', icon:'🔗', name:'URL 编码解码'},
-    {id:'jsonformat', icon:'📋', name:'JSON 格式化'},
-    {id:'lorem', icon:'📄', name:'Lorem Ipsum 生成'},
-    {id:'currency', icon:'💱', name:'货币转换器'},
-    {id:'percentcalc', icon:'📊', name:'百分比计算'},
-    {id:'agecalc', icon:'🎂', name:'年龄计算器'},
-    {id:'binhex', icon:'💻', name:'二进制/十六进制'},
-    {id:'roman', icon:'🏛️', name:'罗马数字转换'},
-    {id:'tipcalc', icon:'💰', name:'小费计算器'},
-    {id:'worldclock', icon:'🕐', name:'世界时钟'},
-    {id:'dice', icon:'🎲', name:'骰子模拟器'},
-    {id:'coin', icon:'🪙', name:'抛硬币'},
-    {id:'joke', icon:'😂', name:'笑话生成器'},
-    {id:'ip', icon:'🌍', name:'IP 查询'},
-    {id:'ai_paraphraser', icon:'🔄', name:'AI 改写'},
-    {id:'ai_grammar', icon:'✅', name:'语法拼写检查'},
-    {id:'ai_summarizer', icon:'📄', name:'AI 摘要'},
-    {id:'ai_sentiment', icon:'😊', name:'情感分析'},
-    {id:'ai_keywords', icon:'🔑', name:'关键词提取'},
-    {id:'ai_readability', icon:'📖', name:'可读性检查'},
-    {id:'premium_ai', icon:'🔮', name:'✨ AI 文本增强'}
-];
-
-function renderGrid(){ let grid=document.getElementById('toolsGrid'); grid.innerHTML=tools.map(t=>`<div class="tool-card" data-tool="${t.id}" onclick="selectTool('${t.id}')"><div style="font-size:2.8rem;">${t.icon}</div><div class="tool-name">${t.name}</div></div>`).join(''); }
-function renderSidebar(){ let sidebar=document.getElementById('sidebarList'); sidebar.innerHTML=tools.map(t=>`<div class="sidebar-item" onclick="selectTool('${t.id}'); closeSidebar();"><span style="font-size:1.6rem;">${t.icon}</span> <span style="font-size:1rem;">${t.name}</span></div>`).join(''); }
-
-function selectTool(toolId){
-    if(toolId==='premium_ai'){ document.getElementById('premiumOverlay').classList.add('active'); document.getElementById('premiumContent').innerHTML=`<h2>🔮 AI 文本增强</h2><textarea id="aiDemoText" rows="4" class="search-input" placeholder="输入文本..."></textarea><select id="aiMode"><option value="grammar">语法修正</option><option value="professional">专业</option><option value="friendly">友好</option><option value="shorten">缩短</option><option value="expand">扩展</option><option value="simplify">简化</option></select><button class="tool-btn" onclick="demoAIEnhanceAdvanced()">增强</button><div id="aiDemoResult" class="tool-output"></div><button class="tool-btn" onclick="closePremium()">← 返回</button>`; return; }
-    closePremium(); document.getElementById('mainPage').style.display='block'; renderToolPanel(toolId); document.getElementById('toolPanel').scrollIntoView({behavior:'smooth'});
+function showToast(msg) {
+    let t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
+}
+function playSound() {
+    if (muted) return;
+    if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    let osc = audioCtx.createOscillator(),
+        gain = audioCtx.createGain();
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.type = 'sine';
+    osc.frequency.value = 660;
+    gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.1);
+    osc.start();
+    osc.stop(audioCtx.currentTime + 0.1);
 }
 
-function renderToolPanel(tid){
-    let title='', content='';
-    switch(tid){
+document.addEventListener('DOMContentLoaded', function() {
+    let muteBtn = document.getElementById('muteBtn');
+    if (muted) muteBtn.innerText = '🔇';
+    muteBtn.onclick = function() {
+        muted = !muted;
+        localStorage.setItem('soundMuted', muted);
+        this.innerText = muted ? '🔇' : '🔊';
+        showToast(muted ? '已静音' : '已开启声音');
+    };
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('active');
+    document.getElementById('sidebarOverlay').classList.toggle('active');
+}
+function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('active');
+    document.getElementById('sidebarOverlay').classList.remove('active');
+}
+function toggleTheme() {
+    darkMode = !darkMode;
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+}
+
+let currentStar = 0;
+const starBoxes = document.querySelectorAll('.star-box');
+const totalStars = starBoxes.length;
+function fillNextStar() {
+    if (currentStar >= totalStars) return;
+    const box = starBoxes[currentStar];
+    const starSpan = box.querySelector('.star');
+    starSpan.classList.remove('empty');
+    starSpan.classList.add('filled');
+    starSpan.textContent = '★';
+    if (currentStar === totalStars - 1) { triggerFireworks(box); }
+    currentStar++;
+    if (currentStar < totalStars) { setTimeout(fillNextStar, 400); }
+}
+function triggerFireworks(starBox) {
+    starBox.classList.add('explode');
+    const rect = starBox.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const colors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#00ffff', '#0000ff', '#8b00ff', '#ff33cc', '#ff6699'];
+    for (let i = 0; i < 60; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 3 + Math.random() * 6;
+        const dx = Math.cos(angle) * speed * 8;
+        const dy = Math.sin(angle) * speed * 8;
+        const particle = document.createElement('div');
+        particle.className = 'firework-particle';
+        particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        particle.style.left = centerX + 'px';
+        particle.style.top = centerY + 'px';
+        particle.style.setProperty('--dx', dx + 'px');
+        particle.style.setProperty('--dy', dy + 'px');
+        document.body.appendChild(particle);
+        setTimeout(() => particle.remove(), 800);
+    }
+    setTimeout(() => { starBox.classList.remove('explode'); }, 600);
+}
+window.addEventListener('load', function() { setTimeout(fillNextStar, 500); });
+
+// ===== 选择工具 =====
+function selectTool(toolId) {
+    if (toolId === 'premium_ai') {
+        document.getElementById('toolPanelTitle').innerHTML = '🔮 AI文本增强器';
+        document.getElementById('toolContent').innerHTML = `
+            <h2 style="font-size:1.8rem;">🔮 AI文本增强器 (多种模式)</h2>
+            <textarea id="aiDemoText" rows="4" class="search-input" placeholder="输入你的文本..."></textarea>
+            <div><select id="aiMode"><option value="grammar">语法修正</option><option value="professional">专业语气</option><option value="friendly">友好语气</option><option value="shorten">缩短</option><option value="expand">扩展</option><option value="simplify">简化</option></select></div>
+            <button class="tool-btn" onclick="demoAIEnhanceAdvanced()">增强</button>
+            <div id="aiDemoResult" class="tool-output"></div>
+        `;
+        return;
+    }
+    renderToolPanel(toolId);
+    document.getElementById('toolPanel').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ===== 工具面板 (完整) =====
+function renderToolPanel(tid) {
+    let title = '',
+        content = '';
+    switch (tid) {
         case 'calculator':
-            title='🧮 高级科学计算器';
-            content=`<div id="calcDisplay" style="font-size:2rem;padding:16px;background:var(--surface2);border-radius:20px;margin-bottom:16px;min-height:60px;">0</div>
-                <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;">
-                    ${['sin','cos','tan','log','ln','sqrt','^','π','e','(',')','7','8','9','/','DEL','4','5','6','*','C','1','2','3','-','0','.','=','+'].map(b=>`<button class="tool-btn calc-btn" onclick="appendCalc('${b}')" style="${b==='DEL'?'background:#e74c3c;':b==='C'?'background:#e67e22;':b==='='?'background:#27ae60;':''}">${b}</button>`).join('')}
+            title = '🧮 高级科学计算器';
+            content = `<div id="calcDisplay" style="font-size:2rem;padding:16px;background:var(--surface2);border-radius:20px;margin-bottom:16px;min-height:60px;word-break:break-all;">0</div>
+                <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:100%;">
+                    <button class="tool-btn calc-btn" onclick="appendCalc('sin(')">sin</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('cos(')">cos</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('tan(')">tan</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('log(')">log10</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('ln(')">ln</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('sqrt(')">√</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('^')">^</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('π')">π</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('e')">e</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('(')">(</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc(')')">)</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('7')">7</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('8')">8</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('9')">9</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('/')">/</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('DEL')" style="background:#e74c3c;">删除</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('4')">4</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('5')">5</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('6')">6</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('*')">×</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('C')" style="background:#e67e22;">清除</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('1')">1</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('2')">2</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('3')">3</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('-')">-</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('0')">0</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('.')">.</button>
+                    <button class="tool-btn calc-btn" onclick="evalCalc()" style="background:#27ae60;">=</button>
+                    <button class="tool-btn calc-btn" onclick="appendCalc('+')">+</button>
                 </div>
-                <div class="tool-output" style="margin-top:12px;"><strong>历史:</strong> <span id="calcHistory">无</span></div>
+                <div class="tool-output" style="margin-top:12px;"><strong>历史记录:</strong> <span id="calcHistory">无</span></div>
                 <div id="calcResult" class="tool-output"></div>`;
-            calcExpr=''; break;
+            calcExpr = '';
+            break;
         case 'password':
-            title='🔐 密码生成器';
-            content=`<div><label>长度: <input type="range" id="passLen" min="6" max="64" value="16" style="width:100%;"></label> <span id="lenVal">16</span></div>
-                <div><label><input type="checkbox" id="useUpper" checked> A-Z</label> <label><input type="checkbox" id="useLower" checked> a-z</label> <label><input type="checkbox" id="useDigits" checked> 0-9</label> <label><input type="checkbox" id="useSymbols" checked> !@#$%</label></div>
-                <div><label>排除易混淆: <input type="checkbox" id="excludeAmb"></label></div>
+            title = '🔐 高级密码生成器';
+            content = `<div><label>长度: <input type="range" id="passLen" min="6" max="64" value="16" style="width:100%;"></label> <span id="lenVal">16</span></div>
+                <div><label><input type="checkbox" id="useUpper" checked> 大写 A-Z</label> <label><input type="checkbox" id="useLower" checked> 小写 a-z</label> <label><input type="checkbox" id="useDigits" checked> 数字 0-9</label> <label><input type="checkbox" id="useSymbols" checked> 符号 !@#$%</label></div>
+                <div><label>排除易混淆字符: <input type="checkbox" id="excludeAmb"></label></div>
                 <button class="tool-btn" onclick="genPassAdvanced()">生成</button>
-                <div id="passOut" class="tool-output" style="font-family:monospace;font-size:1.2rem;"></div>
+                <div id="passOut" class="tool-output" style="font-family: monospace; font-size:1.2rem;"></div>
                 <div>强度: <span id="strengthMeter">—</span></div>`;
             break;
         case 'wordcount':
-            title='📝 字数统计';
-            content=`<textarea id="wcText" rows="6" class="search-input" placeholder="输入文本..."></textarea>
-                <div class="tool-output"><strong>单词:</strong> <span id="wcWord">0</span> | <strong>字符(含空格):</strong> <span id="wcChar">0</span> | <strong>字符(不含空格):</strong> <span id="wcCharNoSpace">0</span><br>
-                <strong>阅读时间:</strong> <span id="readTime">0</span> 分钟 | <strong>朗读时间:</strong> <span id="speakTime">0</span> 分钟<br>
-                <strong>关键词密度:</strong> <span id="keywordDensity">—</span></div>`;
+            title = '📝 字数与字符统计';
+            content = `<textarea id="wcText" rows="6" class="search-input" placeholder="在此输入或粘贴文本..."></textarea>
+                <div class="tool-output"><strong>单词数:</strong> <span id="wcWord">0</span>  | <strong>字符数(含空格):</strong> <span id="wcChar">0</span>  | <strong>字符数(不含空格):</strong> <span id="wcCharNoSpace">0</span><br>
+                <strong>阅读时间:</strong> <span id="readTime">0</span> 分钟  | <strong>朗读时间:</strong> <span id="speakTime">0</span> 分钟<br>
+                <strong>关键词密度 (前3):</strong> <span id="keywordDensity">—</span></div>`;
             break;
         case 'caseconverter':
-            title='🔤 大小写转换';
-            content=`<textarea id="caseText" class="search-input" placeholder="输入文本..."></textarea>
-                <div><button class="tool-btn" onclick="toUpper()">大写</button> <button class="tool-btn" onclick="toLower()">小写</button> <button class="tool-btn" onclick="toTitleCase()">首字母大写</button> <button class="tool-btn" onclick="toSentenceCase()">句子大小写</button> <button class="tool-btn" onclick="toAlternatingCase()">交替大小写</button> <button class="tool-btn" onclick="toInverseCase()">反转大小写</button></div>
+            title = '🔤 高级大小写转换器';
+            content = `<textarea id="caseText" class="search-input" placeholder="输入文本..."></textarea>
+                <div><button class="tool-btn" onclick="toUpper()">全部大写</button> <button class="tool-btn" onclick="toLower()">全部小写</button> <button class="tool-btn" onclick="toTitleCase()">标题大写</button> <button class="tool-btn" onclick="toSentenceCase()">句首大写</button> <button class="tool-btn" onclick="toAlternatingCase()">交替大小写</button> <button class="tool-btn" onclick="toInverseCase()">反转大小写</button></div>
                 <div id="caseOut" class="tool-output"></div>`;
             break;
         case 'colorpicker':
-            title='🎨 颜色拾取器';
-            content=`<input type="color" id="colorPick" value="#6c5ce7" style="width:80px;height:80px;border-radius:40px;">
+            title = '🎨 颜色选择器与转换';
+            content = `<input type="color" id="colorPick" value="#6c5ce7" style="width:80px;height:80px;border-radius:40px;">
                 <div id="colorShow" style="width:100px;height:100px;border-radius:50%;background:#6c5ce7;margin-top:12px;"></div>
                 <div>HEX: <span id="hexOut">#6c5ce7</span> | RGB: <span id="rgbOut">108,92,231</span> | HSL: <span id="hslOut">—</span></div>
                 <div><button class="tool-btn" onclick="copyColor('hex')">复制 HEX</button> <button class="tool-btn" onclick="copyColor('rgb')">复制 RGB</button> <button class="tool-btn" onclick="copyColor('hsl')">复制 HSL</button></div>
                 <div><strong>最近颜色:</strong> <span id="recentColors"></span></div>`;
             break;
         case 'unitconverter':
-            title='📏 单位转换';
-            content=`<div><select id="unitCategory" class="search-input" onchange="changeUnitCategory()"><option value="length">长度</option><option value="mass">质量</option><option value="volume">体积</option><option value="area">面积</option><option value="temperature">温度</option><option value="speed">速度</option><option value="time">时间</option><option value="digital">数字存储</option></select></div>
+            title = '📏 通用单位转换器';
+            content = `<div><select id="unitCategory" class="search-input" onchange="changeUnitCategory()"><option value="length">长度</option><option value="mass">质量</option><option value="volume">体积</option><option value="area">面积</option><option value="temperature">温度</option><option value="speed">速度</option><option value="time">时间</option><option value="digital">数字存储</option></select></div>
                 <div><input id="unitVal" type="number" class="search-input" placeholder="数值"><select id="unitFrom" class="search-input" style="width:auto;"></select> → <select id="unitTo" class="search-input" style="width:auto;"></select><button class="tool-btn" onclick="convertUnitAdvanced()">转换</button></div>
                 <div id="unitOut" class="tool-output"></div>`;
             break;
         case 'stopwatch':
-            title='⏱️ 秒表';
-            content=`<div id="swTime" style="font-size:4rem;">00:00:00.00</div>
-                <div><button class="tool-btn" onclick="startSW()">开始</button> <button class="tool-btn" onclick="pauseSW()">暂停</button> <button class="tool-btn" onclick="resetSW()">重置</button> <button class="tool-btn" onclick="recordLap()">计圈</button></div>
-                <div><strong>计圈:</strong> <ul id="lapList"></ul></div>`;
+            title = '⏱️ 秒表 (带圈数)';
+            content = `<div id="swTime" style="font-size:4rem;">00:00:00.00</div>
+                <div><button class="tool-btn" onclick="startSW()">开始</button> <button class="tool-btn" onclick="pauseSW()">暂停</button> <button class="tool-btn" onclick="resetSW()">重置</button> <button class="tool-btn" onclick="recordLap()">记录圈数</button></div>
+                <div><strong>圈数:</strong> <ul id="lapList"></ul></div>`;
             break;
         case 'qrcode':
-            title='📱 二维码生成';
-            content=`<input id="qrText" class="search-input" placeholder="文本或网址">
-                <div><label>大小: <select id="qrSize"><option>150</option><option selected>250</option><option>350</option></select></label> <label>纠错: <select id="qrEC"><option>L</option><option selected>M</option><option>Q</option><option>H</option></select></label></div>
+            title = '📱 二维码生成器 (可自定义)';
+            content = `<input id="qrText" class="search-input" placeholder="URL或文本">
+                <div><label>尺寸: <select id="qrSize"><option>150</option><option selected>250</option><option>350</option></select></label> <label>纠错等级: <select id="qrEC"><option>L</option><option selected>M</option><option>Q</option><option>H</option></select></label></div>
                 <div><label>前景色: <input type="color" id="qrFg" value="#000000"></label> <label>背景色: <input type="color" id="qrBg" value="#ffffff"></label></div>
                 <button class="tool-btn" onclick="genQRAdvanced()">生成</button>
                 <div id="qrImg" class="tool-output"></div>`;
             break;
         case 'bmi':
-            title='⚖️ BMI 计算器';
-            content=`<div><select id="bmiUnit" onchange="toggleBMIUnits()"><option value="metric">公制 (cm/kg)</option><option value="imperial">英制 (ft/in/lbs)</option></select></div>
+            title = '⚖️ BMI 计算器 (公制/英制)';
+            content = `<div><select id="bmiUnit" onchange="toggleBMIUnits()"><option value="metric">公制 (cm/kg)</option><option value="imperial">英制 (ft/in/lbs)</option></select></div>
                 <div id="bmiMetricDiv"><input id="bmiHeight" placeholder="身高 (cm)" class="search-input"><input id="bmiWeight" placeholder="体重 (kg)" class="search-input"></div>
-                <div id="bmiImperialDiv" style="display:none;"><input id="bmiHeightFt" placeholder="英尺" style="width:30%"> <input id="bmiHeightIn" placeholder="英寸" style="width:30%"> <input id="bmiWeightLbs" placeholder="体重 (lbs)"></div>
+                <div id="bmiImperialDiv" style="display:none;"><input id="bmiHeightFt" placeholder="英尺" class="search-input" style="width:30%"> <input id="bmiHeightIn" placeholder="英寸" class="search-input" style="width:30%"> <input id="bmiWeightLbs" placeholder="体重 (lbs)" class="search-input"></div>
                 <button class="tool-btn" onclick="calcBMIAdvanced()">计算</button>
                 <div id="bmiOut" class="tool-output"></div>`;
             break;
         case 'random':
-            title='🎲 随机数生成';
-            content=`<div><label>最小值: <input id="randMin" value="1" style="width:30%"></label> <label>最大值: <input id="randMax" value="100" style="width:30%"></label></div>
-                <div><label>数量: <input id="randCount" type="number" value="1" min="1" max="50" style="width:30%"></label> <label>允许重复: <input type="checkbox" id="randDuplicates"></label></div>
-                <div><label>排序: <input type="checkbox" id="randSort"></label> <label>小数位: <input id="randDecimals" type="number" value="0" min="0" max="5" style="width:30%"></label></div>
+            title = '🎲 随机数生成器 (多值)';
+            content = `<div><label>最小值: <input id="randMin" value="1" class="search-input" style="width:30%"></label> <label>最大值: <input id="randMax" value="100" class="search-input" style="width:30%"></label></div>
+                <div><label>生成数量: <input id="randCount" type="number" value="1" min="1" max="50" class="search-input" style="width:30%"></label> <label>允许重复: <input type="checkbox" id="randDuplicates"></label></div>
+                <div><label>排序结果: <input type="checkbox" id="randSort"></label> <label>小数位数: <input id="randDecimals" type="number" value="0" min="0" max="5" class="search-input" style="width:30%"></label></div>
                 <button class="tool-btn" onclick="genRandomAdvanced()">生成</button>
                 <div id="randOut" class="tool-output"></div>`;
             break;
         case 'countdown':
-            title='⏳ 倒计时';
-            content=`<div><label>分钟: <input id="cdMinutes" type="number" value="0" style="width:30%"></label> <label>秒: <input id="cdSecondsInput" type="number" value="60" style="width:30%"></label></div>
-                <div><button class="tool-btn" onclick="setPresetCD(60)">1分钟</button> <button class="tool-btn" onclick="setPresetCD(300)">5分钟</button> <button class="tool-btn" onclick="setPresetCD(600)">10分钟</button> <button class="tool-btn" onclick="setPresetCD(1800)">30分钟</button></div>
+            title = '⏳ 倒计时器 (分/秒)';
+            content = `<div><label>分钟: <input id="cdMinutes" type="number" value="0" min="0" class="search-input" style="width:30%"></label> <label>秒: <input id="cdSecondsInput" type="number" value="60" min="0" class="search-input" style="width:30%"></label></div>
+                <div><button class="tool-btn" onclick="setPresetCD(60)">1分钟</button> <button class="tool-btn" onclick="setPresetCD(300)">5分钟</button> <button class="tool-btn" onclick="setPresetCD(600)">10分钟</button> <button class="tool-btn" onclick="setPresetCD(1800)">30分钟</button> <button class="tool-btn" onclick="setPresetCD(3600)">1小时</button></div>
                 <div><button class="tool-btn" onclick="startCDAdvanced()">开始</button> <button class="tool-btn" onclick="pauseCD()">暂停</button> <button class="tool-btn" onclick="resetCDAdvanced()">重置</button></div>
                 <div id="cdDisplay" style="font-size:3rem;">00:00</div>
-                <div><input type="checkbox" id="cdSound"> 结束时提示音</div>`;
+                <div><input type="checkbox" id="cdSound"> 结束后播放声音</div>`;
             break;
         case 'datediff':
-            title='📅 日期差';
-            content=`<input type="date" id="date1" class="search-input"><input type="date" id="date2" class="search-input">
+            title = '📅 高级日期差计算';
+            content = `<input type="date" id="date1" class="search-input"><input type="date" id="date2" class="search-input">
                 <button class="tool-btn" onclick="diffDatesAdvanced()">计算差值</button>
                 <div id="dateOut" class="tool-output"></div>`;
             break;
         case 'base64':
-            title='🔣 Base64 编解码';
-            content=`<textarea id="b64Text" rows="3" class="search-input" placeholder="文本或Base64"></textarea>
+            title = '🔣 Base64 编码/解码 + 文件';
+            content = `<textarea id="b64Text" rows="3" class="search-input" placeholder="文本或Base64"></textarea>
                 <div><button class="tool-btn" onclick="b64Encode()">编码</button> <button class="tool-btn" onclick="b64Decode()">解码</button></div>
                 <div><input type="file" id="b64File"> <button class="tool-btn" onclick="fileToBase64()">文件转Base64</button> <button class="tool-btn" onclick="base64ToFile()">Base64转文件</button></div>
                 <div id="b64Out" class="tool-output"></div>`;
             break;
         case 'urlencode':
-            title='🔗 URL 编码解码';
-            content=`<input id="urlText" class="search-input" placeholder="URL或文本">
-                <div><button class="tool-btn" onclick="urlEnc()">编码</button> <button class="tool-btn" onclick="urlDec()">解码</button> <button class="tool-btn" onclick="urlEncFull()">完整编码</button></div>
+            title = '🔗 URL 编码/解码';
+            content = `<input id="urlText" class="search-input" placeholder="URL或文本">
+                <div><button class="tool-btn" onclick="urlEnc()">编码 (组件)</button> <button class="tool-btn" onclick="urlDec()">解码</button> <button class="tool-btn" onclick="urlEncFull()">编码 (完整URI)</button></div>
                 <div id="urlOut" class="tool-output"></div>`;
             break;
         case 'jsonformat':
-            title='📋 JSON 格式化';
-            content=`<textarea id="jsonIn" rows="6" class="search-input" placeholder='{"name":"test"}'></textarea>
+            title = '📋 JSON 格式化与验证';
+            content = `<textarea id="jsonIn" rows="6" class="search-input" placeholder='{"name":"test"}'></textarea>
                 <div><button class="tool-btn" onclick="formatJSON()">格式化</button> <button class="tool-btn" onclick="minifyJSON()">压缩</button> <button class="tool-btn" onclick="validateJSON()">验证</button></div>
                 <pre id="jsonOut" class="tool-output"></pre>`;
             break;
         case 'lorem':
-            title='📄 Lorem Ipsum';
-            content=`<div><label>类型: <select id="loremType"><option value="paragraphs">段落</option><option value="sentences">句子</option><option value="words">单词</option></select></label> <label>数量: <input id="loremCount" type="number" value="3" style="width:30%"></label></div>
+            title = '📄 Lorem Ipsum 生成器';
+            content = `<div><label>类型: <select id="loremType"><option value="paragraphs">段落</option><option value="sentences">句子</option><option value="words">单词</option></select></label> <label>数量: <input id="loremCount" type="number" value="3" class="search-input" style="width:30%"></label></div>
+                <div><label>包含HTML标记: <input type="checkbox" id="loremHtml"></label></div>
                 <button class="tool-btn" onclick="genLoremAdvanced()">生成</button>
                 <div id="loremOut" class="tool-output"></div>`;
             break;
         case 'currency':
-            title='💱 货币转换';
-            content=`<input id="currAmt" type="number" placeholder="金额" class="search-input">
+            title = '💱 货币转换器 (实时汇率)';
+            content = `<input id="currAmt" type="number" placeholder="金额" class="search-input">
                 <select id="currFrom" class="search-input" style="width:auto;"></select> → <select id="currTo" class="search-input" style="width:auto;"></select>
                 <button class="tool-btn" onclick="convCurrencyAdvanced()">转换</button>
                 <div id="currOut" class="tool-output"></div>`;
             break;
         case 'percentcalc':
-            title='📊 百分比计算';
-            content=`<div><button class="tool-btn" onclick="showPercentType('percent')">百分比</button> <button class="tool-btn" onclick="showPercentType('change')">变化</button> <button class="tool-btn" onclick="showPercentType('what')">占比</button></div>
-                <div id="percentPanel"><input id="percVal" placeholder="数值"><input id="percPer" placeholder="百分比"><button class="tool-btn" onclick="calcPercent()">计算</button></div>
+            title = '📊 百分比计算器 (3种模式)';
+            content = `<div><button class="tool-btn" onclick="showPercentType('percent')">求百分比</button> <button class="tool-btn" onclick="showPercentType('change')">百分比变化</button> <button class="tool-btn" onclick="showPercentType('what')">占百分比</button></div>
+                <div id="percentPanel"><input id="percVal" placeholder="数值" class="search-input"><input id="percPer" placeholder="百分比" class="search-input"><button class="tool-btn" onclick="calcPercent()">计算</button></div>
                 <div id="percOut" class="tool-output"></div>`;
             break;
         case 'agecalc':
-            title='🎂 年龄计算';
-            content=`<input type="date" id="dob" class="search-input"><button class="tool-btn" onclick="calcAgeAdvanced()">计算年龄</button>
+            title = '🎂 年龄计算器 (精确)';
+            content = `<input type="date" id="dob" class="search-input"><button class="tool-btn" onclick="calcAgeAdvanced()">计算年龄</button>
                 <div id="ageOut" class="tool-output"></div>`;
             break;
         case 'binhex':
-            title='💻 进制转换';
-            content=`<input id="binVal" class="search-input" placeholder="输入数字">
-                <button class="tool-btn" onclick="convertAllBases()">转换所有进制</button>
+            title = '💻 二进制/十六进制/十进制/八进制转换器';
+            content = `<input id="binVal" class="search-input" placeholder="输入数字 (dec/bin/hex/oct)">
+                <div><button class="tool-btn" onclick="convertAllBases()">转换所有进制</button></div>
                 <div id="binhexOut" class="tool-output"></div>`;
             break;
         case 'roman':
-            title='🏛️ 罗马数字';
-            content=`<input id="romanNum" class="search-input" placeholder="数字或罗马数字">
+            title = '🏛️ 罗马数字转换器 (↔)';
+            content = `<input id="romanNum" class="search-input" placeholder="数字 (1-3999) 或罗马数字">
                 <button class="tool-btn" onclick="convertRomanAdvanced()">转换</button>
                 <div id="romanOut" class="tool-output"></div>`;
             break;
         case 'tipcalc':
-            title='💰 小费计算';
-            content=`<input id="billAmt" placeholder="账单金额"><input id="tipPct" placeholder="小费%" value="15">
-                <div><label>分摊人数: <input id="splitNum" type="number" value="1" min="1" style="width:30%"></label></div>
+            title = '💰 小费计算器 (AA分摊)';
+            content = `<input id="billAmt" placeholder="账单金额" class="search-input"><input id="tipPct" placeholder="小费 %" value="15" class="search-input">
+                <div><label>分摊人数: <input id="splitNum" type="number" value="1" min="1" class="search-input" style="width:30%"></label></div>
                 <button class="tool-btn" onclick="calcTipAdvanced()">计算</button>
                 <div id="tipOut" class="tool-output"></div>`;
             break;
         case 'worldclock':
-            title='🕐 世界时钟';
-            content=`<div><input type="text" id="worldClockSearch" class="search-input" placeholder="筛选时区..." onkeyup="filterWorldClock()"></div>
-                <div><button class="tool-btn" onclick="toggleWorldClockFormat()">12/24小时切换</button> <button class="tool-btn" onclick="refreshWorldClock()">刷新</button></div>
+            title = '🕐 世界时钟 (所有时区)';
+            content = `<div><input type="text" id="worldClockSearch" class="search-input" placeholder="过滤时区..." onkeyup="filterWorldClock()"></div>
+                <div><button class="tool-btn" onclick="toggleWorldClockFormat()">切换 12/24h</button> <button class="tool-btn" onclick="refreshWorldClock()">刷新</button></div>
                 <div id="worldClockContainer" class="tool-output" style="font-size:0.9rem;">加载中...</div>`;
             break;
         case 'dice':
-            title='🎲 骰子';
-            content=`<div><label>数量: <input id="diceCount" type="number" min="1" max="6" value="1" style="width:30%"></label> <label>面数: <select id="diceSidesSelect"><option value="4">d4</option><option value="6" selected>d6</option><option value="8">d8</option><option value="10">d10</option><option value="12">d12</option><option value="20">d20</option></select></label></div>
+            title = '🎲 骰子投掷器 (多骰子)';
+            content = `<div><label>骰子数量: <input id="diceCount" type="number" min="1" max="6" value="1" class="search-input" style="width:30%"></label> <label>面数: <select id="diceSidesSelect"><option value="4">d4</option><option value="6" selected>d6</option><option value="8">d8</option><option value="10">d10</option><option value="12">d12</option><option value="20">d20</option></select></label></div>
                 <button class="tool-btn" onclick="rollMultipleDice()">投掷</button>
                 <div id="diceOut" class="tool-output"></div>`;
             break;
         case 'coin':
-            title='🪙 抛硬币';
-            content=`<button class="tool-btn" onclick="flipCoinAdvanced()">抛硬币</button>
+            title = '🪙 抛硬币 (连击计数)';
+            content = `<button class="tool-btn" onclick="flipCoinAdvanced()">抛硬币</button>
                 <div id="coinOut" class="tool-output"></div>
-                <div>连续: <span id="coinStreak">0</span></div>`;
+                <div>连击: <span id="coinStreak">0</span></div>`;
             break;
         case 'joke':
-            title='😂 笑话';
-            content=`<div><select id="jokeCategory"><option value="Any">任意</option><option value="Programming">编程</option><option value="Misc">杂项</option><option value="Pun">双关</option></select><input type="checkbox" id="safeMode" checked> 安全模式</div>
+            title = '😂 笑话生成器 (分类)';
+            content = `<div><select id="jokeCategory"><option value="Any">任意</option><option value="Programming">编程</option><option value="Misc">杂项</option><option value="Pun">双关</option><option value="Dark">黑色幽默</option></select>
+                <input type="checkbox" id="safeMode" checked> 安全模式</div>
                 <button class="tool-btn" onclick="fetchNewJokeAdvanced()">获取笑话</button>
-                <div id="jokeOutput" class="tool-output">点击获取笑话!</div>`;
+                <div id="jokeOutput" class="tool-output">点击获取笑话！</div>`;
             break;
         case 'ip':
-            title='🌍 IP 查询';
-            content=`<button class="tool-btn" onclick="getIPAdvanced()">获取我的IP信息</button>
+            title = '🌍 IP 查询 (地理位置)';
+            content = `<button class="tool-btn" onclick="getIPAdvanced()">获取我的IP信息</button>
                 <div id="ipOut" class="tool-output"></div>`;
             break;
         case 'ai_paraphraser':
-            title='🔄 AI 改写';
-            content=`<textarea id="paraphraserText" rows="4" class="search-input" placeholder="输入文本..."></textarea><button class="tool-btn" onclick="runParaphraserTool()">改写</button><div id="paraphraserOut" class="tool-output"></div>`;
+            title = '🔄 AI 改写器';
+            content = `<textarea id="paraphraserText" rows="4" class="search-input" placeholder="输入要改写的文本..."></textarea>
+                <button class="tool-btn" onclick="runParaphraserTool()">改写</button>
+                <div id="paraphraserOut" class="tool-output"></div>`;
             break;
         case 'ai_grammar':
-            title='✅ 语法检查';
-            content=`<textarea id="grammarText" rows="4" class="search-input" placeholder="输入文本..."></textarea><button class="tool-btn" onclick="runGrammarTool()">检查</button><div id="grammarOut" class="tool-output"></div>`;
+            title = '✅ 语法与拼写检查';
+            content = `<textarea id="grammarText" rows="4" class="search-input" placeholder="输入要检查的文本..."></textarea>
+                <button class="tool-btn" onclick="runGrammarTool()">检查语法</button>
+                <div id="grammarOut" class="tool-output"></div>`;
             break;
         case 'ai_summarizer':
-            title='📄 AI 摘要';
-            content=`<textarea id="summarizerText" rows="5" class="search-input" placeholder="长文本..."></textarea><button class="tool-btn" onclick="runSummarizerTool()">摘要</button><div id="summarizerOut" class="tool-output"></div>`;
+            title = '📄 AI 摘要生成器';
+            content = `<textarea id="summarizerText" rows="5" class="search-input" placeholder="粘贴长文本以生成摘要..."></textarea>
+                <button class="tool-btn" onclick="runSummarizerTool()">生成摘要</button>
+                <div id="summarizerOut" class="tool-output"></div>`;
             break;
         case 'ai_sentiment':
-            title='😊 情感分析';
-            content=`<textarea id="sentimentText" rows="4" class="search-input" placeholder="输入文本..."></textarea><button class="tool-btn" onclick="runSentimentTool()">分析</button><div id="sentimentOut" class="tool-output"></div>`;
+            title = '😊 情感分析';
+            content = `<textarea id="sentimentText" rows="4" class="search-input" placeholder="输入要分析情感的文本..."></textarea>
+                <button class="tool-btn" onclick="runSentimentTool()">分析情感</button>
+                <div id="sentimentOut" class="tool-output"></div>`;
             break;
         case 'ai_keywords':
-            title='🔑 关键词提取';
-            content=`<textarea id="keywordsText" rows="4" class="search-input" placeholder="输入文本..."></textarea><button class="tool-btn" onclick="runKeywordsTool()">提取</button><div id="keywordsOut" class="tool-output"></div>`;
+            title = '🔑 关键词提取器';
+            content = `<textarea id="keywordsText" rows="4" class="search-input" placeholder="输入要提取关键词的文本..."></textarea>
+                <button class="tool-btn" onclick="runKeywordsTool()">提取关键词</button>
+                <div id="keywordsOut" class="tool-output"></div>`;
             break;
         case 'ai_readability':
-            title='📖 可读性';
-            content=`<textarea id="readabilityText" rows="4" class="search-input" placeholder="输入文本..."></textarea><button class="tool-btn" onclick="runReadabilityTool()">检查</button><div id="readabilityOut" class="tool-output"></div>`;
+            title = '📖 可读性检查器';
+            content = `<textarea id="readabilityText" rows="4" class="search-input" placeholder="输入要检查可读性的文本..."></textarea>
+                <button class="tool-btn" onclick="runReadabilityTool()">检查可读性</button>
+                <div id="readabilityOut" class="tool-output"></div>`;
             break;
-        case 'premium_ai':
-            title='🔮 AI 文本增强';
-            content=`<textarea id="aiDemoText" rows="4" class="search-input" placeholder="输入文本..."></textarea><select id="aiMode"><option value="grammar">语法修正</option><option value="professional">专业</option><option value="friendly">友好</option><option value="shorten">缩短</option><option value="expand">扩展</option><option value="simplify">简化</option></select><button class="tool-btn" onclick="demoAIEnhanceAdvanced()">增强</button><div id="aiDemoResult" class="tool-output"></div>`;
-            break;
-        default: title='✨ 工具'; content='<div class="tool-output">准备就绪。</div>';
+        default:
+            title = '✨ 工具';
+            content = '<div class="tool-output">准备就绪。</div>';
     }
-    document.getElementById('toolPanelTitle').innerHTML=title;
-    document.getElementById('toolContent').innerHTML=content;
-    if(tid==='wordcount') document.getElementById('wcText')?.addEventListener('input',updateWordCount);
-    if(tid==='password') document.getElementById('passLen')?.addEventListener('input',(e)=>document.getElementById('lenVal').innerText=e.target.value);
-    if(tid==='colorpicker') document.getElementById('colorPick')?.addEventListener('input',updateColorFromPicker);
-    if(tid==='unitconverter') changeUnitCategory();
-    if(tid==='currency') loadCurrencyList();
-    if(tid==='worldclock'){ refreshWorldClock(); setInterval(refreshWorldClock,60000); }
+    document.getElementById('toolPanelTitle').innerHTML = title;
+    document.getElementById('toolContent').innerHTML = content;
+    if (tid === 'wordcount') document.getElementById('wcText')?.addEventListener('input', updateWordCount);
+    if (tid === 'password') document.getElementById('passLen')?.addEventListener('input', (e) => document.getElementById('lenVal').innerText = e.target.value);
+    if (tid === 'colorpicker') document.getElementById('colorPick')?.addEventListener('input', updateColorFromPicker);
+    if (tid === 'unitconverter') changeUnitCategory();
+    if (tid === 'currency') loadCurrencyList();
+    if (tid === 'worldclock') { refreshWorldClock();
+        setInterval(refreshWorldClock, 60000); }
 }
 
-// Tool implementations (abbreviated but fully functional)
-let calcHistory=[];
+// ===== 各个工具的具体功能 =====
+let calcHistory = [];
+function appendCalc(v) {
+    if (v === 'C') { calcExpr = ''; } else if (v === 'DEL') { calcExpr = calcExpr.slice(0, -1); } else { calcExpr += v; }
+    const display = document.getElementById('calcDisplay');
+    if (display) display.textContent = calcExpr || '0';
+}
+function evalCalc() {
+    let expr = calcExpr;
+    if (!expr) return;
+    try {
+        expr = expr.replace(/sin\(/g, 'Math.sin(');
+        expr = expr.replace(/cos\(/g, 'Math.cos(');
+        expr = expr.replace(/tan\(/g, 'Math.tan(');
+        expr = expr.replace(/log\(/g, 'Math.log10(');
+        expr = expr.replace(/ln\(/g, 'Math.log(');
+        expr = expr.replace(/sqrt\(/g, 'Math.sqrt(');
+        expr = expr.replace(/π/g, 'Math.PI');
+        expr = expr.replace(/\be\b/g, 'Math.E');
+        expr = expr.replace(/\^/g, '**');
+        let result = new Function('return ' + expr)();
+        calcHistory.unshift(`${calcExpr} = ${result}`);
+        if (calcHistory.length > 5) calcHistory.pop();
+        document.getElementById('calcHistory').innerHTML = calcHistory.join('<br>');
+        document.getElementById('calcResult').innerHTML = '<strong>结果:</strong> ' + result;
+        calcExpr = String(result);
+        const display = document.getElementById('calcDisplay');
+        if (display) display.textContent = result;
+    } catch (e) { document.getElementById('calcResult').innerHTML = '错误'; }
+}
 
-function appendCalc(v){ if(v==='C') calcExpr=''; else if(v==='DEL') calcExpr=calcExpr.slice(0,-1); else calcExpr+=v; document.getElementById('calcDisplay').textContent=calcExpr||'0'; }
-function evalCalc(){ let expr=calcExpr; try{ expr=expr.replace(/sin\(/g,'Math.sin(').replace(/cos\(/g,'Math.cos(').replace(/tan\(/g,'Math.tan(').replace(/log\(/g,'Math.log10(').replace(/ln\(/g,'Math.log(').replace(/sqrt\(/g,'Math.sqrt(').replace(/π/g,'Math.PI').replace(/\^/g,'**'); let result=new Function('return '+expr)(); calcHistory.unshift(calcExpr+' = '+result); if(calcHistory.length>5)calcHistory.pop(); document.getElementById('calcHistory').innerHTML=calcHistory.join('<br>'); document.getElementById('calcResult').innerHTML='<strong>结果:</strong> '+result; calcExpr=String(result); document.getElementById('calcDisplay').textContent=result; }catch(e){ document.getElementById('calcResult').innerHTML='错误'; } }
+function genPassAdvanced() {
+    let len = parseInt(document.getElementById('passLen').value);
+    let upper = document.getElementById('useUpper').checked;
+    let lower = document.getElementById('useLower').checked;
+    let digits = document.getElementById('useDigits').checked;
+    let symbols = document.getElementById('useSymbols').checked;
+    let exclude = document.getElementById('excludeAmb').checked;
+    let charSet = '';
+    if (upper) charSet += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if (lower) charSet += 'abcdefghijklmnopqrstuvwxyz';
+    if (digits) charSet += '0123456789';
+    if (symbols) charSet += '!@#$%^&*()_+[]{};:,.<>?';
+    if (exclude) charSet = charSet.replace(/[il1Lo0O]/g, '');
+    if (charSet === '') { showToast('至少选择一种字符集'); return; }
+    let pwd = '';
+    for (let i = 0; i < len; i++) pwd += charSet[Math.floor(Math.random() * charSet.length)];
+    document.getElementById('passOut').innerText = pwd;
+    let strength = '弱';
+    if (len >= 12 && upper && lower && digits && symbols) strength = '强';
+    else if (len >= 8 && ((upper && lower) || (digits && symbols))) strength = '中';
+    document.getElementById('strengthMeter').innerHTML = strength;
+}
 
-function genPassAdvanced(){ let len=parseInt(document.getElementById('passLen').value), charSet=''; if(document.getElementById('useUpper').checked) charSet+='ABCDEFGHIJKLMNOPQRSTUVWXYZ'; if(document.getElementById('useLower').checked) charSet+='abcdefghijklmnopqrstuvwxyz'; if(document.getElementById('useDigits').checked) charSet+='0123456789'; if(document.getElementById('useSymbols').checked) charSet+='!@#$%^&*()_+[]{};:,.<>?'; if(document.getElementById('excludeAmb').checked) charSet=charSet.replace(/[il1Lo0O]/g,''); if(!charSet){showToast('请至少选择一种字符集');return;} let pwd=''; for(let i=0;i<len;i++) pwd+=charSet[Math.floor(Math.random()*charSet.length)]; document.getElementById('passOut').innerText=pwd; let strength='弱'; if(len>=12&&document.getElementById('useUpper').checked&&document.getElementById('useLower').checked&&document.getElementById('useDigits').checked&&document.getElementById('useSymbols').checked) strength='强'; else if(len>=8) strength='中'; document.getElementById('strengthMeter').innerHTML=strength; }
+function updateWordCount() {
+    let t = document.getElementById('wcText').value;
+    let words = t.trim().split(/\s+/).filter(w => w.length > 0);
+    let chars = t.length;
+    let charsNoSpace = t.replace(/\s/g, '').length;
+    document.getElementById('wcWord').innerText = words.length;
+    document.getElementById('wcChar').innerText = chars;
+    document.getElementById('wcCharNoSpace').innerText = charsNoSpace;
+    let readTime = Math.ceil(words.length / 200);
+    let speakTime = Math.ceil(words.length / 130);
+    document.getElementById('readTime').innerText = readTime;
+    document.getElementById('speakTime').innerText = speakTime;
+    let freq = {};
+    words.forEach(w => { let low = w.toLowerCase();
+        freq[low] = (freq[low] || 0) + 1; });
+    let sorted = Object.entries(freq).sort((a, b) => b[1] - a[1]).slice(0, 3);
+    document.getElementById('keywordDensity').innerHTML = sorted.map(([k, v]) => `${k} (${v})`).join(', ') || '—';
+}
 
-function updateWordCount(){ let t=document.getElementById('wcText').value, words=t.trim().split(/\s+/).filter(w=>w.length>0); document.getElementById('wcWord').innerText=words.length; document.getElementById('wcChar').innerText=t.length; document.getElementById('wcCharNoSpace').innerText=t.replace(/\s/g,'').length; document.getElementById('readTime').innerText=Math.ceil(words.length/200); document.getElementById('speakTime').innerText=Math.ceil(words.length/130); let freq={}; words.forEach(w=>{let low=w.toLowerCase(); freq[low]=(freq[low]||0)+1;}); let sorted=Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,3); document.getElementById('keywordDensity').innerHTML=sorted.map(([k,v])=>`${k} (${v})`).join(', ')||'—'; }
+function toUpper() { document.getElementById('caseOut').innerText = document.getElementById('caseText').value.toUpperCase(); }
+function toLower() { document.getElementById('caseOut').innerText = document.getElementById('caseText').value.toLowerCase(); }
+function toTitleCase() { let txt = document.getElementById('caseText').value; document.getElementById('caseOut').innerText = txt.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.substr(1).toLowerCase()); }
+function toSentenceCase() { let txt = document.getElementById('caseText').value; document.getElementById('caseOut').innerText = txt.replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase()); }
+function toAlternatingCase() { let txt = document.getElementById('caseText').value; let result = ''; for (let i = 0; i < txt.length; i++) result += i % 2 ? txt[i].toLowerCase() : txt[i].toUpperCase(); document.getElementById('caseOut').innerHTML = result; }
+function toInverseCase() { let txt = document.getElementById('caseText').value; let result = ''; for (let c of txt) result += c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase(); document.getElementById('caseOut').innerHTML = result; }
 
-function toUpper(){ document.getElementById('caseOut').innerText=document.getElementById('caseText').value.toUpperCase(); }
-function toLower(){ document.getElementById('caseOut').innerText=document.getElementById('caseText').value.toLowerCase(); }
-function toTitleCase(){ document.getElementById('caseOut').innerText=document.getElementById('caseText').value.replace(/\w\S*/g,w=>w.charAt(0).toUpperCase()+w.substr(1).toLowerCase()); }
-function toSentenceCase(){ document.getElementById('caseOut').innerText=document.getElementById('caseText').value.replace(/(^\s*\w|[.!?]\s*\w)/g,c=>c.toUpperCase()); }
-function toAlternatingCase(){ let txt=document.getElementById('caseText').value,r=''; for(let i=0;i<txt.length;i++) r+=i%2?txt[i].toLowerCase():txt[i].toUpperCase(); document.getElementById('caseOut').innerHTML=r; }
-function toInverseCase(){ let txt=document.getElementById('caseText').value,r=''; for(let c of txt) r+=c===c.toUpperCase()?c.toLowerCase():c.toUpperCase(); document.getElementById('caseOut').innerHTML=r; }
+let recentColors = JSON.parse(localStorage.getItem('recentColors') || '[]');
+function updateColorFromPicker() {
+    let col = document.getElementById('colorPick').value;
+    document.getElementById('colorShow').style.background = col;
+    document.getElementById('hexOut').innerText = col;
+    let r = parseInt(col.slice(1, 3), 16),
+        g = parseInt(col.slice(3, 5), 16),
+        b = parseInt(col.slice(5, 7), 16);
+    document.getElementById('rgbOut').innerText = `${r},${g},${b}`;
+    let hsl = rgbToHsl(r, g, b);
+    document.getElementById('hslOut').innerText = `${hsl[0].toFixed(0)}°,${(hsl[1] * 100).toFixed(0)}%,${(hsl[2] * 100).toFixed(0)}%`;
+    if (!recentColors.includes(col)) { recentColors.unshift(col); if (recentColors.length > 5) recentColors.pop();
+        localStorage.setItem('recentColors', JSON.stringify(recentColors)); }
+    document.getElementById('recentColors').innerHTML = recentColors.map(c =>
+        `<span style="display:inline-block;width:30px;height:30px;background:${c};border-radius:50%;margin:0 5px;cursor:pointer;" onclick="document.getElementById('colorPick').value='${c}';updateColorFromPicker();"></span>`
+    ).join('');
+}
+function rgbToHsl(r, g, b) { r /= 255, g /= 255, b /= 255; let max = Math.max(r, g, b),
+        min = Math.min(r, g, b); let h, s, l = (max + min) / 2; if (max === min) h = s = 0; else { let d = max - min; s = l > 0.5 ? d / (2 - max - min) : d / (max + min); switch (max) { case r: h = (g - b) / d + (g < b ? 6 : 0); break; case g: h = (b - r) / d + 2; break; case b: h = (r - g) / d + 4; break; } h /= 6; } return [h * 360, s, l]; }
+function copyColor(type) {
+    let hex = document.getElementById('hexOut').innerText;
+    let rgb = document.getElementById('rgbOut').innerText;
+    let hsl = document.getElementById('hslOut').innerText;
+    let copyText = type === 'hex' ? hex : type === 'rgb' ? `rgb(${rgb})` : hsl;
+    navigator.clipboard.writeText(copyText);
+    showToast(`已复制 ${copyText}`);
+}
 
-let recentColors=JSON.parse(localStorage.getItem('recentColors')||'[]');
-function updateColorFromPicker(){ let col=document.getElementById('colorPick').value; document.getElementById('colorShow').style.background=col; document.getElementById('hexOut').innerText=col; let r=parseInt(col.slice(1,3),16),g=parseInt(col.slice(3,5),16),b=parseInt(col.slice(5,7),16); document.getElementById('rgbOut').innerText=`${r},${g},${b}`; let hsl=rgbToHsl(r,g,b); document.getElementById('hslOut').innerText=`${hsl[0].toFixed(0)}°,${(hsl[1]*100).toFixed(0)}%,${(hsl[2]*100).toFixed(0)}%`; if(!recentColors.includes(col)){recentColors.unshift(col); if(recentColors.length>5)recentColors.pop(); localStorage.setItem('recentColors',JSON.stringify(recentColors));} document.getElementById('recentColors').innerHTML=recentColors.map(c=>`<span style="display:inline-block;width:30px;height:30px;background:${c};border-radius:50%;margin:0 5px;cursor:pointer;" onclick="document.getElementById('colorPick').value='${c}';updateColorFromPicker();"></span>`).join(''); }
-function rgbToHsl(r,g,b){ r/=255;g/=255;b/=255; let max=Math.max(r,g,b),min=Math.min(r,g,b); let h,s,l=(max+min)/2; if(max===min)h=s=0; else{let d=max-min; s=l>0.5?d/(2-max-min):d/(max+min); switch(max){case r:h=(g-b)/d+(g<b?6:0);break;case g:h=(b-r)/d+2;break;case b:h=(r-g)/d+4;break;}h/=6;} return[h*360,s,l]; }
-function copyColor(type){ let hex=document.getElementById('hexOut').innerText, rgb=document.getElementById('rgbOut').innerText, hsl=document.getElementById('hslOut').innerText; let copyText=type==='hex'?hex:type==='rgb'?`rgb(${rgb})`:hsl; navigator.clipboard.writeText(copyText); showToast('已复制 '+copyText); }
+const unitDefs = {
+    length: { units: ['mm', 'cm', 'm', 'km', 'in', 'ft', 'yd', 'mi'], conv: { mm: 0.001, cm: 0.01, m: 1, km: 1000, in: 0.0254, ft: 0.3048, yd: 0.9144, mi: 1609.344 } },
+    mass: { units: ['mg', 'g', 'kg', 'oz', 'lb', 't'], conv: { mg: 0.000001, g: 0.001, kg: 1, oz: 0.0283495, lb: 0.453592, t: 1000 } },
+    volume: { units: ['ml', 'l', 'cup', 'gal', 'floz'], conv: { ml: 0.001, l: 1, cup: 0.236588, gal: 3.78541, floz: 0.0295735 } },
+    area: { units: ['m2', 'cm2', 'ft2', 'in2', 'acre'], conv: { m2: 1, cm2: 0.0001, ft2: 0.092903, in2: 0.00064516, acre: 4046.86 } },
+    temperature: { units: ['C', 'F', 'K'], conv: null },
+    speed: { units: ['m/s', 'km/h', 'mph', 'kn'], conv: { 'm/s': 1, 'km/h': 0.277778, 'mph': 0.44704, 'kn': 0.514444 } },
+    time: { units: ['s', 'min', 'h', 'day'], conv: { s: 1, min: 60, h: 3600, day: 86400 } },
+    digital: { units: ['B', 'KB', 'MB', 'GB', 'TB'], conv: { B: 1, KB: 1024, MB: 1048576, GB: 1073741824, TB: 1099511627776 } }
+};
+function changeUnitCategory() {
+    let cat = document.getElementById('unitCategory').value;
+    let fromSel = document.getElementById('unitFrom');
+    let toSel = document.getElementById('unitTo');
+    let units = unitDefs[cat].units;
+    fromSel.innerHTML = units.map(u => `<option value="${u}">${u}</option>`).join('');
+    toSel.innerHTML = units.map(u => `<option value="${u}">${u}</option>`).join('');
+}
+function convertUnitAdvanced() {
+    let cat = document.getElementById('unitCategory').value;
+    let val = parseFloat(document.getElementById('unitVal').value);
+    let from = document.getElementById('unitFrom').value;
+    let to = document.getElementById('unitTo').value;
+    if (isNaN(val)) { document.getElementById('unitOut').innerHTML = '请输入数字'; return; }
+    let result;
+    if (cat === 'temperature') {
+        let celsius;
+        if (from === 'C') celsius = val;
+        else if (from === 'F') celsius = (val - 32) * 5 / 9;
+        else celsius = val - 273.15;
+        if (to === 'C') result = celsius;
+        else if (to === 'F') result = celsius * 9 / 5 + 32;
+        else result = celsius + 273.15;
+        document.getElementById('unitOut').innerHTML = `${val} ${from} = ${result.toFixed(4)} ${to}`;
+    } else {
+        let conv = unitDefs[cat].conv;
+        let base = val * conv[from];
+        result = base / conv[to];
+        document.getElementById('unitOut').innerHTML = `${val} ${from} = ${result.toFixed(6)} ${to}`;
+    }
+}
 
-const unitDefs={length:{units:['mm','cm','m','km','in','ft','yd','mi'],conv:{mm:0.001,cm:0.01,m:1,km:1000,in:0.0254,ft:0.3048,yd:0.9144,mi:1609.344}},mass:{units:['mg','g','kg','oz','lb','t'],conv:{mg:0.000001,g:0.001,kg:1,oz:0.0283495,lb:0.453592,t:1000}},volume:{units:['ml','l','cup','gal','floz'],conv:{ml:0.001,l:1,cup:0.236588,gal:3.78541,floz:0.0295735}},area:{units:['m2','cm2','ft2','in2','acre'],conv:{m2:1,cm2:0.0001,ft2:0.092903,in2:0.00064516,acre:4046.86}},temperature:{units:['C','F','K'],conv:null},speed:{units:['m/s','km/h','mph','kn'],conv:{'m/s':1,'km/h':0.277778,'mph':0.44704,'kn':0.514444}},time:{units:['s','min','h','day'],conv:{s:1,min:60,h:3600,day:86400}},digital:{units:['B','KB','MB','GB','TB'],conv:{B:1,KB:1024,MB:1048576,GB:1073741824,TB:1099511627776}}};
-function changeUnitCategory(){ let cat=document.getElementById('unitCategory').value, fromSel=document.getElementById('unitFrom'), toSel=document.getElementById('unitTo'); let units=unitDefs[cat].units; fromSel.innerHTML=units.map(u=>`<option value="${u}">${u}</option>`).join(''); toSel.innerHTML=units.map(u=>`<option value="${u}">${u}</option>`).join(''); }
-function convertUnitAdvanced(){ let cat=document.getElementById('unitCategory').value,val=parseFloat(document.getElementById('unitVal').value),from=document.getElementById('unitFrom').value,to=document.getElementById('unitTo').value; if(isNaN(val)){showToast('请输入数字');return;} let result; if(cat==='temperature'){ let celsius; if(from==='C')celsius=val; else if(from==='F')celsius=(val-32)*5/9; else celsius=val-273.15; if(to==='C')result=celsius; else if(to==='F')result=celsius*9/5+32; else result=celsius+273.15; document.getElementById('unitOut').innerHTML=`${val} ${from} = ${result.toFixed(4)} ${to}`; }else{ let conv=unitDefs[cat].conv; let base=val*conv[from]; result=base/conv[to]; document.getElementById('unitOut').innerHTML=`${val} ${from} = ${result.toFixed(6)} ${to}`; } }
+let swRunning = false,
+    swStartTime = 0,
+    swElapsed = 0,
+    swInterval = null;
+let laps = [];
+function startSW() { if (swRunning) return;
+    swRunning = true;
+    swStartTime = Date.now() - swElapsed;
+    swInterval = setInterval(() => { swElapsed = Date.now() - swStartTime; let ms = swElapsed % 1000; let sec = Math.floor(swElapsed / 1000) % 60; let min = Math.floor(swElapsed / 60000) % 60; let hr = Math.floor(swElapsed / 3600000); document.getElementById('swTime').innerText = `${hr.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}.${Math.floor(ms / 10).toString().padStart(2, '0')}`; }, 10); }
+function pauseSW() { if (swRunning) { clearInterval(swInterval);
+        swRunning = false; } }
+function resetSW() { clearInterval(swInterval);
+    swRunning = false;
+    swElapsed = 0;
+    laps = [];
+    document.getElementById('swTime').innerText = '00:00:00.00';
+    document.getElementById('lapList').innerHTML = ''; }
+function recordLap() { if (!swRunning && swElapsed === 0) return; let lapTime = document.getElementById('swTime').innerText;
+    laps.push(lapTime); let ul = document.getElementById('lapList');
+    ul.innerHTML = laps.map((l, i) => `<li>第 ${i+1} 圈: ${l}</li>`).join(''); }
 
-let swRunning=false,swStartTime=0,swElapsed=0,swInterval=null,laps=[];
-function startSW(){ if(swRunning)return; swRunning=true; swStartTime=Date.now()-swElapsed; swInterval=setInterval(()=>{ swElapsed=Date.now()-swStartTime; let ms=swElapsed%1000,sec=Math.floor(swElapsed/1000)%60,min=Math.floor(swElapsed/60000)%60,hr=Math.floor(swElapsed/3600000); document.getElementById('swTime').innerText=`${hr.toString().padStart(2,'0')}:${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}.${Math.floor(ms/10).toString().padStart(2,'0')}`; },10); }
-function pauseSW(){ if(swRunning){clearInterval(swInterval);swRunning=false;} }
-function resetSW(){ clearInterval(swInterval);swRunning=false;swElapsed=0;laps=[]; document.getElementById('swTime').innerText='00:00:00.00'; document.getElementById('lapList').innerHTML=''; }
-function recordLap(){ if(!swRunning&&swElapsed===0)return; laps.push(document.getElementById('swTime').innerText); document.getElementById('lapList').innerHTML=laps.map((l,i)=>`<li>圈数 ${i+1}: ${l}</li>`).join(''); }
+function genQRAdvanced() {
+    let text = document.getElementById('qrText').value;
+    if (!text) { showToast('请输入文本或URL'); return; }
+    let size = document.getElementById('qrSize').value;
+    let ec = document.getElementById('qrEC').value;
+    let fg = document.getElementById('qrFg').value.substring(1);
+    let bg = document.getElementById('qrBg').value.substring(1);
+    let url = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(text)}&ecc=${ec}&color=${fg}&bgcolor=${bg}`;
+    document.getElementById('qrImg').innerHTML = `<img src="${url}" style="max-width:100%"> <br><a href="${url}" download="qrcode.png" class="tool-btn">下载 PNG</a>`;
+}
 
-function genQRAdvanced(){ let text=document.getElementById('qrText').value; if(!text){showToast('请输入文本');return;} let size=document.getElementById('qrSize').value,ec=document.getElementById('qrEC').value,fg=document.getElementById('qrFg').value.substring(1),bg=document.getElementById('qrBg').value.substring(1); let url=`https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(text)}&ecc=${ec}&color=${fg}&bgcolor=${bg}`; document.getElementById('qrImg').innerHTML=`<img src="${url}" style="max-width:100%"> <br><a href="${url}" download="qrcode.png" class="tool-btn">下载 PNG</a>`; }
+function toggleBMIUnits() {
+    let unit = document.getElementById('bmiUnit').value;
+    document.getElementById('bmiMetricDiv').style.display = unit === 'metric' ? 'block' : 'none';
+    document.getElementById('bmiImperialDiv').style.display = unit === 'imperial' ? 'block' : 'none';
+}
+function calcBMIAdvanced() {
+    let unit = document.getElementById('bmiUnit').value;
+    let heightM, weightKg;
+    if (unit === 'metric') {
+        let h = parseFloat(document.getElementById('bmiHeight').value);
+        let w = parseFloat(document.getElementById('bmiWeight').value);
+        if (isNaN(h) || isNaN(w)) { showToast('请输入有效数字'); return; }
+        heightM = h / 100;
+        weightKg = w;
+    } else {
+        let ft = parseFloat(document.getElementById('bmiHeightFt').value) || 0;
+        let inch = parseFloat(document.getElementById('bmiHeightIn').value) || 0;
+        let lbs = parseFloat(document.getElementById('bmiWeightLbs').value);
+        if (isNaN(lbs)) { showToast('请输入体重'); return; }
+        heightM = (ft * 12 + inch) * 0.0254;
+        weightKg = lbs * 0.453592;
+    }
+    let bmi = weightKg / (heightM * heightM);
+    let category = bmi < 18.5 ? '体重过轻' : bmi < 25 ? '正常' : bmi < 30 ? '超重' : '肥胖';
+    document.getElementById('bmiOut').innerHTML = `BMI: ${bmi.toFixed(1)} (${category})<br>健康体重范围: ${(18.5*heightM*heightM).toFixed(1)} - ${(24.9*heightM*heightM).toFixed(1)} kg`;
+}
 
-function toggleBMIUnits(){ let unit=document.getElementById('bmiUnit').value; document.getElementById('bmiMetricDiv').style.display=unit==='metric'?'block':'none'; document.getElementById('bmiImperialDiv').style.display=unit==='imperial'?'block':'none'; }
-function calcBMIAdvanced(){ let unit=document.getElementById('bmiUnit').value,heightM,weightKg; if(unit==='metric'){ let h=parseFloat(document.getElementById('bmiHeight').value),w=parseFloat(document.getElementById('bmiWeight').value); if(isNaN(h)||isNaN(w)){showToast('请输入数字');return;} heightM=h/100;weightKg=w; }else{ let ft=parseFloat(document.getElementById('bmiHeightFt').value)||0,inch=parseFloat(document.getElementById('bmiHeightIn').value)||0,lbs=parseFloat(document.getElementById('bmiWeightLbs').value); if(isNaN(lbs)){showToast('请输入数字');return;} heightM=(ft*12+inch)*0.0254;weightKg=lbs*0.453592; } let bmi=weightKg/(heightM*heightM); let category=bmi<18.5?'体重不足':bmi<25?'正常':bmi<30?'超重':'肥胖'; document.getElementById('bmiOut').innerHTML=`BMI: ${bmi.toFixed(1)} (${category})<br>健康范围: ${(18.5*heightM*heightM).toFixed(1)} - ${(24.9*heightM*heightM).toFixed(1)} kg`; }
+function genRandomAdvanced() {
+    let min = parseFloat(document.getElementById('randMin').value);
+    let max = parseFloat(document.getElementById('randMax').value);
+    let count = parseInt(document.getElementById('randCount').value);
+    let dup = document.getElementById('randDuplicates').checked;
+    let sort = document.getElementById('randSort').checked;
+    let decimals = parseInt(document.getElementById('randDecimals').value);
+    if (isNaN(min) || isNaN(max) || min > max) { showToast('无效范围'); return; }
+    let results = [];
+    if (dup) {
+        for (let i = 0; i < count; i++) {
+            let val = min + Math.random() * (max - min);
+            results.push(val.toFixed(decimals));
+        }
+    } else {
+        let step = 1 / Math.pow(10, decimals);
+        let possible = Math.floor((max - min) / step) + 1;
+        if (count > possible) { showToast('唯一值不足'); return; }
+        let set = new Set();
+        while (set.size < count) {
+            let val = min + Math.random() * (max - min);
+            set.add(val.toFixed(decimals));
+        }
+        results = Array.from(set);
+    }
+    if (sort) results.sort((a, b) => parseFloat(a) - parseFloat(b));
+    document.getElementById('randOut').innerHTML = results.join(', ');
+}
 
-function genRandomAdvanced(){ let min=parseFloat(document.getElementById('randMin').value),max=parseFloat(document.getElementById('randMax').value),count=parseInt(document.getElementById('randCount').value),dup=document.getElementById('randDuplicates').checked,sort=document.getElementById('randSort').checked,decimals=parseInt(document.getElementById('randDecimals').value); if(isNaN(min)||isNaN(max)||min>max){showToast('范围无效');return;} let results=[]; if(dup){ for(let i=0;i<count;i++) results.push((min+Math.random()*(max-min)).toFixed(decimals)); }else{ let step=1/Math.pow(10,decimals),possible=Math.floor((max-min)/step)+1; if(count>possible){showToast('唯一值不足');return;} let set=new Set(); while(set.size<count) set.add((min+Math.random()*(max-min)).toFixed(decimals)); results=Array.from(set); } if(sort) results.sort((a,b)=>parseFloat(a)-parseFloat(b)); document.getElementById('randOut').innerHTML=results.join(', '); }
+function pauseCD() { if (cdIntervalObj) { clearInterval(cdIntervalObj);
+        cdRunning = false; } }
+function setPresetCD(seconds) {
+    document.getElementById('cdMinutes').value = Math.floor(seconds / 60);
+    document.getElementById('cdSecondsInput').value = seconds % 60;
+}
+let cdTotalSeconds = 0,
+    cdIntervalObj = null,
+    cdRunning = false;
+function startCDAdvanced() {
+    if (cdRunning) return;
+    let min = parseInt(document.getElementById('cdMinutes').value) || 0;
+    let sec = parseInt(document.getElementById('cdSecondsInput').value) || 0;
+    cdTotalSeconds = min * 60 + sec;
+    if (cdTotalSeconds <= 0) { showToast('请设置正数时间'); return; }
+    cdRunning = true;
+    cdIntervalObj = setInterval(() => {
+        if (cdTotalSeconds <= 0) {
+            clearInterval(cdIntervalObj);
+            cdRunning = false;
+            if (document.getElementById('cdSound').checked) playSound();
+            showToast('时间到！');
+            document.getElementById('cdDisplay').innerText = '00:00';
+            return;
+        }
+        cdTotalSeconds--;
+        let m = Math.floor(cdTotalSeconds / 60);
+        let s = cdTotalSeconds % 60;
+        document.getElementById('cdDisplay').innerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    }, 1000);
+}
+function resetCDAdvanced() {
+    if (cdIntervalObj) clearInterval(cdIntervalObj);
+    cdRunning = false;
+    document.getElementById('cdDisplay').innerText = '00:00';
+    document.getElementById('cdMinutes').value = '0';
+    document.getElementById('cdSecondsInput').value = '60';
+}
 
-let cdTotalSeconds=0,cdIntervalObj=null,cdRunning=false;
-function setPresetCD(seconds){ document.getElementById('cdMinutes').value=Math.floor(seconds/60); document.getElementById('cdSecondsInput').value=seconds%60; }
-function startCDAdvanced(){ if(cdRunning)return; let min=parseInt(document.getElementById('cdMinutes').value)||0,sec=parseInt(document.getElementById('cdSecondsInput').value)||0; cdTotalSeconds=min*60+sec; if(cdTotalSeconds<=0){showToast('请设置正数时间');return;} cdRunning=true; cdIntervalObj=setInterval(()=>{ if(cdTotalSeconds<=0){clearInterval(cdIntervalObj);cdRunning=false; if(document.getElementById('cdSound').checked)playSound(); showToast('时间到！'); document.getElementById('cdDisplay').innerText='00:00'; return;} cdTotalSeconds--; let m=Math.floor(cdTotalSeconds/60),s=cdTotalSeconds%60; document.getElementById('cdDisplay').innerText=`${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`; },1000); }
-function pauseCD(){ if(cdIntervalObj){clearInterval(cdIntervalObj);cdRunning=false;} }
-function resetCDAdvanced(){ if(cdIntervalObj)clearInterval(cdIntervalObj);cdRunning=false; document.getElementById('cdDisplay').innerText='00:00'; document.getElementById('cdMinutes').value='0'; document.getElementById('cdSecondsInput').value='60'; }
+function diffDatesAdvanced() {
+    let d1 = new Date(document.getElementById('date1').value);
+    let d2 = new Date(document.getElementById('date2').value);
+    if (isNaN(d1) || isNaN(d2)) { showToast('请选择有效日期'); return; }
+    let diffMs = Math.abs(d2 - d1);
+    let diffDays = Math.floor(diffMs / (86400000));
+    let diffHours = Math.floor((diffMs % 86400000) / 3600000);
+    let diffMinutes = Math.floor((diffMs % 3600000) / 60000);
+    document.getElementById('dateOut').innerHTML = `${diffDays} 天, ${diffHours} 小时, ${diffMinutes} 分钟。周数: ${Math.floor(diffDays/7)} 周 + ${diffDays%7} 天`;
+}
 
-function diffDatesAdvanced(){ let d1=new Date(document.getElementById('date1').value),d2=new Date(document.getElementById('date2').value); if(isNaN(d1)||isNaN(d2)){showToast('请选择有效日期');return;} let diffMs=Math.abs(d2-d1),diffDays=Math.floor(diffMs/86400000),diffHours=Math.floor((diffMs%86400000)/3600000),diffMinutes=Math.floor((diffMs%3600000)/60000); document.getElementById('dateOut').innerHTML=`${diffDays} 天, ${diffHours} 小时, ${diffMinutes} 分钟。周数: ${Math.floor(diffDays/7)} 周 + ${diffDays%7} 天`; }
+function b64Encode() { let txt = document.getElementById('b64Text').value;
+    document.getElementById('b64Out').innerHTML = btoa(txt); }
+function b64Decode() { let txt = document.getElementById('b64Text').value; try { document.getElementById('b64Out').innerHTML = atob(txt); } catch (e) { document.getElementById('b64Out').innerHTML = '无效的Base64'; } }
+function fileToBase64() {
+    let file = document.getElementById('b64File').files[0];
+    if (!file) { showToast('请选择文件'); return; }
+    let reader = new FileReader();
+    reader.onload = function(e) {
+        document.getElementById('b64Text').value = e.target.result.split(',')[1];
+        showToast('文件已转换为Base64');
+    };
+    reader.readAsDataURL(file);
+}
+function base64ToFile() {
+    let b64 = document.getElementById('b64Text').value;
+    if (!b64) { showToast('请输入Base64'); return; }
+    let link = document.createElement('a');
+    link.href = 'data:application/octet-stream;base64,' + b64;
+    link.download = 'decoded_file.bin';
+    link.click();
+}
 
-function b64Encode(){ document.getElementById('b64Out').innerHTML=btoa(document.getElementById('b64Text').value); }
-function b64Decode(){ let txt=document.getElementById('b64Text').value; try{document.getElementById('b64Out').innerHTML=atob(txt);}catch(e){document.getElementById('b64Out').innerHTML='无效的 Base64';} }
-function fileToBase64(){ let file=document.getElementById('b64File').files[0]; if(!file){showToast('请选择文件');return;} let reader=new FileReader(); reader.onload=function(e){ document.getElementById('b64Text').value=e.target.result.split(',')[1]; showToast('文件已转换'); }; reader.readAsDataURL(file); }
-function base64ToFile(){ let b64=document.getElementById('b64Text').value; if(!b64){showToast('请输入 Base64');return;} let link=document.createElement('a'); link.href='data:application/octet-stream;base64,'+b64; link.download='decoded_file.bin'; link.click(); }
+function urlEnc() { document.getElementById('urlOut').innerText = encodeURIComponent(document.getElementById('urlText').value); }
+function urlDec() { document.getElementById('urlOut').innerText = decodeURIComponent(document.getElementById('urlText').value); }
+function urlEncFull() { document.getElementById('urlOut').innerText = encodeURI(document.getElementById('urlText').value); }
 
-function urlEnc(){ document.getElementById('urlOut').innerText=encodeURIComponent(document.getElementById('urlText').value); }
-function urlDec(){ document.getElementById('urlOut').innerText=decodeURIComponent(document.getElementById('urlText').value); }
-function urlEncFull(){ document.getElementById('urlOut').innerText=encodeURI(document.getElementById('urlText').value); }
+function formatJSON() {
+    try { let obj = JSON.parse(document.getElementById('jsonIn').value);
+        document.getElementById('jsonOut').innerHTML = JSON.stringify(obj, null, 2); } catch (e) { document.getElementById('jsonOut').innerHTML = '无效的JSON'; }
+}
+function minifyJSON() {
+    try { let obj = JSON.parse(document.getElementById('jsonIn').value);
+        document.getElementById('jsonOut').innerText = JSON.stringify(obj); } catch (e) { document.getElementById('jsonOut').innerHTML = '无效的JSON'; }
+}
+function validateJSON() {
+    try { JSON.parse(document.getElementById('jsonIn').value);
+        document.getElementById('jsonOut').innerHTML = '✅ 有效的JSON'; } catch (e) { document.getElementById('jsonOut').innerHTML = '❌ 无效的JSON: ' + e.message; }
+}
 
-function formatJSON(){ try{let obj=JSON.parse(document.getElementById('jsonIn').value); document.getElementById('jsonOut').innerHTML=JSON.stringify(obj,null,2);}catch(e){document.getElementById('jsonOut').innerHTML='无效的 JSON';} }
-function minifyJSON(){ try{let obj=JSON.parse(document.getElementById('jsonIn').value); document.getElementById('jsonOut').innerText=JSON.stringify(obj);}catch(e){document.getElementById('jsonOut').innerHTML='无效的 JSON';} }
-function validateJSON(){ try{JSON.parse(document.getElementById('jsonIn').value); document.getElementById('jsonOut').innerHTML='✅ 有效的 JSON';}catch(e){document.getElementById('jsonOut').innerHTML='❌ 无效的 JSON: '+e.message;} }
+function genLoremAdvanced() {
+    let type = document.getElementById('loremType').value;
+    let count = parseInt(document.getElementById('loremCount').value);
+    let html = document.getElementById('loremHtml').checked;
+    let lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+    let words = lorem.split(' ');
+    let result = '';
+    if (type === 'words') result = words.slice(0, count).join(' ');
+    else if (type === 'sentences') result = Array(count).fill(lorem).join('. ');
+    else result = Array(count).fill(lorem + '\n\n').join('');
+    if (html) result = `<p>${result.replace(/\n/g, '</p><p>')}</p>`;
+    document.getElementById('loremOut').innerHTML = result;
+}
 
-function genLoremAdvanced(){ let type=document.getElementById('loremType').value,count=parseInt(document.getElementById('loremCount').value),html=document.getElementById('loremHtml').checked; let lorem='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; let words=lorem.split(' '),result=''; if(type==='words') result=words.slice(0,count).join(' '); else if(type==='sentences') result=Array(count).fill(lorem).join('. '); else result=Array(count).fill(lorem+'\n\n').join(''); if(html) result=`<p>${result.replace(/\n/g,'</p><p>')}</p>`; document.getElementById('loremOut').innerHTML=result; }
+const currencyList = ["AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN", "BAM", "BBD", "BDT", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BRL", "BSD", "BTN", "BWP", "BYN", "BZD", "CAD", "CDF", "CHF", "CLP", "CNY", "COP", "CRC", "CUP", "CVE", "CZK", "DJF", "DKK", "DOP", "DZD", "EGP", "ERN", "ETB", "EUR", "FJD", "FKP", "FOK", "GBP", "GEL", "GGP", "GHS", "GIP", "GMD", "GNF", "GTQ", "GYD", "HKD", "HNL", "HRK", "HTG", "HUF", "IDR", "ILS", "IMP", "INR", "IQD", "IRR", "ISK", "JEP", "JMD", "JOD", "JPY", "KES", "KGS", "KHR", "KID", "KMF", "KRW", "KWD", "KYD", "KZT", "LAK", "LBP", "LKR", "LRD", "LSL", "LYD", "MAD", "MDL", "MGA", "MKD", "MMK", "MNT", "MOP", "MRU", "MUR", "MVR", "MWK", "MXN", "MYR", "MZN", "NAD", "NGN", "NIO", "NOK", "NPR", "NZD", "OMR", "PAB", "PEN", "PGK", "PHP", "PKR", "PLN", "PYG", "QAR", "RON", "RSD", "RUB", "RWF", "SAR", "SBD", "SCR", "SDG", "SEK", "SGD", "SHP", "SLE", "SLL", "SOS", "SRD", "SSP", "STN", "SYP", "SZL", "THB", "TJS", "TMT", "TND", "TOP", "TRY", "TTD", "TVD", "TWD", "TZS", "UAH", "UGX", "USD", "UYU", "UZS", "VES", "VND", "VUV", "WST", "XAF", "XCD", "XDR", "XOF", "XPF", "YER", "ZAR", "ZMW", "ZWL"];
+function loadCurrencyList() {
+    let fromSel = document.getElementById('currFrom');
+    let toSel = document.getElementById('currTo');
+    fromSel.innerHTML = currencyList.map(c => `<option value="${c}">${c}</option>`).join('');
+    toSel.innerHTML = currencyList.map(c => `<option value="${c}">${c}</option>`).join('');
+    fromSel.value = 'USD';
+    toSel.value = 'EUR';
+}
+function convCurrencyAdvanced() {
+    let amt = parseFloat(document.getElementById('currAmt').value);
+    let from = document.getElementById('currFrom').value;
+    let to = document.getElementById('currTo').value;
+    if (isNaN(amt)) { showToast('请输入金额'); return; }
+    fetch(`https://api.exchangerate-api.com/v4/latest/${from}`)
+        .then(res => res.json())
+        .then(data => {
+            let rate = data.rates[to];
+            if (rate) {
+                let converted = (amt * rate).toFixed(2);
+                document.getElementById('currOut').innerHTML = `${amt} ${from} = ${converted} ${to}<br><strong>汇率:</strong> 1 ${from} = ${rate.toFixed(4)} ${to}`;
+            } else {
+                document.getElementById('currOut').innerHTML = '汇率不可用';
+            }
+        })
+        .catch(() => { document.getElementById('currOut').innerHTML = '获取汇率失败'; });
+}
 
-const currencyList=["USD","EUR","GBP","JPY","CNY","AUD","CAD","CHF","HKD","NZD","SEK","KRW","SGD","NOK","MXN","INR","RUB","BRL","ZAR","AED"]; // shortened for demo
-function loadCurrencyList(){ let fromSel=document.getElementById('currFrom'),toSel=document.getElementById('currTo'); fromSel.innerHTML=currencyList.map(c=>`<option value="${c}">${c}</option>`).join(''); toSel.innerHTML=currencyList.map(c=>`<option value="${c}">${c}</option>`).join(''); fromSel.value='USD'; toSel.value='EUR'; }
-function convCurrencyAdvanced(){ let amt=parseFloat(document.getElementById('currAmt').value),from=document.getElementById('currFrom').value,to=document.getElementById('currTo').value; if(isNaN(amt)){showToast('请输入金额');return;} fetch(`https://api.exchangerate-api.com/v4/latest/${from}`).then(res=>res.json()).then(data=>{ let rate=data.rates[to]; if(rate){ let converted=(amt*rate).toFixed(2); document.getElementById('currOut').innerHTML=`${amt} ${from} = ${converted} ${to}<br><strong>汇率:</strong> 1 ${from} = ${rate.toFixed(4)} ${to}`; }else{document.getElementById('currOut').innerHTML='汇率不可用';} }).catch(()=>{document.getElementById('currOut').innerHTML='获取汇率失败';}); }
+function calcPercent() {
+    let val = parseFloat(document.getElementById('percVal').value);
+    let per = parseFloat(document.getElementById('percPer').value);
+    if (isNaN(val) || isNaN(per)) { showToast('请输入数字'); return; }
+    document.getElementById('percOut').innerHTML = `${per}% 的 ${val} = ${(val*per/100).toFixed(2)}`;
+}
+function showPercentType(type) {
+    let panel = document.getElementById('percentPanel');
+    if (type === 'percent') panel.innerHTML =
+        `<input id="percVal" placeholder="数值" class="search-input"><input id="percPer" placeholder="百分比" class="search-input"><button class="tool-btn" onclick="calcPercent()">计算</button>`;
+    else if (type === 'change') panel.innerHTML =
+        `<input id="oldVal" placeholder="原值" class="search-input"><input id="newVal" placeholder="新值" class="search-input"><button class="tool-btn" onclick="calcPercentChange()">计算百分比变化</button>`;
+    else panel.innerHTML =
+        `<input id="partVal" placeholder="部分" class="search-input"><input id="wholeVal" placeholder="总数" class="search-input"><button class="tool-btn" onclick="calcWhatPercent()">占百分比?</button>`;
+}
+function calcPercentChange() {
+    let oldV = parseFloat(document.getElementById('oldVal').value);
+    let newV = parseFloat(document.getElementById('newVal').value);
+    if (isNaN(oldV) || isNaN(newV)) { showToast('请输入数字'); return; }
+    let change = ((newV - oldV) / oldV) * 100;
+    document.getElementById('percOut').innerHTML = `${change.toFixed(2)}% 变化`;
+}
+function calcWhatPercent() {
+    let part = parseFloat(document.getElementById('partVal').value);
+    let whole = parseFloat(document.getElementById('wholeVal').value);
+    if (isNaN(part) || isNaN(whole) || whole === 0) { showToast('无效输入'); return; }
+    document.getElementById('percOut').innerHTML = `${(part/whole*100).toFixed(2)}%`;
+}
 
-function calcPercent(){ let val=parseFloat(document.getElementById('percVal').value),per=parseFloat(document.getElementById('percPer').value); if(isNaN(val)||isNaN(per)){showToast('请输入数字');return;} document.getElementById('percOut').innerHTML=`${per}% 的 ${val} = ${(val*per/100).toFixed(2)}`; }
-function showPercentType(type){ let panel=document.getElementById('percentPanel'); if(type==='percent') panel.innerHTML=`<input id="percVal" placeholder="数值"><input id="percPer" placeholder="百分比"><button class="tool-btn" onclick="calcPercent()">计算</button>`; else if(type==='change') panel.innerHTML=`<input id="oldVal" placeholder="旧值"><input id="newVal" placeholder="新值"><button class="tool-btn" onclick="calcPercentChange()">计算%变化</button>`; else panel.innerHTML=`<input id="partVal" placeholder="部分"><input id="wholeVal" placeholder="整体"><button class="tool-btn" onclick="calcWhatPercent()">占比多少？</button>`; }
-function calcPercentChange(){ let oldV=parseFloat(document.getElementById('oldVal').value),newV=parseFloat(document.getElementById('newVal').value); if(isNaN(oldV)||isNaN(newV)){showToast('请输入数字');return;} let change=((newV-oldV)/oldV)*100; document.getElementById('percOut').innerHTML=`${change.toFixed(2)}% 变化`; }
-function calcWhatPercent(){ let part=parseFloat(document.getElementById('partVal').value),whole=parseFloat(document.getElementById('wholeVal').value); if(isNaN(part)||isNaN(whole)||whole===0){showToast('请输入有效数字');return;} document.getElementById('percOut').innerHTML=`${(part/whole*100).toFixed(2)}%`; }
+function calcAgeAdvanced() {
+    let dob = new Date(document.getElementById('dob').value);
+    let today = new Date();
+    let years = today.getFullYear() - dob.getFullYear();
+    let months = today.getMonth() - dob.getMonth();
+    let days = today.getDate() - dob.getDate();
+    if (days < 0) { months--;
+        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); }
+    if (months < 0) { years--;
+        months += 12; }
+    let nextBD = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
+    if (nextBD < today) nextBD.setFullYear(nextBD.getFullYear() + 1);
+    let daysToNext = Math.ceil((nextBD - today) / 86400000);
+    document.getElementById('ageOut').innerHTML = `${years} 年, ${months} 月, ${days} 天。<br>距离下一个生日还有 ${daysToNext} 天。`;
+}
 
-function calcAgeAdvanced(){ let dob=new Date(document.getElementById('dob').value),today=new Date(); let years=today.getFullYear()-dob.getFullYear(),months=today.getMonth()-dob.getMonth(),days=today.getDate()-dob.getDate(); if(days<0){months--; days+=new Date(today.getFullYear(),today.getMonth(),0).getDate();} if(months<0){years--; months+=12;} let nextBD=new Date(today.getFullYear(),dob.getMonth(),dob.getDate()); if(nextBD<today)nextBD.setFullYear(nextBD.getFullYear()+1); let daysToNext=Math.ceil((nextBD-today)/86400000); document.getElementById('ageOut').innerHTML=`${years} 岁, ${months} 个月, ${days} 天.<br>下一个生日还有 ${daysToNext} 天.`; }
+function convertAllBases() {
+    let input = document.getElementById('binVal').value.trim();
+    let num = parseInt(input);
+    if (isNaN(num)) num = parseInt(input, 16);
+    if (isNaN(num)) num = parseInt(input, 2);
+    if (isNaN(num)) { showToast('无效数字'); return; }
+    document.getElementById('binhexOut').innerHTML = `十进制: ${num}<br>二进制: ${num.toString(2)}<br>十六进制: ${num.toString(16).toUpperCase()}<br>八进制: ${num.toString(8)}`;
+}
 
-function convertAllBases(){ let input=document.getElementById('binVal').value.trim(),num=parseInt(input); if(isNaN(num))num=parseInt(input,16); if(isNaN(num))num=parseInt(input,2); if(isNaN(num)){showToast('无效数字');return;} document.getElementById('binhexOut').innerHTML=`十进制: ${num}<br>二进制: ${num.toString(2)}<br>十六进制: ${num.toString(16).toUpperCase()}<br>八进制: ${num.toString(8)}`; }
+function convertRomanAdvanced() {
+    let input = document.getElementById('romanNum').value.trim().toUpperCase();
+    let romanRegex = /^[IVXLCDM]+$/;
+    if (romanRegex.test(input)) {
+        let num = romanToInt(input);
+        if (num >= 1 && num <= 3999) document.getElementById('romanOut').innerHTML = `${input} = ${num}`;
+        else document.getElementById('romanOut').innerHTML = '无效的罗马数字';
+    } else {
+        let num = parseInt(input);
+        if (isNaN(num) || num < 1 || num > 3999) { document.getElementById('romanOut').innerHTML = '请输入 1-3999 的数字或罗马数字'; return; }
+        document.getElementById('romanOut').innerHTML = `${num} = ${intToRoman(num)}`;
+    }
+}
+function intToRoman(num) { const map = { M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 }; let res = ''; for (let key in map) { while (num >= map[key]) { res += key;
+        num -= map[key]; } } return res; }
+function romanToInt(s) { const map = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 }; let total = 0; for (let i = 0; i < s.length; i++) { let curr = map[s[i]],
+        next = map[s[i + 1]]; if (next && curr < next) total -= curr; else total += curr; } return total; }
 
-function convertRomanAdvanced(){ let input=document.getElementById('romanNum').value.trim().toUpperCase(); if(/^[IVXLCDM]+$/.test(input)){ let num=romanToInt(input); if(num>=1&&num<=3999) document.getElementById('romanOut').innerHTML=`${input} = ${num}`; else document.getElementById('romanOut').innerHTML='无效的罗马数字'; }else{ let num=parseInt(input); if(isNaN(num)||num<1||num>3999){document.getElementById('romanOut').innerHTML='请输入 1-3999 的数字';return;} document.getElementById('romanOut').innerHTML=`${num} = ${intToRoman(num)}`; } }
-function intToRoman(num){ const map={M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1}; let res=''; for(let key in map){ while(num>=map[key]){res+=key; num-=map[key];} } return res; }
-function romanToInt(s){ const map={I:1,V:5,X:10,L:50,C:100,D:500,M:1000}; let total=0; for(let i=0;i<s.length;i++){let curr=map[s[i]],next=map[s[i+1]]; if(next&&curr<next) total-=curr; else total+=curr;} return total; }
+function calcTipAdvanced() {
+    let bill = parseFloat(document.getElementById('billAmt').value);
+    let tipP = parseFloat(document.getElementById('tipPct').value);
+    let split = parseInt(document.getElementById('splitNum').value);
+    if (isNaN(bill) || isNaN(tipP)) { showToast('请输入账单和小费'); return; }
+    let tip = bill * tipP / 100;
+    let total = bill + tip;
+    let perPerson = total / split;
+    document.getElementById('tipOut').innerHTML = `小费: ¥${tip.toFixed(2)}<br>总计: ¥${total.toFixed(2)}<br>每人 (${split}人): ¥${perPerson.toFixed(2)}`;
+}
 
-function calcTipAdvanced(){ let bill=parseFloat(document.getElementById('billAmt').value),tipP=parseFloat(document.getElementById('tipPct').value),split=parseInt(document.getElementById('splitNum').value); if(isNaN(bill)||isNaN(tipP)){showToast('请输入账单和小费');return;} let tip=bill*tipP/100,total=bill+tip,perPerson=total/split; document.getElementById('tipOut').innerHTML=`小费: $${tip.toFixed(2)}<br>总计: $${total.toFixed(2)}<br>每人 (${split}): $${perPerson.toFixed(2)}`; }
+let worldClock24h = true;
+function toggleWorldClockFormat() { worldClock24h = !worldClock24h;
+    refreshWorldClock(); }
+function refreshWorldClock() {
+    let container = document.getElementById('worldClockContainer');
+    if (!container) return;
+    let zones = getAllTimeZones().sort();
+    let filter = document.getElementById('worldClockSearch')?.value.toLowerCase() || '';
+    let now = new Date();
+    let html = '<div class="timezone-grid">';
+    zones.forEach(zone => {
+        if (filter && !zone.toLowerCase().includes(filter)) return;
+        try {
+            let time = now.toLocaleTimeString('en-US', { timeZone: zone, hour12: !worldClock24h, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            let date = now.toLocaleDateString('en-US', { timeZone: zone });
+            let displayName = zone.replace(/_/g, ' ').split('/').pop() + ' (' + zone.split('/')[0] + ')';
+            html += `<div class="timezone-item"><strong>${displayName}</strong><span>${date} ${time}</span></div>`;
+        } catch (e) {}
+    });
+    html += '</div>';
+    container.innerHTML = html;
+}
+function filterWorldClock() { refreshWorldClock(); }
 
-let worldClock24h=true;
-function toggleWorldClockFormat(){ worldClock24h=!worldClock24h; refreshWorldClock(); }
-function refreshWorldClock(){ let container=document.getElementById('worldClockContainer'); if(!container)return; let zones=Intl.supportedValuesOf('timeZone').sort(),filter=document.getElementById('worldClockSearch')?.value.toLowerCase()||'',now=new Date(); let html='<div class="timezone-grid">'; zones.forEach(zone=>{ if(filter&&!zone.toLowerCase().includes(filter))return; try{ let time=now.toLocaleTimeString('en-US',{timeZone:zone,hour12:!worldClock24h,hour:'2-digit',minute:'2-digit',second:'2-digit'}); let date=now.toLocaleDateString('en-US',{timeZone:zone}); let displayName=zone.replace(/_/g,' ').split('/').pop()+' ('+zone.split('/')[0]+')'; html+=`<div class="timezone-item"><strong>${displayName}</strong><span>${date} ${time}</span></div>`; }catch(e){} }); html+='</div>'; container.innerHTML=html; }
-function filterWorldClock(){ refreshWorldClock(); }
+function rollMultipleDice() {
+    let count = parseInt(document.getElementById('diceCount').value);
+    let sides = parseInt(document.getElementById('diceSidesSelect').value);
+    let results = [];
+    let sum = 0;
+    for (let i = 0; i < count; i++) { let r = Math.floor(Math.random() * sides) + 1;
+        results.push(r);
+        sum += r; }
+    document.getElementById('diceOut').innerHTML = `🎲 ${results.join(', ')}  (总和: ${sum})`;
+}
 
-function rollMultipleDice(){ let count=parseInt(document.getElementById('diceCount').value),sides=parseInt(document.getElementById('diceSidesSelect').value); let results=[],sum=0; for(let i=0;i<count;i++){let r=Math.floor(Math.random()*sides)+1; results.push(r); sum+=r;} document.getElementById('diceOut').innerHTML=`🎲 ${results.join(', ')}  (总和: ${sum})`; }
+let streak = 0,
+    lastResult = '';
+function flipCoinAdvanced() {
+    let result = Math.random() < 0.5 ? '正面' : '反面';
+    if (result === lastResult) streak++;
+    else streak = 1;
+    lastResult = result;
+    document.getElementById('coinOut').innerHTML = `🪙 ${result}`;
+    document.getElementById('coinStreak').innerHTML = streak;
+}
 
-let streak=0,lastResult='';
-function flipCoinAdvanced(){ let result=Math.random()<0.5?'正面':'反面'; if(result===lastResult)streak++; else streak=1; lastResult=result; document.getElementById('coinOut').innerHTML=`🪙 ${result}`; document.getElementById('coinStreak').innerHTML=streak; }
+function fetchNewJokeAdvanced() {
+    let category = document.getElementById('jokeCategory').value;
+    let safe = document.getElementById('safeMode').checked ? '&safe-mode' : '';
+    let url = `https://v2.jokeapi.dev/joke/${category}?format=json&type=single,twopart${safe}`;
+    let outDiv = document.getElementById('jokeOutput');
+    outDiv.innerHTML = '正在加载笑话...';
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            let joke = data.type === 'single' ? data.joke : `${data.setup} 😂 ${data.delivery}`;
+            // 自动翻译为中文
+            let translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-CN&dt=t&q=${encodeURIComponent(joke)}`;
+            fetch(translateUrl)
+                .then(res => res.json())
+                .then(transData => {
+                    let translatedJoke = transData[0][0][0];
+                    outDiv.innerHTML = translatedJoke;
+                })
+                .catch(() => {
+                    outDiv.innerHTML = joke + ' (翻译失败，显示原文)';
+                });
+        })
+        .catch(() => { outDiv.innerHTML = '获取笑话失败，请重试。'; });
+}
 
-function fetchNewJokeAdvanced(){ let category=document.getElementById('jokeCategory').value,safe=document.getElementById('safeMode').checked?'&safe-mode':''; let url=`https://v2.jokeapi.dev/joke/${category}?format=json&type=single,twopart${safe}`; let out=document.getElementById('jokeOutput'); out.innerHTML='加载中...'; fetch(url).then(res=>res.json()).then(data=>{ let joke=data.type==='single'?data.joke:`${data.setup} 😂 ${data.delivery}`; out.innerHTML=joke; }).catch(()=>{out.innerHTML='获取笑话失败';}); }
+function getIPAdvanced() {
+    let out = document.getElementById('ipOut');
+    out.innerHTML = '<span>🔍 正在获取您的IP和位置信息...</span>';
+    fetch('https://api.ipify.org?format=json')
+        .then(res => res.json())
+        .then(ipData => {
+            let ip = ipData.ip;
+            fetch(`https://ip-api.com/json/${ip}?fields=status,country,regionName,city,zip,lat,lon,isp,org,as,timezone,query`)
+                .then(res => res.json())
+                .then(geo => {
+                    if (geo.status === 'success') {
+                        out.innerHTML = `
+                            <strong>🌐 IP地址:</strong> ${geo.query}<br>
+                            <strong>📍 位置:</strong> ${geo.city}, ${geo.regionName}, ${geo.country}<br>
+                            <strong>📮 邮政编码:</strong> ${geo.zip || 'N/A'}<br>
+                            <strong>🗺️ 坐标:</strong> ${geo.lat}, ${geo.lon}<br>
+                            <strong>🔌 ISP:</strong> ${geo.isp}<br>
+                            <strong>🏢 组织:</strong> ${geo.org}<br>
+                            <strong>🔢 AS:</strong> ${geo.as}<br>
+                            <strong>⏰ 时区:</strong> ${geo.timezone}<br>
+                            <a href="https://maps.google.com/?q=${geo.lat},${geo.lon}" target="_self" class="tool-btn" style="display:inline-block; margin-top:8px;">🗺️ 在地图上查看</a>
+                        `;
+                    } else {
+                        out.innerHTML = `⚠️ 无法获取位置详情。您的IP: ${ip}`;
+                    }
+                })
+                .catch(() => { out.innerHTML = '❌ 获取IP信息失败，请检查网络连接。'; });
+        })
+        .catch(() => { out.innerHTML = '❌ 获取IP失败，请检查网络连接。'; });
+}
 
-function getIPAdvanced(){ let out=document.getElementById('ipOut'); out.innerHTML='🔍 获取中...'; fetch('https://api.ipify.org?format=json').then(res=>res.json()).then(ipData=>{ let ip=ipData.ip; fetch(`https://ip-api.com/json/${ip}?fields=status,country,regionName,city,zip,lat,lon,isp,org,as,timezone,query`).then(res=>res.json()).then(geo=>{ if(geo.status==='success'){ out.innerHTML=`<strong>IP:</strong> ${geo.query}<br><strong>位置:</strong> ${geo.city}, ${geo.regionName}, ${geo.country}<br><strong>ISP:</strong> ${geo.isp}<br><strong>时区:</strong> ${geo.timezone}`; }else{ out.innerHTML=`IP: ${ip}`; } }).catch(()=>{out.innerHTML='获取失败';}); }).catch(()=>{out.innerHTML='获取失败';}); }
-
-function runParaphraserTool(){ let txt=document.getElementById('paraphraserText').value; document.getElementById('paraphraserOut').innerHTML=txt?`🔄 改写版本: ${txt.split(' ').reverse().join(' ')}`:'请输入文本。'; }
-function runGrammarTool(){ let txt=document.getElementById('grammarText').value; document.getElementById('grammarOut').innerHTML=txt?`✅ 语法检查通过`:'请输入文本。'; }
-function runSummarizerTool(){ let txt=document.getElementById('summarizerText').value; document.getElementById('summarizerOut').innerHTML=txt?`📄 摘要: ${txt.substring(0,Math.min(100,txt.length))}...`:'请输入文本。'; }
-function runSentimentTool(){ let txt=document.getElementById('sentimentText').value; document.getElementById('sentimentOut').innerHTML=txt?`😊 情感: 中性`:'请输入文本。'; }
-function runKeywordsTool(){ let txt=document.getElementById('keywordsText').value; document.getElementById('keywordsOut').innerHTML=txt?`🔑 关键词: ${txt.split(' ').slice(0,5).join(', ')}`:'请输入文本。'; }
-function runReadabilityTool(){ let txt=document.getElementById('readabilityText').value; document.getElementById('readabilityOut').innerHTML=txt?`📖 可读性得分: ${Math.round((txt.length/100)*10)}`:'请输入文本。'; }
-function demoAIEnhanceAdvanced(){ let txt=document.getElementById('aiDemoText').value,mode=document.getElementById('aiMode').value; if(!txt){document.getElementById('aiDemoResult').innerHTML='请输入文本。';return;} let result=txt; if(mode==='grammar') result=txt.replace(/(i) /gi,'I ').replace(/\s+/g,' '); else if(mode==='professional') result=`✨ 专业语气: ${txt}`; else if(mode==='friendly') result=`🙂 友好语气: ${txt}`; else if(mode==='shorten') result=txt.split(' ').slice(0,15).join(' ')+(txt.split(' ').length>15?'...':''); else if(mode==='expand') result=txt+' 此外，此工具帮助您达成更多。'; else if(mode==='simplify') result=txt.replace(/[^a-zA-Z0-9 ]/g,'').toLowerCase(); document.getElementById('aiDemoResult').innerHTML=result; }
-
-// Search
-document.getElementById('globalSearch').addEventListener('input',function(e){
-    let q=e.target.value.trim().toLowerCase(); if(q===''){document.getElementById('searchResults').style.display='none';return;}
-    let filtered=tools.filter(t=>t.name.toLowerCase().includes(q));
-    let html=filtered.map(t=>`<div style="padding:16px;border-bottom:1px solid var(--border);cursor:pointer;" onclick="selectTool('${t.id}');document.getElementById('globalSearch').value='';document.getElementById('searchResults').style.display='none';">${t.icon} ${t.name}</div>`).join('');
-    if(!html) html=`<div style="padding:20px;text-align:center;">未找到与 "<strong>${q}</strong>" 相关的工具</div>`;
-    document.getElementById('searchResults').innerHTML=html; document.getElementById('searchResults').style.display='block';
+// ===== 搜索功能 =====
+document.getElementById('globalSearch').addEventListener('input', function(e) {
+    let q = e.target.value.trim().toLowerCase();
+    if (q === '') { document.getElementById('searchResults').style.display = 'none'; return; }
+    let filtered = originalTools.filter(t => t.name.toLowerCase().includes(q));
+    let html = filtered.map(t =>
+        `<div style="padding:16px;border-bottom:1px solid var(--border);cursor:pointer;font-size:1rem;" onclick="selectTool('${t.id}');document.getElementById('globalSearch').value='';document.getElementById('searchResults').style.display='none';">${t.icon} ${t.name}</div>`
+    ).join('');
+    if (!html) {
+        html = `<div style="padding:20px;text-align:center;"><div>未找到匹配 "<strong>${q}</strong>" 的工具</div></div>`;
+    }
+    document.getElementById('searchResults').innerHTML = html;
+    document.getElementById('searchResults').style.display = 'block';
 });
-document.addEventListener('click',(e)=>{if(!e.target.closest('.search-container')) document.getElementById('searchResults').style.display='none';});
+document.addEventListener('click', (e) => { if (!e.target.closest('.search-container')) document.getElementById('searchResults').style.display = 'none'; });
 
-// Chat functionality (simplified)
-(function(){ let chatPanel=document.getElementById('chatPanel'), chatButton=document.getElementById('chatButton'), chatClose=document.getElementById('chatCloseBtn'), chatInput=document.getElementById('chatInput'), chatSend=document.getElementById('chatSendBtn'), chatMessages=document.getElementById('chatMessages'); chatButton.addEventListener('click',()=>{ chatPanel.classList.toggle('active'); }); chatClose.addEventListener('click',()=>{ chatPanel.classList.remove('active'); }); chatSend.addEventListener('click',()=>{ let msg=chatInput.value.trim(); if(!msg)return; chatMessages.innerHTML+=`<div class="chat-message user">${msg}</div>`; chatInput.value=''; chatMessages.scrollTop=chatMessages.scrollHeight; setTimeout(()=>{ chatMessages.innerHTML+=`<div class="chat-message bot">🤖 收到: "${msg}"。试试输入 "计算器" 或 "pdf"。</div>`; chatMessages.scrollTop=chatMessages.scrollHeight; },500); }); chatInput.addEventListener('keypress',(e)=>{if(e.key==='Enter') chatSend.click();}); })();
+// ===== 下拉刷新 =====
+let startY = 0;
+let pullToRefresh = document.getElementById('pullToRefresh');
+document.addEventListener('touchstart', function(e) {
+    if (window.scrollY === 0) {
+        startY = e.touches[0].clientY;
+    }
+}, { passive: true });
+document.addEventListener('touchmove', function(e) {
+    if (window.scrollY === 0) {
+        let diff = e.touches[0].clientY - startY;
+        if (diff > 60) {
+            pullToRefresh.classList.add('active');
+        }
+    }
+}, { passive: true });
+document.addEventListener('touchend', function() {
+    if (pullToRefresh.classList.contains('active')) {
+        pullToRefresh.classList.remove('active');
+        location.reload();
+    }
+}, { passive: true });
 
-// Override links
-var originalWindowOpen=window.open; window.open=function(url,target,features){ if(url&&(url.startsWith('http://')||url.startsWith('https://'))){ window.location.href=url; return null;} return originalWindowOpen(url,target,features); };
-document.addEventListener('click',function(e){ let target=e.target.closest('a'); if(target&&target.href){ if(!target.href.startsWith('http://')&&!target.href.startsWith('https://'))return; e.preventDefault(); window.location.href=target.href; } });
-const base=document.createElement('base'); base.target='_self'; document.head.appendChild(base);
+// ===== 工具数据 =====
+const originalTools = [
+    { id: 'calculator', icon: '🧮', name: '高级计算器' },
+    { id: 'password', icon: '🔐', name: '密码生成器' },
+    { id: 'wordcount', icon: '📝', name: '字数统计' },
+    { id: 'caseconverter', icon: '🔤', name: '大小写转换器' },
+    { id: 'colorpicker', icon: '🎨', name: '颜色选择器' },
+    { id: 'unitconverter', icon: '📏', name: '单位转换器' },
+    { id: 'stopwatch', icon: '⏱️', name: '秒表' },
+    { id: 'qrcode', icon: '📱', name: '二维码生成器' },
+    { id: 'bmi', icon: '⚖️', name: 'BMI计算器' },
+    { id: 'random', icon: '🎲', name: '随机数生成器' },
+    { id: 'countdown', icon: '⏳', name: '倒计时器' },
+    { id: 'datediff', icon: '📅', name: '日期差计算' },
+    { id: 'base64', icon: '🔣', name: 'Base64编码/解码器' },
+    { id: 'urlencode', icon: '🔗', name: 'URL编码/解码' },
+    { id: 'jsonformat', icon: '📋', name: 'JSON格式化器' },
+    { id: 'lorem', icon: '📄', name: 'Lorem Ipsum生成器' },
+    { id: 'currency', icon: '💱', name: '货币转换器' },
+    { id: 'percentcalc', icon: '📊', name: '百分比计算器' },
+    { id: 'agecalc', icon: '🎂', name: '年龄计算器' },
+    { id: 'binhex', icon: '💻', name: '二进制/十六进制转换器' },
+    { id: 'roman', icon: '🏛️', name: '罗马数字转换器' },
+    { id: 'tipcalc', icon: '💰', name: '小费计算器' },
+    { id: 'worldclock', icon: '🕐', name: '世界时钟' },
+    { id: 'dice', icon: '🎲', name: '骰子投掷器' },
+    { id: 'coin', icon: '🪙', name: '抛硬币' },
+    { id: 'joke', icon: '😂', name: '笑话生成器' },
+    { id: 'ip', icon: '🌍', name: 'IP查询' },
+    { id: 'ai_paraphraser', icon: '🔄', name: 'AI改写器' },
+    { id: 'ai_grammar', icon: '✅', name: '语法与拼写检查' },
+    { id: 'ai_summarizer', icon: '📄', name: 'AI摘要生成器' },
+    { id: 'ai_sentiment', icon: '😊', name: '情感分析' },
+    { id: 'ai_keywords', icon: '🔑', name: '关键词提取器' },
+    { id: 'ai_readability', icon: '📖', name: '可读性检查器' },
+    { id: 'premium_ai', icon: '🔮', name: 'AI文本增强器' }
+];
 
-renderGrid(); renderSidebar(); selectTool('calculator');
+// ===== 渲染网格与侧边栏 =====
+function renderGrid() {
+    let grid = document.getElementById('toolsGrid');
+    let html = '';
+    for (let i = 0; i < originalTools.length; i++) {
+        let t = originalTools[i];
+        html += `<div class="tool-card" data-tool="${t.id}" onclick="selectTool('${t.id}')"><div style="font-size:2.8rem;">${t.icon}</div><div class="tool-name">${t.name}</div></div>`;
+    }
+    grid.innerHTML = html;
+}
+function renderSidebar() {
+    let sidebar = document.getElementById('sidebarList');
+    sidebar.innerHTML = originalTools.map(t =>
+        `<div class="sidebar-item" onclick="selectTool('${t.id}'); closeSidebar();"><span style="font-size:1.6rem;">${t.icon}</span> <span style="font-size:1rem;">${t.name}</span></div>`
+    ).join('');
+}
 
-const randomBtn=document.getElementById('randomToolBtn'); let isRandomVisible=true; setInterval(()=>{ if(randomBtn){ isRandomVisible?randomBtn.classList.add('hide-random'):randomBtn.classList.remove('hide-random'); isRandomVisible=!isRandomVisible; } },3000); randomBtn.addEventListener('click',function(){ let avail=tools.filter(t=>t.id!=='premium_ai'); let rand=avail[Math.floor(Math.random()*avail.length)]; if(rand){ selectTool(rand.id); playSound(); showToast(`🎲 随机工具: ${rand.name}`); } });
-console.log('MultiTool Pro 已完整加载。');
+// ===== AI 模拟工具函数 (仅保留) =====
+function runParaphraserTool() { let t = document.getElementById('paraphraserText').value; document.getElementById('paraphraserOut').innerHTML = `🔄 改写: ${t} (模拟) - 仅用于演示。`; }
+function runGrammarTool() { let t = document.getElementById('grammarText').value; document.getElementById('grammarOut').innerHTML = `✅ 语法检查: ${t} (模拟) - 所有内容看起来正确。`; }
+function runSummarizerTool() { let t = document.getElementById('summarizerText').value; document.getElementById('summarizerOut').innerHTML = `📄 摘要: ${t.substring(0, 50)}... (模拟) - 这是简短摘要。`; }
+function runSentimentTool() { let t = document.getElementById('sentimentText').value; document.getElementById('sentimentOut').innerHTML = `😊 情感: 积极 (模拟) - 基于输入 " ${t} "。`; }
+function runKeywordsTool() { let t = document.getElementById('keywordsText').value; document.getElementById('keywordsOut').innerHTML = `🔑 关键词: ${t.split(' ').slice(0, 3).join(', ')} (模拟) - 提取前3个。`; }
+function runReadabilityTool() { let t = document.getElementById('readabilityText').value; document.getElementById('readabilityOut').innerHTML = `📖 可读性: 容易 (模拟) - 基于 ${t.length} 个字符。`; }
+function demoAIEnhanceAdvanced() {
+    let txt = document.getElementById('aiDemoText').value;
+    let mode = document.getElementById('aiMode').value;
+    if (!txt) { document.getElementById('aiDemoResult').innerHTML = '请先输入文本。'; return; }
+    let result = txt;
+    if (mode === 'grammar') result = txt.replace(/(i) /gi, 'I ').replace(/ +/g, ' ');
+    else if (mode === 'professional') result = `✨ 增强: ${txt} (专业语气) - 模拟效果。`;
+    else if (mode === 'friendly') result = `🙂 ${txt} (友好语气) - 模拟效果。`;
+    else if (mode === 'shorten') result = txt.split(' ').slice(0, 15).join(' ') + (txt.split(' ').length > 15 ? '...' : '');
+    else if (mode === 'expand') result = `${txt} 此外，此工具可帮助您实现更多目标。 (模拟扩展)`;
+    else if (mode === 'simplify') result = txt.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase();
+    document.getElementById('aiDemoResult').innerHTML = result;
+}
+
+// ===== 辅助函数: 获取时区列表 =====
+function getAllTimeZones() {
+    return Intl.supportedValuesOf('timeZone');
+}
+
+// ===== 链接强制在当前页面打开 =====
+var originalWindowOpen = window.open;
+window.open = function(url, target, features) {
+    if (url && (url.startsWith('http://') || url.startsWith('https://'))) {
+        window.location.href = url;
+        return null;
+    }
+    return originalWindowOpen(url, target, features);
+};
+document.addEventListener('click', function(e) {
+    let target = e.target.closest('a');
+    if (target && target.href) {
+        if (!target.href.startsWith('http://') && !target.href.startsWith('https://')) {
+            return;
+        }
+        e.preventDefault();
+        window.location.href = target.href;
+    }
+});
+const base = document.createElement('base');
+base.target = '_self';
+document.head.appendChild(base);
+const linkObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        mutation.addedNodes.forEach(function(node) {
+            if (node.nodeType === 1 && node.tagName === 'A') {
+                node.target = '_self';
+            }
+            if (node.nodeType === 1 && node.querySelectorAll) {
+                node.querySelectorAll('a').forEach(function(link) {
+                    link.target = '_self';
+                });
+            }
+        });
+    });
+});
+linkObserver.observe(document.body, { childList: true, subtree: true });
+
+// ===== 初始化 =====
+renderGrid();
+renderSidebar();
+selectTool('calculator');
+
+// ===== 随机工具按钮 =====
+const randomBtn = document.getElementById('randomToolBtn');
+let isRandomVisible = true;
+setInterval(function() {
+    if (randomBtn) {
+        if (isRandomVisible) randomBtn.classList.add('hide-random');
+        else randomBtn.classList.remove('hide-random');
+        isRandomVisible = !isRandomVisible;
+    }
+}, 3000);
+randomBtn.addEventListener('click', function() {
+    const availableTools = originalTools.filter(t => t.id !== 'premium_ai');
+    const randomIndex = Math.floor(Math.random() * availableTools.length);
+    const randomTool = availableTools[randomIndex];
+    if (randomTool) {
+        selectTool(randomTool.id);
+        playSound();
+        showToast(`🎲 随机工具: ${randomTool.name}`);
+    }
+});
+
+console.log('多功能工具专业版已加载 – 仅保留34个核心工具，全部翻译为简体中文。');
 </script>
 </body>
 </html>
