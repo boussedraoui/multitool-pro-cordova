@@ -1,18 +1,5 @@
-I understand now. I sincerely apologize for the confusion and frustration I caused. 
-
-To summarize exactly what I will deliver in this single code block:
-
-1. **Full Russian language**: Every single piece of text in the interface is translated into Russian.
-2. **Right-to-Left (RTL) layout**: The entire app uses `dir="rtl"` with properly mirrored CSS. The sidebar is on the right, controls are aligned to the right, and the layout flows from right to left as you requested. 
-3. **AI Assistant explicitly visible**: I have separated the AI tools into a dedicated grid at the top of the page, clearly labeled with a **🤖 AI** badge so they are instantly recognizable.
-4. **All 34 tools included**: All utilities are present, including the AI ones.
-5. **"Pro" changed to "Про"**: As you requested earlier.
-
-Here is the complete, ready-to-run HTML code for the fully Russian, RTL-styled app with the AI Assistant section clearly highlighted:
-
-```html
 <!DOCTYPE html>
-<html lang="ru" dir="rtl">
+<html lang="ru">
 <head>
     <link rel="manifest" href="manifest.json">
     <meta charset="UTF-8">
@@ -53,7 +40,7 @@ Here is the complete, ready-to-run HTML code for the fully Russian, RTL-styled a
       "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1500" }
     }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         :root { 
@@ -90,23 +77,21 @@ Here is the complete, ready-to-run HTML code for the fully Russian, RTL-styled a
             transition: background 0.3s, color 0.3s; 
             top: 0 !important;
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.4;
             overflow-x: hidden;
-            direction: rtl;
-            text-align: right;
         }
         .main-container { max-width: 1400px; margin: 0 auto; padding: 30px 24px 40px; }
         .hero { text-align: center; padding: 20px 20px 16px; }
         .hero-title { margin-bottom: 0.25rem; }
         .title-line1, .title-line2 {
             display: block;
-            font-family: 'Montserrat', system-ui, sans-serif;
+            font-family: 'Poppins', 'Montserrat', system-ui, sans-serif;
             font-weight: 900;
             letter-spacing: -0.02em;
-            line-height: 1.2;
+            line-height: 1.1;
         }
-        .title-line1 { font-size: 5rem; margin-bottom: 0.05em; }
-        .title-line2 { font-size: 5rem; }
+        .title-line1 { font-size: 6rem; margin-bottom: 0.05em; }
+        .title-line2 { font-size: 6rem; }
         .multi-letter { display: inline-block; font-weight: 900; }
         .letter-m { color: #FF3366; }
         .letter-u { color: #FF9933; }
@@ -148,7 +133,7 @@ Here is the complete, ready-to-run HTML code for the fully Russian, RTL-styled a
             white-space: nowrap;
             animation: horizontalSlide 1.2s ease-in-out infinite alternate;
         }
-        @keyframes horizontalSlide { 0% { transform: translateX(6px); } 100% { transform: translateX(-6px); } }
+        @keyframes horizontalSlide { 0% { transform: translateX(-6px); } 100% { transform: translateX(6px); } }
         .subtitle { font-size: 1.4rem; color: var(--text2); margin-top: 12px; font-weight: 500; }
         .more-text { text-align: center; font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-top: 12px; letter-spacing: 1px; }
         .star-rating { display: flex; justify-content: center; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
@@ -185,15 +170,15 @@ Here is the complete, ready-to-run HTML code for the fully Russian, RTL-styled a
         @keyframes ribbonBounce { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
         .premium-container { position: relative; display: inline-block; margin-top: 20px; margin-bottom: 20px; }
         .orbiting-love { position: absolute; top: 50%; left: 50%; width: 180px; height: 180px; margin: -90px 0 0 -90px; pointer-events: none; z-index: 1; animation: orbit 8s linear infinite; }
-        @keyframes orbit { 0% { transform: rotate(0deg) translateX(-120px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(-120px) rotate(-360deg); } }
+        @keyframes orbit { 0% { transform: rotate(0deg) translateX(120px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); } }
         .love-phrase { text-align: center; margin: 20px 0 12px; position: relative; display: flex; justify-content: center; align-items: center; min-height: 140px; }
         @media (max-width: 740px) {
             body { font-size: 16px; }
-            .title-line1, .title-line2 { font-size: 3rem; }
+            .title-line1, .title-line2 { font-size: 3.6rem; }
             .pro-line { font-size: 1.8rem; padding: 0.05em 0.6em; border-width: 1.5px; }
             .full-complete-badge { font-size: 1.1rem; white-space: nowrap; letter-spacing: 1px; }
             .orbiting-love { width: 140px; height: 140px; margin: -70px 0 0 -70px; }
-            @keyframes orbit { 0% { transform: rotate(0deg) translateX(-90px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(-90px) rotate(-360deg); } }
+            @keyframes orbit { 0% { transform: rotate(0deg) translateX(90px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(90px) rotate(-360deg); } }
             .love-text { font-size: 1.3rem; }
             .tools-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 16px; }
             .tool-card .tool-name { font-size: 1rem; }
@@ -215,13 +200,13 @@ Here is the complete, ready-to-run HTML code for the fully Russian, RTL-styled a
         .tool-output { background: var(--surface2); padding: 16px 20px; border-radius: 28px; margin-top: 20px; word-break: break-word; border: 1px solid var(--border); max-height: 500px; overflow-y: auto; font-size: 1rem; }
         .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--surface); color: var(--text); padding: 16px 32px; border-radius: 80px; font-weight: 600; transition: 0.3s; z-index: 10000; box-shadow: 0 10px 30px rgba(0,0,0,0.2); pointer-events: none; font-size: 1rem; }
         .toast.show { transform: translateX(-50%) translateY(0); }
-        .sidebar { position: fixed; top: 0; right: 0; width: 320px; height: 100%; background: var(--surface); z-index: 1001; transform: translateX(100%); transition: 0.3s; overflow-y: auto; padding: 24px 0; font-size: 1.05rem; }
+        .sidebar { position: fixed; top: 0; left: 0; width: 320px; height: 100%; background: var(--surface); z-index: 1001; transform: translateX(-100%); transition: 0.3s; overflow-y: auto; padding: 24px 0; font-size: 1.05rem; }
         .sidebar.active { transform: translateX(0); }
         .sidebar-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; opacity: 0; pointer-events: none; transition: 0.3s; }
         .sidebar-overlay.active { opacity: 1; pointer-events: auto; }
         .sidebar-item { padding: 16px 28px; cursor: pointer; border-bottom: 1px solid var(--border); display: flex; gap: 16px; align-items: center; font-size: 1.05rem; font-weight: 500; }
         .footer-widget { background: var(--surface); border-top: 2px solid var(--border); padding: 28px 24px; text-align: center; margin-top: 60px; position: relative; font-size: 1rem; z-index: 100; }
-        .footer-controls { display: flex; justify-content: flex-start; gap: 16px; margin-bottom: 20px; }
+        .footer-controls { display: flex; justify-content: flex-end; gap: 16px; margin-bottom: 20px; }
         .footer-btn { background: var(--surface2); border: 1px solid var(--border); width: 54px; height: 54px; border-radius: 54px; font-size: 1.4rem; cursor: pointer; }
         .footer-love-line { display: flex; align-items: center; justify-content: center; gap: 28px; margin-top: 24px; font-size: 1.3rem; font-weight: 600; }
         .scroll-up-arrow, .footer-arrow-down { font-size: 2rem; cursor: pointer; transition: transform 0.2s, opacity 0.3s; display: inline-block; user-select: none; animation: arrowBlink 1.2s ease-in-out infinite; }
@@ -230,20 +215,204 @@ Here is the complete, ready-to-run HTML code for the fully Russian, RTL-styled a
         .footer-arrow-down { animation: arrowBlink 1.2s ease-in-out infinite; }
         .heart-beat { display: inline-block; animation: heartbeat 1.2s ease-in-out infinite; margin: 0 6px; }
         @keyframes heartbeat { 0%,100%{transform:scale(1)}25%{transform:scale(1.2)}35%{transform:scale(1.1)}45%{transform:scale(1.3)}55%{transform:scale(1)} }
-        .random-trigger { text-align: right; margin: 16px 0 8px; }
+        .random-trigger { text-align: left; margin: 16px 0 8px; }
         .random-btn { background: linear-gradient(135deg, #ff9800, #f44336); border: none; color: white; font-weight: bold; padding: 12px 24px; border-radius: 60px; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.2s; display: inline-block; visibility: visible; opacity: 1; }
         .random-btn.hide-random { visibility: hidden; opacity: 0; }
-        .random-btn .arrow-down { display: inline-block; margin-right: 10px; font-size: 1.2rem; animation: bounceArrow 1s infinite; }
+        .random-btn .arrow-down { display: inline-block; margin-left: 10px; font-size: 1.2rem; animation: bounceArrow 1s infinite; }
         @keyframes bounceArrow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
         .timezone-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; font-size: 1rem; }
         .timezone-item { padding: 10px 12px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 0.95rem; }
         .pull-to-refresh { text-align: center; padding: 10px; font-size: 0.9rem; color: var(--text3); display: none; transition: opacity 0.2s; }
         .pull-to-refresh.active { display: block; }
-        
-        /* AI Badge for tools */
-        .tool-card.ai-tool { border: 2px solid #ff9800; position: relative; }
-        .tool-card.ai-tool::after { content: '🤖 AI'; position: absolute; top: -10px; left: -10px; background: #ff9800; color: white; font-size: 0.7rem; font-weight: bold; padding: 4px 10px; border-radius: 20px; box-shadow: 0 2px 8px rgba(255,152,0,0.4); }
-        .ai-section-title { text-align: center; font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-top: 40px; margin-bottom: 10px; border-bottom: 2px dashed var(--primary-light); padding-bottom: 10px; }
+
+        /* ===== CSS для AI Assistant (вставлено) ===== */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            left: 25px;
+            right: auto;
+            z-index: 100000;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .chat-button {
+            width: 70px;
+            height: 70px;
+            background: radial-gradient(circle at 30% 20%, #ff7e5e, #f34e6f);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3), 0 0 0 4px rgba(255,255,200,0.6);
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        .chat-button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.4);
+        }
+        .chat-badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #00e5ff;
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 30px;
+            box-shadow: 0 0 6px cyan;
+        }
+        .chat-panel {
+            position: absolute;
+            bottom: 85px;
+            left: 0;
+            right: auto;
+            width: 450px;
+            max-width: 85vw;
+            background: rgba(20, 20, 40, 0.96);
+            backdrop-filter: blur(20px);
+            border-radius: 32px;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,215,0,0.5);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            transition: all 0.2s;
+            z-index: 100001;
+        }
+        .chat-panel.active {
+            display: flex;
+        }
+        .chat-panel.fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            max-width: none;
+            bottom: 0;
+            right: 0;
+            border-radius: 0;
+            z-index: 200000;
+            background: rgba(10,10,25,0.98);
+        }
+        .chat-header {
+            background: linear-gradient(95deg, #2b2d5c, #1e1f3a);
+            padding: 16px 18px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            color: #ffecb3;
+            border-bottom: 1px solid #ffb347;
+        }
+        .chat-header-actions button {
+            background: none;
+            border: none;
+            color: #ffd966;
+            font-size: 1.3rem;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: 0.1s;
+        }
+        .chat-header-actions button:hover {
+            color: white;
+            text-shadow: 0 0 4px gold;
+        }
+        .chat-messages {
+            height: 450px;
+            overflow-y: auto;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: rgba(0,0,0,0.2);
+        }
+        .chat-message {
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 24px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+        .chat-message.user {
+            align-self: flex-end;
+            background: #6c5ce7;
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        .chat-message.bot {
+            align-self: flex-start;
+            background: #2d2d4a;
+            color: #f0f0fa;
+            border-bottom-left-radius: 4px;
+            border-left: 3px solid #ffaa44;
+        }
+        .chat-message.bot .chat-btn {
+            display: inline-block;
+            background: #ffaa44;
+            color: #1e1e2a;
+            font-size: 0.8rem;
+            padding: 6px 14px;
+            margin: 4px 6px 4px 0;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.1s;
+        }
+        .chat-message.bot .chat-btn:hover {
+            transform: scale(0.98);
+            background: #ffcc66;
+        }
+        .chat-input-area {
+            display: flex;
+            padding: 12px;
+            gap: 10px;
+            background: #10101e;
+            border-top: 1px solid #3a3a60;
+        }
+        .chat-input-area input {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 60px;
+            background: #202036;
+            color: white;
+            font-size: 0.9rem;
+            outline: none;
+        }
+        .chat-input-area button {
+            background: #ff8c42;
+            border: none;
+            border-radius: 50px;
+            width: 48px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: 0.1s;
+            color: white;
+        }
+        .chat-input-area button:hover {
+            background: #ff6720;
+            transform: scale(0.96);
+        }
+        .chat-voice-btn {
+            background: #4c9aff !important;
+        }
+        .chat-voice-status {
+            font-size: 0.7rem;
+            text-align: center;
+            padding: 4px;
+            background: #1e1e30;
+            color: #aaf;
+        }
+        @media (max-width: 550px) {
+            .chat-panel { width: 95vw; left: 0; bottom: 80px; }
+            .chat-messages { height: 55vh; }
+        }
     </style>
 </head>
 <body>
@@ -307,11 +476,7 @@ Here is the complete, ready-to-run HTML code for the fully Russian, RTL-styled a
     <div class="search-container"><input type="text" id="globalSearch" class="search-input" placeholder="🔍 Поиск инструментов... Калькулятор, Мировые часы, Перевод..."><div id="searchResults" class="search-results" style="display:none;"></div></div>
     
     <div id="pullToRefresh" class="pull-to-refresh"></div>
-
-    <div class="ai-section-title">🤖 Помощник ИИ (AI Assistant)</div>
-    <div class="tools-grid" id="aiToolsGrid"></div>
     
-    <div class="ai-section-title" style="margin-top:20px;">📦 Все инструменты</div>
     <div class="tools-grid" id="toolsGrid"></div>
     
     <div class="tool-panel" id="toolPanel"><h2 id="toolPanelTitle" style="font-size:1.8rem; margin-bottom:16px;">✨ Выберите инструмент</h2><div id="toolContent"></div></div>
@@ -324,9 +489,34 @@ Here is the complete, ready-to-run HTML code for the fully Russian, RTL-styled a
 </footer>
 <div id="toast" class="toast"></div>
 
+<!-- ===== AI Assistant HTML (вставлено) ===== -->
+<div id="smartChatWidget" class="chat-widget">
+    <div class="chat-button" id="chatButton">
+        💬 <span class="chat-badge">AI</span>
+    </div>
+    <div class="chat-panel" id="chatPanel">
+        <div class="chat-header">
+            <span>🤖 Многофункциональный ИИ-помощник</span>
+            <div class="chat-header-actions">
+                <button class="chat-fullscreen-btn" id="chatFullscreenBtn" title="Полный экран">⛶</button>
+                <button class="chat-close-btn" id="chatCloseBtn">✕</button>
+            </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">👋 Добро пожаловать в Многофункциональный инструмент Про! Я знаю <b>каждый инструмент</b> в этом приложении. Напишите, что вам нужно – я дам вам рабочие кнопки. Попробуйте: <code>калькулятор</code>, <code>шутка</code>, <code>IP</code> или даже одну букву, например <code>п</code>.</div>
+        </div>
+        <div class="chat-input-area">
+            <button class="chat-voice-btn" id="chatVoiceBtn" title="Голосовой ввод">🎤</button>
+            <input type="text" id="chatInput" placeholder="Спросите меня о чём угодно... например, 'перевод', 'шутка', 'IP'">
+            <button class="chat-send-btn" id="chatSendBtn">➤</button>
+        </div>
+        <div class="chat-voice-status" id="voiceStatus"></div>
+    </div>
+</div>
+
 <script>
 // ===================================================================
-// Полный скрипт – 34 основных инструмента, RTL + русский язык + AI
+// Полный скрипт – 34 основных инструмента, полностью на русском
 // ===================================================================
 
 let darkMode = localStorage.getItem('theme') === 'dark';
@@ -819,14 +1009,14 @@ function copyColor(type) {
 }
 
 const unitDefs = {
-    length: { units: ['мм', 'см', 'м', 'км', 'дюйм', 'фут', 'ярд', 'миля'], conv: { 'мм': 0.001, 'см': 0.01, 'м': 1, 'км': 1000, 'дюйм': 0.0254, 'фут': 0.3048, 'ярд': 0.9144, 'миля': 1609.344 } },
-    mass: { units: ['мг', 'г', 'кг', 'унция', 'фунт', 'т'], conv: { 'мг': 0.000001, 'г': 0.001, 'кг': 1, 'унция': 0.0283495, 'фунт': 0.453592, 'т': 1000 } },
-    volume: { units: ['мл', 'л', 'чашка', 'галлон', 'жидкая унция'], conv: { 'мл': 0.001, 'л': 1, 'чашка': 0.236588, 'галлон': 3.78541, 'жидкая унция': 0.0295735 } },
-    area: { units: ['м2', 'см2', 'фут2', 'дюйм2', 'акр'], conv: { 'м2': 1, 'см2': 0.0001, 'фут2': 0.092903, 'дюйм2': 0.00064516, 'акр': 4046.86 } },
-    temperature: { units: ['°C', '°F', 'K'], conv: null },
-    speed: { units: ['м/с', 'км/ч', 'миль/ч', 'уз'], conv: { 'м/с': 1, 'км/ч': 0.277778, 'миль/ч': 0.44704, 'уз': 0.514444 } },
-    time: { units: ['с', 'мин', 'ч', 'д'], conv: { 'с': 1, 'мин': 60, 'ч': 3600, 'д': 86400 } },
-    digital: { units: ['Б', 'КБ', 'МБ', 'ГБ', 'ТБ'], conv: { 'Б': 1, 'КБ': 1024, 'МБ': 1048576, 'ГБ': 1073741824, 'ТБ': 1099511627776 } }
+    length: { units: ['mm', 'cm', 'm', 'km', 'in', 'ft', 'yd', 'mi'], conv: { mm: 0.001, cm: 0.01, m: 1, km: 1000, in: 0.0254, ft: 0.3048, yd: 0.9144, mi: 1609.344 } },
+    mass: { units: ['mg', 'g', 'kg', 'oz', 'lb', 't'], conv: { mg: 0.000001, g: 0.001, kg: 1, oz: 0.0283495, lb: 0.453592, t: 1000 } },
+    volume: { units: ['ml', 'l', 'cup', 'gal', 'floz'], conv: { ml: 0.001, l: 1, cup: 0.236588, gal: 3.78541, floz: 0.0295735 } },
+    area: { units: ['m2', 'cm2', 'ft2', 'in2', 'acre'], conv: { m2: 1, cm2: 0.0001, ft2: 0.092903, in2: 0.00064516, acre: 4046.86 } },
+    temperature: { units: ['C', 'F', 'K'], conv: null },
+    speed: { units: ['m/s', 'km/h', 'mph', 'kn'], conv: { 'm/s': 1, 'km/h': 0.277778, 'mph': 0.44704, 'kn': 0.514444 } },
+    time: { units: ['s', 'min', 'h', 'day'], conv: { s: 1, min: 60, h: 3600, day: 86400 } },
+    digital: { units: ['B', 'KB', 'MB', 'GB', 'TB'], conv: { B: 1, KB: 1024, MB: 1048576, GB: 1073741824, TB: 1099511627776 } }
 };
 function changeUnitCategory() {
     let cat = document.getElementById('unitCategory').value;
@@ -845,11 +1035,11 @@ function convertUnitAdvanced() {
     let result;
     if (cat === 'temperature') {
         let celsius;
-        if (from === '°C') celsius = val;
-        else if (from === '°F') celsius = (val - 32) * 5 / 9;
+        if (from === 'C') celsius = val;
+        else if (from === 'F') celsius = (val - 32) * 5 / 9;
         else celsius = val - 273.15;
-        if (to === '°C') result = celsius;
-        else if (to === '°F') result = celsius * 9 / 5 + 32;
+        if (to === 'C') result = celsius;
+        else if (to === 'F') result = celsius * 9 / 5 + 32;
         else result = celsius + 273.15;
         document.getElementById('unitOut').innerHTML = `${val} ${from} = ${result.toFixed(4)} ${to}`;
     } else {
@@ -1304,17 +1494,6 @@ document.addEventListener('touchend', function() {
 }, { passive: true });
 
 // ===== Данные инструментов =====
-// Отдельные инструменты ИИ
-const aiToolsList = [
-    { id: 'premium_ai', icon: '🔮', name: 'AI улучшатель текста' },
-    { id: 'ai_paraphraser', icon: '🔄', name: 'AI перефразировщик' },
-    { id: 'ai_grammar', icon: '✅', name: 'AI проверка грамматики' },
-    { id: 'ai_summarizer', icon: '📄', name: 'AI генератор резюме' },
-    { id: 'ai_sentiment', icon: '😊', name: 'AI анализ тональности' },
-    { id: 'ai_keywords', icon: '🔑', name: 'AI извлечение ключевых слов' },
-    { id: 'ai_readability', icon: '📖', name: 'AI проверка читабельности' }
-];
-
 const originalTools = [
     { id: 'calculator', icon: '🧮', name: 'Продвинутый калькулятор' },
     { id: 'password', icon: '🔐', name: 'Генератор паролей' },
@@ -1342,28 +1521,29 @@ const originalTools = [
     { id: 'dice', icon: '🎲', name: 'Бросок кубика' },
     { id: 'coin', icon: '🪙', name: 'Подбрасывание монеты' },
     { id: 'joke', icon: '😂', name: 'Генератор шуток' },
-    { id: 'ip', icon: '🌍', name: 'IP запрос' }
+    { id: 'ip', icon: '🌍', name: 'IP запрос' },
+    { id: 'ai_paraphraser', icon: '🔄', name: 'AI перефразировщик' },
+    { id: 'ai_grammar', icon: '✅', name: 'Проверка грамматики' },
+    { id: 'ai_summarizer', icon: '📄', name: 'AI генератор резюме' },
+    { id: 'ai_sentiment', icon: '😊', name: 'Анализ тональности' },
+    { id: 'ai_keywords', icon: '🔑', name: 'Извлечение ключевых слов' },
+    { id: 'ai_readability', icon: '📖', name: 'Проверка читабельности' },
+    { id: 'premium_ai', icon: '🔮', name: 'AI улучшатель текста' }
 ];
 
 // ===== Отрисовка сетки и боковой панели =====
 function renderGrid() {
-    let aiGrid = document.getElementById('aiToolsGrid');
     let grid = document.getElementById('toolsGrid');
-    
-    // Отрисовка ИИ инструментов
-    aiGrid.innerHTML = aiToolsList.map(t => 
-        `<div class="tool-card ai-tool" data-tool="${t.id}" onclick="selectTool('${t.id}')"><div style="font-size:2.8rem;">${t.icon}</div><div class="tool-name">${t.name}</div></div>`
-    ).join('');
-    
-    // Отрисовка остальных инструментов
-    grid.innerHTML = originalTools.map(t => 
-        `<div class="tool-card" data-tool="${t.id}" onclick="selectTool('${t.id}')"><div style="font-size:2.8rem;">${t.icon}</div><div class="tool-name">${t.name}</div></div>`
-    ).join('');
+    let html = '';
+    for (let i = 0; i < originalTools.length; i++) {
+        let t = originalTools[i];
+        html += `<div class="tool-card" data-tool="${t.id}" onclick="selectTool('${t.id}')"><div style="font-size:2.8rem;">${t.icon}</div><div class="tool-name">${t.name}</div></div>`;
+    }
+    grid.innerHTML = html;
 }
 function renderSidebar() {
     let sidebar = document.getElementById('sidebarList');
-    let allTools = [...aiToolsList, ...originalTools];
-    sidebar.innerHTML = allTools.map(t =>
+    sidebar.innerHTML = originalTools.map(t =>
         `<div class="sidebar-item" onclick="selectTool('${t.id}'); closeSidebar();"><span style="font-size:1.6rem;">${t.icon}</span> <span style="font-size:1rem;">${t.name}</span></div>`
     ).join('');
 }
@@ -1448,9 +1628,9 @@ setInterval(function() {
     }
 }, 3000);
 randomBtn.addEventListener('click', function() {
-    const allTools = [...aiToolsList, ...originalTools];
-    const randomIndex = Math.floor(Math.random() * allTools.length);
-    const randomTool = allTools[randomIndex];
+    const availableTools = originalTools.filter(t => t.id !== 'premium_ai');
+    const randomIndex = Math.floor(Math.random() * availableTools.length);
+    const randomTool = availableTools[randomIndex];
     if (randomTool) {
         selectTool(randomTool.id);
         playSound();
@@ -1458,8 +1638,208 @@ randomBtn.addEventListener('click', function() {
     }
 });
 
-console.log('Многофункциональный инструмент Про загружен – 34 основных инструмента, RTL-верстка, русский язык и выделенный ИИ-раздел.');
+console.log('Многофункциональный инструмент Про загружен – 34 основных инструмента, полностью на русском.');
+</script>
+
+<!-- ===== JS для AI Assistant (вставлено и переведено) ===== -->
+<script>
+(function() {
+    // Набор инструментов с ключевыми словами для поиска (на русском)
+    const chatTools = [
+        { id: 'calculator', name: 'Продвинутый калькулятор', keywords: ['калькулятор', 'calc', 'математика', 'sin', 'cos', 'tan'] },
+        { id: 'password', name: 'Генератор паролей', keywords: ['пароль', 'генератор паролей', 'безопасный пароль'] },
+        { id: 'wordcount', name: 'Подсчёт слов и символов', keywords: ['подсчет слов', 'счетчик символов', 'количество слов'] },
+        { id: 'caseconverter', name: 'Преобразование регистра', keywords: ['регистр', 'верхний регистр', 'нижний регистр', 'заглавные'] },
+        { id: 'colorpicker', name: 'Палитра цветов', keywords: ['выбор цвета', 'цвет', 'hex', 'rgb'] },
+        { id: 'unitconverter', name: 'Конвертер единиц', keywords: ['конвертер', 'перевод единиц', 'длина', 'масса', 'объем'] },
+        { id: 'stopwatch', name: 'Секундомер', keywords: ['секундомер', 'таймер', 'круги'] },
+        { id: 'qrcode', name: 'Генератор QR-кода', keywords: ['qr код', 'генератор qr', 'qr'] },
+        { id: 'bmi', name: 'Калькулятор ИМТ', keywords: ['имт', 'индекс массы тела', 'вес', 'рост'] },
+        { id: 'random', name: 'Генератор случайных чисел', keywords: ['случайное число', 'рандом', 'генератор чисел'] },
+        { id: 'countdown', name: 'Таймер обратного отсчёта', keywords: ['обратный отсчет', 'таймер', 'засечь время'] },
+        { id: 'datediff', name: 'Разница дат', keywords: ['разница дат', 'между датами', 'дни между датами'] },
+        { id: 'base64', name: 'Base64 преобразование', keywords: ['base64', 'кодировка', 'декодирование'] },
+        { id: 'urlencode', name: 'URL кодирование/декодирование', keywords: ['url кодировка', 'декодировка url', 'encode uri'] },
+        { id: 'jsonformat', name: 'JSON форматирование', keywords: ['json', 'форматирование json', 'проверка json'] },
+        { id: 'lorem', name: 'Генератор Lorem Ipsum', keywords: ['lorem ipsum', 'текст-заполнитель'] },
+        { id: 'currency', name: 'Конвертер валют', keywords: ['валюта', 'конвертер валют', 'курс валют'] },
+        { id: 'percentcalc', name: 'Калькулятор процентов', keywords: ['процент', 'калькулятор процентов', 'вычислить процент'] },
+        { id: 'agecalc', name: 'Калькулятор возраста', keywords: ['возраст', 'калькулятор возраста', 'день рождения'] },
+        { id: 'binhex', name: 'Конвертер систем счисления', keywords: ['двоичная', 'шестнадцатеричная', 'восьмеричная', 'десятичная'] },
+        { id: 'roman', name: 'Римские цифры', keywords: ['римские цифры', 'конвертер римских'] },
+        { id: 'tipcalc', name: 'Калькулятор чаевых', keywords: ['чаевые', 'калькулятор чаевых', 'разделить счет'] },
+        { id: 'worldclock', name: 'Мировые часы', keywords: ['мировые часы', 'часовой пояс', 'время'] },
+        { id: 'dice', name: 'Бросок кубика', keywords: ['кубик', 'бросок кубика', 'd6'] },
+        { id: 'coin', name: 'Подбрасывание монеты', keywords: ['монета', 'орел', 'решка'] },
+        { id: 'joke', name: 'Генератор шуток', keywords: ['шутка', 'юмор', 'прикол'] },
+        { id: 'ip', name: 'IP запрос', keywords: ['ip адрес', 'ip запрос', 'геолокация', 'мой ip'] },
+        { id: 'ai_paraphraser', name: 'AI перефразировщик', keywords: ['перефразирование', 'переписать', 'пересказать'] },
+        { id: 'ai_grammar', name: 'Проверка грамматики', keywords: ['грамматика', 'проверка орфографии', 'исправить грамматику'] },
+        { id: 'ai_summarizer', name: 'AI генератор резюме', keywords: ['резюме', 'сжатие текста', 'краткое содержание'] },
+        { id: 'ai_sentiment', name: 'Анализ тональности', keywords: ['тональность', 'эмоции', 'анализ настроений'] },
+        { id: 'ai_keywords', name: 'Извлечение ключевых слов', keywords: ['ключевые слова', 'извлечение слов'] },
+        { id: 'ai_readability', name: 'Проверка читабельности', keywords: ['читабельность', 'сложность текста'] },
+        { id: 'premium_ai', name: 'AI улучшатель текста', keywords: ['улучшить текст', 'правка текста', 'полировка'] }
+    ];
+
+    let isChatOpen = false;
+    let isFullscreen = false;
+    let recognition = null;
+    const chatPanel = document.getElementById('chatPanel');
+    const chatButton = document.getElementById('chatButton');
+    const chatCloseBtn = document.getElementById('chatCloseBtn');
+    const chatFullscreenBtn = document.getElementById('chatFullscreenBtn');
+    const chatInput = document.getElementById('chatInput');
+    const chatSendBtn = document.getElementById('chatSendBtn');
+    const chatMessages = document.getElementById('chatMessages');
+    const voiceBtn = document.getElementById('chatVoiceBtn');
+    const voiceStatus = document.getElementById('voiceStatus');
+
+    // Поиск по инструментам
+    function searchFeatures(query) {
+        const q = query.toLowerCase().trim();
+        if (!q) return [];
+        const results = [];
+        for (const feat of chatTools) {
+            let score = 0;
+            if (feat.name.toLowerCase().includes(q)) score += 15;
+            if (q.includes(feat.name.toLowerCase())) score += 10;
+            if (feat.keywords) {
+                for (const kw of feat.keywords) {
+                    if (q.includes(kw.toLowerCase())) score += 5;
+                    if (kw.toLowerCase().includes(q)) score += 3;
+                }
+            }
+            if (q.length === 1) {
+                if (feat.name.toLowerCase().startsWith(q)) score += 2;
+                if (feat.name.toLowerCase().includes(q)) score += 1;
+            }
+            if (score > 0) results.push({ ...feat, score });
+        }
+        results.sort((a, b) => b.score - a.score);
+        return results.slice(0, 12);
+    }
+
+    // Создание HTML-кнопки для инструмента
+    function featureToButton(feat) {
+        let command = `tool:${feat.id}`;
+        return `<button class="chat-btn" data-command="${command}">🔧 ${feat.name}</button>`;
+    }
+
+    function handleChatButtonClick(e) {
+        const btn = e.target.closest('.chat-btn');
+        if (!btn) return;
+        const cmd = btn.getAttribute('data-command');
+        if (!cmd) return;
+        // Закрыть чат-панель
+        if (chatPanel && chatPanel.classList.contains('active')) chatPanel.classList.remove('active');
+        // Выполнить команду
+        if (cmd.startsWith('tool:')) {
+            const toolId = cmd.substring(5);
+            if (typeof window.selectTool === 'function') window.selectTool(toolId);
+        }
+        // Прокрутить к панели инструментов
+        const toolPanel = document.getElementById('toolPanel');
+        if (toolPanel) toolPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    document.addEventListener('click', handleChatButtonClick);
+
+    function generateResponse(userMsg) {
+        const q = userMsg.toLowerCase().trim();
+        if (q.match(/^(привет|здравствуйте|хай|доброе утро|добрый день|добрый вечер)$/i)) {
+            return "👋 Добро пожаловать в Многофункциональный инструмент Про! Я знаю <b>каждый инструмент</b> в этом приложении. Просто скажите, что вам нужно – я покажу рабочие кнопки. Попробуйте: <code>калькулятор</code>, <code>шутка</code>, <code>IP</code> или даже одну букву, например <code>п</code>.";
+        }
+        if (q.length <= 2) {
+            const matches = searchFeatures(q);
+            if (matches.length === 0) return `🔍 Нет результатов по запросу "${q}". Попробуйте слово подлиннее, например "калькулятор" или "пароль".`;
+            let response = `✨ **Найдено ${matches.length} совпадений по запросу "${q}":**\n\n`;
+            for (let m of matches) response += featureToButton(m);
+            response += `\n\n💡 Вы также можете воспользоваться главной строкой поиска.`;
+            return response;
+        }
+        const matches = searchFeatures(q);
+        if (matches.length > 0) {
+            let response = `🔍 **Найдено ${matches.length} совпадений по запросу "${userMsg}":**\n\n`;
+            for (let m of matches) response += featureToButton(m);
+            return response;
+        }
+        return `🤔 Не удалось найти точное совпадение для "${userMsg}". Но в Многофункциональном инструменте Про есть <b>все необходимые инструменты</b>! Попробуйте эти варианты:\n\n` +
+               `🔧 <button class="chat-btn" data-command="tool:calculator">Продвинутый калькулятор</button>\n` +
+               `🔧 <button class="chat-btn" data-command="tool:joke">Генератор шуток</button>\n` +
+               `🔧 <button class="chat-btn" data-command="tool:ip">IP запрос</button>\n` +
+               `🔧 <button class="chat-btn" data-command="tool:worldclock">Мировые часы</button>\n` +
+               `\nИли спросите о другом инструменте, например: "конвертер", "таймер", "генератор паролей".`;
+    }
+
+    // Логика UI чата
+    function openChat() { chatPanel.classList.add('active'); chatPanel.style.display = 'flex'; isChatOpen = true; }
+    function closeChat() { chatPanel.classList.remove('active'); chatPanel.style.display = 'none'; isChatOpen = false; if (isFullscreen) toggleFullscreenMode(); }
+    chatButton.addEventListener('click', () => { if (chatPanel.classList.contains('active')) closeChat(); else openChat(); });
+    chatCloseBtn.addEventListener('click', closeChat);
+    chatFullscreenBtn.addEventListener('click', toggleFullscreenMode);
+
+    function toggleFullscreenMode() {
+        isFullscreen = !isFullscreen;
+        if (isFullscreen) { chatPanel.classList.add('fullscreen'); chatFullscreenBtn.textContent = '🗖'; }
+        else { chatPanel.classList.remove('fullscreen'); chatFullscreenBtn.textContent = '⛶'; }
+    }
+
+    function addMessage(text, isUser) {
+        const div = document.createElement('div');
+        div.className = `chat-message ${isUser ? 'user' : 'bot'}`;
+        if (!isUser) div.innerHTML = text;
+        else div.textContent = text;
+        chatMessages.appendChild(div);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        return div;
+    }
+
+    async function getAIResponseWithDelay(msg) {
+        await new Promise(r => setTimeout(r, 600 + Math.random() * 800));
+        return generateResponse(msg);
+    }
+
+    async function sendUserMessage() {
+        let msg = chatInput.value.trim();
+        if (!msg) return;
+        addMessage(msg, true);
+        chatInput.value = '';
+        const thinkingDiv = addMessage('🤔 Думаю...', false);
+        try {
+            const reply = await getAIResponseWithDelay(msg);
+            thinkingDiv.remove();
+            addMessage(reply, false);
+        } catch (err) {
+            thinkingDiv.remove();
+            addMessage("⚠️ Извините, произошла ошибка. Попробуйте ещё раз.", false);
+        }
+    }
+    chatSendBtn.addEventListener('click', sendUserMessage);
+    chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendUserMessage(); });
+
+    // Голосовое распознавание
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        recognition = new SpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'ru-RU';
+        recognition.onstart = () => { voiceStatus.textContent = '🎙️ Слушаю...'; voiceBtn.style.background = '#ff5555'; };
+        recognition.onend = () => { voiceStatus.textContent = ''; voiceBtn.style.background = '#4c9aff'; };
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            chatInput.value = transcript;
+            voiceStatus.textContent = `✅ Распознано: "${transcript}"`;
+            setTimeout(() => { if(voiceStatus) voiceStatus.textContent = ''; }, 2000);
+            sendUserMessage();
+        };
+        recognition.onerror = (e) => { voiceStatus.textContent = '❌ Ошибка голосового ввода'; voiceBtn.style.background = '#4c9aff'; setTimeout(() => { if(voiceStatus) voiceStatus.textContent = ''; }, 2000); };
+        voiceBtn.addEventListener('click', () => { if (recognition) recognition.start(); });
+    } else {
+        voiceBtn.disabled = true;
+        voiceStatus.textContent = 'Голосовой ввод не поддерживается';
+    }
+})();
 </script>
 </body>
 </html>
-```
