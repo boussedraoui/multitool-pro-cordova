@@ -413,6 +413,34 @@
             .chat-panel { width: 95vw; left: 0; bottom: 80px; }
             .chat-messages { height: 55vh; }
         }
+
+        /* ========== FIX FOR MOBILE SHAKING (ADDED WITHOUT DELETING ANYTHING) ========== */
+        @media (max-width: 740px) {
+            /* Disable all constant animations that cause layout repaints */
+            .full-complete-badge,
+            .love-text,
+            .premium-ribbon,
+            .orbiting-love,
+            .scroll-up-arrow,
+            .footer-arrow-down,
+            .random-btn .arrow-down,
+            .heart-beat,
+            .chat-button,
+            .chat-panel {
+                animation: none !important;
+                transition: none !important;
+            }
+            .chat-button:hover {
+                transform: none !important;
+            }
+            .chat-panel {
+                backdrop-filter: none !important;
+            }
+            /* Keep the button shadow stable */
+            .chat-button {
+                box-shadow: 0 10px 25px rgba(0,0,0,0.3) !important;
+            }
+        }
     </style>
 </head>
 <body>
