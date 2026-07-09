@@ -19,11 +19,17 @@ jobs:
       - run: keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias -storepass 123456 -keypass 123456 -dname "CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown"
       - run: cd multitool-app && cordova platform add android@13.0.0
       - run: cd multitool-app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456
-      - id: find_apk
+      - name: Debug APK Location
+        id: find_apk
         run: |
-          APK=$(find ${{ github.workspace }}/multitool-app -name "*.apk" | head -n 1)
+          echo "Current directory:"
+          pwd
+          echo "Searching for APK..."
+          APK=$(find multitool-app -name "*.apk" | head -n 1)
+          echo "Found APK path: $APK"
           echo "path=$APK" >> $GITHUB_OUTPUT
       - uses: actions/upload-artifact@v4
         with:
           name: app-release-signed
           path: ${{ steps.find_apk.outputs.path }}
+          if-no-files-found: error
