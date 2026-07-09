@@ -19,18 +19,20 @@ jobs:
       - run: keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias -storepass 123456 -keypass 123456 -dname "CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown"
       - run: cd multitool-app && cordova platform add android@13.0.0
       - run: cd multitool-app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456
-      - name: Find and Copy APK
+      
+      - name: Copy the exact APK file
         run: |
-          echo "Searching for APK in the entire runner..."
-          APK_FILE=$(find ${{ github.workspace }} -name "*.apk" -type f | head -n 1)
-          if [ -n "$APK_FILE" ]; then
-            echo "✅ Found APK at: $APK_FILE"
-            cp "$APK_FILE" app-release-signed.apk
+          APK_SOURCE="multitool-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
+          if [ -f "$APK_SOURCE" ]; then
+            cp "$APK_SOURCE" app-release-signed.apk
+            echo "✅ APK found and copied successfully."
           else
-            echo "❌ No APK found! Printing directory structure:"
-            ls -R ${{ github.workspace }}
+            echo "❌ APK NOT FOUND at $APK_SOURCE"
+            echo "Checking if release folder exists..."
+            ls -R multitool-app/platforms/android/app/build/outputs/apk/release/ || echo "Folder missing!"
             exit 1
           fi
+          
       - uses: actions/upload-artifact@v4
         with:
           name: app-release-signed
