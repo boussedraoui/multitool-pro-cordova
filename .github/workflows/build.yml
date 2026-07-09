@@ -19,25 +19,28 @@ jobs:
       - run: keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias -storepass 123456 -keypass 123456 -dname "CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown"
       - run: cd multitool-app && cordova platform add android@13.0.0
       - run: cd multitool-app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456
-      
-      # This finds the APK using the exact standard path, and copies it to the root folder.
       - name: Find and Copy APK
         run: |
-          APK_PATH="multitool-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
-          if [ -f "$APK_PATH" ]; then
-            echo "Found APK at $APK_PATH"
-            cp "$APK_PATH" app-release-signed.apk
+          APK_PATH1="multitool-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
+          APK_PATH2="multitool-app/app/build/outputs/apk/release/app-release-unsigned.apk"
+          if [ -f "$APK_PATH1" ]; then
+            echo "Found APK at $APK_PATH1"
+            cp "$APK_PATH1" app-release-signed.apk
+          elif [ -f "$APK_PATH2" ]; then
+            echo "Found APK at $APK_PATH2"
+            cp "$APK_PATH2" app-release-signed.apk
           else
-            echo "Standard path failed, running full search..."
-            APK=$(find multitool-app -name "*.apk" -type f | head -n 1)
+            echo "Standard paths failed, running full search..."
+            APK=$(find $GITHUB_WORKSPACE -name "*.apk" -type f | head -n 1)
             if [ -n "$APK" ]; then
               echo "Found APK at $APK"
               cp "$APK" app-release-signed.apk
             else
-              echo "APK NOT FOUND" && exit 1
+              echo "APK NOT FOUND. Directory structure:"
+              ls -R $GITHUB_WORKSPACE
+              exit 1
             fi
           fi
-          
       - uses: actions/upload-artifact@v4
         with:
           name: app-release-signed
