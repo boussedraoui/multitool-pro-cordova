@@ -18,10 +18,9 @@ jobs:
       - run: cp config.xml app/config.xml
       - run: keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias -storepass 123456 -keypass 123456 -dname "CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown"
       - run: cd app && cordova platform add android@13.0.0
-      - run: cd app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456 -- -PpackageType=apk
+      - run: cd app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456 -- --packageType=apk
       - name: Find and copy APK
         run: |
-          echo "Searching for APK..."
           APK_FILE=$(find app -name "*.apk" -type f | head -n 1)
           if [ -n "$APK_FILE" ]; then
             echo "✅ APK found at: $APK_FILE"
