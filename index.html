@@ -414,13 +414,11 @@
             .chat-messages { height: 55vh; }
         }
 
-        /* ========== FIX FOR MOBILE SHAKING (ADDED WITHOUT DELETING ANYTHING) ========== */
+        /* ========== FIX FOR MOBILE SHAKING (KEEPS ROTATION) ========== */
         @media (max-width: 740px) {
-            /* Disable all constant animations that cause layout repaints */
+            /* Disable heavy animations for elements that cause shaking, but keep the orbiting love text running */
             .full-complete-badge,
-            .love-text,
             .premium-ribbon,
-            .orbiting-love,
             .scroll-up-arrow,
             .footer-arrow-down,
             .random-btn .arrow-down,
@@ -430,13 +428,25 @@
                 animation: none !important;
                 transition: none !important;
             }
+            /* Keep rotation and heartbeat for the love text, but prevent shaking via GPU acceleration */
+            .orbiting-love {
+                animation: orbit 8s linear infinite !important;
+                will-change: transform;
+                transform: translateZ(0);
+                backface-visibility: hidden;
+            }
+            .love-text {
+                animation: rainbowBeat 4s ease infinite, heartbeatPulse 1.2s ease-in-out infinite !important;
+                will-change: transform;
+                transform: translateZ(0);
+                backface-visibility: hidden;
+            }
             .chat-button:hover {
                 transform: none !important;
             }
             .chat-panel {
                 backdrop-filter: none !important;
             }
-            /* Keep the button shadow stable */
             .chat-button {
                 box-shadow: 0 10px 25px rgba(0,0,0,0.3) !important;
             }
