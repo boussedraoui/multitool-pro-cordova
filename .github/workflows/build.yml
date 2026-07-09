@@ -16,9 +16,14 @@ jobs:
       - run: cordova create multitool-app com.multitool.proz "MultiTool Pro"
       - run: cp index.html multitool-app/www/index.html
       - run: cp config.xml multitool-app/config.xml
+      
+      # Generate a dummy keystore automatically on GitHub (no computer needed)
+      - run: keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias -storepass 123456 -keypass 123456 -dname "CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown"
+      
       - run: cd multitool-app && cordova platform add android@13.0.0
-      - run: cd multitool-app && cordova build android --release
+      - run: cd multitool-app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456
+      
       - uses: actions/upload-artifact@v4
         with:
-          name: app-release-unsigned
+          name: app-release-signed
           path: multitool-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
