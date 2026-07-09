@@ -19,30 +19,15 @@ jobs:
       - run: keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias -storepass 123456 -keypass 123456 -dname "CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown"
       - run: cd multitool-app && cordova platform add android@13.0.0
       - run: cd multitool-app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456
-      - name: Copy the exact APK file
+      - name: Find and copy the APK
         run: |
-          # Try Standard Path 1
-          APK_SOURCE1="multitool-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
-          # Try Standard Path 2
-          APK_SOURCE2="multitool-app/app/build/outputs/apk/release/app-release-unsigned.apk"
-          
-          if [ -f "$APK_SOURCE1" ]; then
-            cp "$APK_SOURCE1" app-release-signed.apk
-            echo "✅ APK found at $APK_SOURCE1"
-          elif [ -f "$APK_SOURCE2" ]; then
-            cp "$APK_SOURCE2" app-release-signed.apk
-            echo "✅ APK found at $APK_SOURCE2"
+          # This finds ANY .apk file inside the whole project and copies it
+          APK=$(find ${{ github.workspace }} -name "*.apk" -type f | head -n 1)
+          if [ -n "$APK" ]; then
+            echo "Found APK at: $APK"
+            cp "$APK" app-release-signed.apk
           else
-            echo "❌ Standard paths failed. Searching entire project for APK..."
-            APK_SEARCH=$(find multitool-app -name "*.apk" -type f | head -n 1)
-            if [ -n "$APK_SEARCH" ]; then
-              cp "$APK_SEARCH" app-release-signed.apk
-              echo "✅ APK found at $APK_SEARCH"
-            else
-              echo "❌ No APK found. Please check project structure."
-              ls -R multitool-app
-              exit 1
-            fi
+            echo "No APK found" && exit 1
           fi
       - uses: actions/upload-artifact@v4
         with:
