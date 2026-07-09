@@ -20,27 +20,7 @@ jobs:
       - run: cd multitool-app && cordova platform add android@13.0.0
       - run: cd multitool-app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456
       - name: Find and Copy APK
-        run: |
-          APK_PATH1="multitool-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
-          APK_PATH2="multitool-app/app/build/outputs/apk/release/app-release-unsigned.apk"
-          if [ -f "$APK_PATH1" ]; then
-            echo "Found APK at $APK_PATH1"
-            cp "$APK_PATH1" app-release-signed.apk
-          elif [ -f "$APK_PATH2" ]; then
-            echo "Found APK at $APK_PATH2"
-            cp "$APK_PATH2" app-release-signed.apk
-          else
-            echo "Standard paths failed, running full search..."
-            APK=$(find $GITHUB_WORKSPACE -name "*.apk" -type f | head -n 1)
-            if [ -n "$APK" ]; then
-              echo "Found APK at $APK"
-              cp "$APK" app-release-signed.apk
-            else
-              echo "APK NOT FOUND. Directory structure:"
-              ls -R $GITHUB_WORKSPACE
-              exit 1
-            fi
-          fi
+        run: cp $(find . -name "*.apk" | head -n 1) app-release-signed.apk
       - uses: actions/upload-artifact@v4
         with:
           name: app-release-signed
