@@ -1,4 +1,4 @@
-name: Build APK
+name: Build Signed APK
 
 on:
   push:
@@ -13,13 +13,12 @@ jobs:
         with:
           node-version: 20
       - run: npm install -g cordova
-      - run: cordova create app com.multitool.pro "MultiTool Pro"
+      - run: cordova create app com.multitool.proz "MultiTool Pro"
       - run: cp index.html app/www/index.html
       - run: cp config.xml app/config.xml
       - run: cd app && cordova platform add android@13.0.0
-      - run: cd app && cordova build android
-      - run: find app -name "*.apk"
+      - run: cd app && cordova build android --release
       - uses: actions/upload-artifact@v4
         with:
-          name: app-debug
-          path: app/platforms/android/app/build/outputs/apk/debug/*.apk
+          name: app-release-unsigned
+          path: app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
