@@ -13,23 +13,14 @@ jobs:
         with:
           node-version: 20
       - run: npm install -g cordova
-      - run: cordova create multitool-app com.multitool.proz "MultiTool Pro"
-      - run: cp index.html multitool-app/www/index.html
-      - run: cp config.xml multitool-app/config.xml
+      - run: cordova create app com.multitool.proz "MultiTool Pro"
+      - run: cp index.html app/www/index.html
+      - run: cp config.xml app/config.xml
       - run: keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias -storepass 123456 -keypass 123456 -dname "CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown"
-      - run: cd multitool-app && cordova platform add android@13.0.0
-      - run: cd multitool-app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456
-      - name: Find and copy the APK
-        run: |
-          # This finds ANY .apk file inside the whole project and copies it
-          APK=$(find ${{ github.workspace }} -name "*.apk" -type f | head -n 1)
-          if [ -n "$APK" ]; then
-            echo "Found APK at: $APK"
-            cp "$APK" app-release-signed.apk
-          else
-            echo "No APK found" && exit 1
-          fi
-      - uses: actions/upload-artifact@v4
+      - run: cd app && cordova platform add android@13.0.0
+      - run: cd app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
           name: app-release-signed
-          path: app-release-signed.apk
+          path: app/**/*.apk
