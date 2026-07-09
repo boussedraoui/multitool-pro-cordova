@@ -21,12 +21,15 @@ jobs:
       - run: cd app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456
       - name: Find and copy APK
         run: |
-          APK_FILE=$(find app -name "*.apk" -type f | head -n 1)
+          echo "Searching for APK..."
+          APK_FILE=$(find ${{ github.workspace }} -name "*.apk" -type f | head -n 1)
           if [ -n "$APK_FILE" ]; then
             echo "✅ APK found at: $APK_FILE"
             cp "$APK_FILE" app-release-signed.apk
           else
-            echo "❌ APK not found!" && exit 1
+            echo "❌ APK not found. Printing the FULL directory tree:"
+            ls -R ${{ github.workspace }}
+            exit 1
           fi
       - uses: actions/upload-artifact@v4
         with:
