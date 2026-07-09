@@ -20,17 +20,25 @@ jobs:
       - run: cd multitool-app && cordova platform add android@13.0.0
       - run: cd multitool-app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456
       
-      # THIS WILL PRINT THE FULL DIRECTORY TREE
-      - name: Show me where the APK is
+      # This finds the APK using the exact standard path, and copies it to the root folder.
+      - name: Find and Copy APK
         run: |
-          echo "Current directory:"
-          pwd
-          echo "Searching for APK file..."
-          find ${{ github.workspace }} -name "*.apk" -type f
-          echo "Listing full directory tree of multitool-app..."
-          ls -R multitool-app || echo "Folder multitool-app not found"
-
+          APK_PATH="multitool-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
+          if [ -f "$APK_PATH" ]; then
+            echo "Found APK at $APK_PATH"
+            cp "$APK_PATH" app-release-signed.apk
+          else
+            echo "Standard path failed, running full search..."
+            APK=$(find multitool-app -name "*.apk" -type f | head -n 1)
+            if [ -n "$APK" ]; then
+              echo "Found APK at $APK"
+              cp "$APK" app-release-signed.apk
+            else
+              echo "APK NOT FOUND" && exit 1
+            fi
+          fi
+          
       - uses: actions/upload-artifact@v4
         with:
           name: app-release-signed
-          path: ${{ steps.find_apk.outputs.path }}
+          path: app-release-signed.apk
