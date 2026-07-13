@@ -557,9 +557,6 @@
 // Полный скрипт – 34 основных инструмента, полностью на русском
 // ===================================================================
 
-// === إضافة رابط الإعلان هنا ===
-const AD_DIRECT_LINK = "https://omg10.com/4/11245317";
-
 let darkMode = localStorage.getItem('theme') === 'dark';
 if (darkMode) document.documentElement.setAttribute('data-theme', 'dark');
 let muted = localStorage.getItem('soundMuted') === 'true';
@@ -599,49 +596,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.innerText = muted ? '🔇' : '🔊';
         showToast(muted ? 'Звук выключен' : 'Звук включен');
     };
-
-    // === تشغيل الإعلان عند فتح التطبيق ===
-    setTimeout(openAdInterstitial, 1500);
-
-    // === تشغيل الإعلان كل 60 ثانية ===
-    setInterval(openAdInterstitial, 60000);
 });
-
-// === دالة فتح الإعلان المنبثق ===
-function openAdInterstitial() {
-    // إزالة أي إعلان سابق إذا كان موجوداً
-    const existing = document.getElementById('adOverlay');
-    if (existing) existing.remove();
-
-    // إنشاء نافذة منبثقة (Modal)
-    const overlay = document.createElement('div');
-    overlay.id = 'adOverlay';
-    overlay.style.position = 'fixed';
-    overlay.style.top = '0';
-    overlay.style.left = '0';
-    overlay.style.width = '100%';
-    overlay.style.height = '100%';
-    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
-    overlay.style.zIndex = '999999';
-    overlay.style.display = 'flex';
-    overlay.style.justifyContent = 'center';
-    overlay.style.alignItems = 'center';
-    overlay.style.flexDirection = 'column';
-
-    overlay.innerHTML = `
-        <div style="background: white; padding: 20px; border-radius: 20px; max-width: 95%; width: 500px; text-align: center; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
-            <button onclick="document.getElementById('adOverlay').remove()" 
-                    style="position: absolute; top: -10px; right: -10px; background: #e74c3c; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; font-size: 16px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
-                ✕
-            </button>
-            <h3 style="margin-top: 0; color: #333;">Sponsored</h3>
-            <iframe src="${AD_DIRECT_LINK}" 
-                    style="width: 100%; height: 350px; border: none; border-radius: 10px;">
-            </iframe>
-        </div>
-    `;
-    document.body.appendChild(overlay);
-}
 
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
