@@ -3,7 +3,7 @@
 <head>
     <link rel="manifest" href="manifest.json">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes, viewport-fit=cover">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="description" content="Многофункциональный инструмент Про - 34 полезных инструмента: калькулятор, генератор паролей, конвертер единиц и др. Полностью бесплатно.">
     <title>Многофункциональный инструмент Про | Полный набор инструментов</title>
@@ -70,18 +70,20 @@
             --primary: #a29bfe; 
             --border: #2e2e4a; 
         }
+        html { scroll-behavior: smooth; }
         body { 
             font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; 
             background: var(--bg); 
             color: var(--text); 
             transition: background 0.3s, color 0.3s; 
             top: 0 !important;
-            font-size: 18px;
-            line-height: 1.4;
+            font-size: clamp(16px, 1.4vw, 18px);
+            line-height: 1.5;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
-        .main-container { max-width: 1400px; margin: 0 auto; padding: 30px 24px 40px; }
-        .hero { text-align: center; padding: 20px 20px 16px; }
+        .main-container { max-width: 1400px; margin: 0 auto; padding: 30px 20px 40px; }
+        .hero { text-align: center; padding: 16px 12px 12px; }
         .hero-title { margin-bottom: 0.25rem; }
         .title-line1, .title-line2 {
             display: block;
@@ -89,18 +91,12 @@
             font-weight: 900;
             letter-spacing: -0.02em;
             line-height: 1.1;
+            font-size: clamp(3.2rem, 12vw, 5.5rem);
         }
-        .title-line1 { font-size: 6rem; margin-bottom: 0.05em; }
-        .title-line2 { font-size: 6rem; }
         .multi-letter { display: inline-block; font-weight: 900; }
-        .letter-m { color: #FF3366; }
-        .letter-u { color: #FF9933; }
-        .letter-l { color: #FFCC00; }
-        .letter-t { color: #33CC66; }
-        .letter-i { color: #3399FF; }
-        .letter-o { color: #9933FF; }
-        .letter-o2 { color: #FF33CC; }
-        .letter-l2 { color: #FF6633; }
+        .letter-m { color: #FF3366; } .letter-u { color: #FF9933; } .letter-l { color: #FFCC00; } 
+        .letter-t { color: #33CC66; } .letter-i { color: #3399FF; } .letter-o { color: #9933FF; } 
+        .letter-o2 { color: #FF33CC; } .letter-l2 { color: #FF6633; }
         .pro-line {
             display: inline-block;
             background: linear-gradient(145deg, #FFD700, #FFA500, #FFD700, #FFC125);
@@ -109,18 +105,18 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
-            font-size: 2.6rem;
+            font-size: clamp(1.6rem, 5vw, 2.6rem);
             border: 2px solid rgba(255, 215, 0, 0.9);
             border-radius: 80px;
-            padding: 0.1em 0.7em;
+            padding: 0.15em 0.8em;
             margin-top: 0.2rem;
             margin-bottom: 0.5rem;
             display: inline-block;
-            box-shadow: 0 0 12px rgba(255,215,0,0.8), inset 0 1px 2px rgba(255,255,200,0.9);
+            box-shadow: 0 0 12px rgba(255,215,0,0.4), inset 0 1px 2px rgba(255,255,200,0.9);
             vertical-align: middle;
         }
         .full-complete-badge { 
-            font-size: 1.4rem;
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
             font-weight: 800; 
             background: linear-gradient(0deg, #CC0000, #CC5500, #B8860B, #006400, #004466, #0000CC, #660066);
             background-size: 100% 100%;
@@ -128,16 +124,16 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block; 
-            margin: 12px 0 8px; 
-            letter-spacing: 2px;
+            margin: 10px 0 6px; 
+            letter-spacing: 1px;
             white-space: nowrap;
-            animation: horizontalSlide 1.2s ease-in-out infinite alternate;
+            animation: horizontalSlide 1.4s ease-in-out infinite alternate;
         }
-        @keyframes horizontalSlide { 0% { transform: translateX(-6px); } 100% { transform: translateX(6px); } }
-        .subtitle { font-size: 1.4rem; color: var(--text2); margin-top: 12px; font-weight: 500; }
-        .more-text { text-align: center; font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-top: 12px; letter-spacing: 1px; }
-        .star-rating { display: flex; justify-content: center; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
-        .star-box { width: 48px; height: 48px; background: var(--surface2); border: 2px solid #FFC107; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        @keyframes horizontalSlide { 0% { transform: translateX(-4px); } 100% { transform: translateX(4px); } }
+        .subtitle { font-size: clamp(1rem, 2.5vw, 1.4rem); color: var(--text2); margin-top: 10px; font-weight: 500; }
+        .more-text { text-align: center; font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 700; color: var(--primary); margin-top: 8px; letter-spacing: 0.5px; }
+        .star-rating { display: flex; justify-content: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+        .star-box { width: 48px; height: 48px; background: var(--surface2); border: 2px solid #FFC107; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 6px rgba(0,0,0,0.1); touch-action: manipulation; }
         .star-box .star.empty { color: #ccc; }
         .star-box .star.filled { color: #FFC107; text-shadow: 0 0 4px gold; }
         .star-box.explode { animation: starExplode 0.6s cubic-bezier(0.34,1.2,0.64,1) forwards; }
@@ -154,137 +150,182 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 1.8rem;
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
             font-weight: 900;
             background: linear-gradient(135deg, #ff0844, #ffb199, #ff4e50, #f9d423, #00b4db, #0083b0, #6a11cb, #2575fc);
             background-size: 400% 400%;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: rainbowBeat 4s ease infinite, heartbeatPulse 1.2s ease-in-out infinite;
+            animation: rainbowBeat 4s ease infinite, heartbeatPulse 1.4s ease-in-out infinite;
             white-space: nowrap;
         }
         @keyframes rainbowBeat { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        @keyframes heartbeatPulse { 0%,100%{ transform: translate(-50%, -50%) scale(1); } 25%{ transform: translate(-50%, -50%) scale(1.1); } 35%{ transform: translate(-50%, -50%) scale(1.05); } 45%{ transform: translate(-50%, -50%) scale(1.12); } 55%{ transform: translate(-50%, -50%) scale(1); } }
-        .premium-ribbon { background: linear-gradient(135deg, #f7b731, #f0c060); color: #1a1a2e; font-weight: 800; padding: 10px 24px; border-radius: 60px; font-size: 1.1rem; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: relative; z-index: 2; animation: ribbonBounce 1.4s ease-in-out infinite; }
-        @keyframes ribbonBounce { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
-        .premium-container { position: relative; display: inline-block; margin-top: 20px; margin-bottom: 20px; }
-        .orbiting-love { position: absolute; top: 50%; left: 50%; width: 180px; height: 180px; margin: -90px 0 0 -90px; pointer-events: none; z-index: 1; animation: orbit 8s linear infinite; }
-        @keyframes orbit { 0% { transform: rotate(0deg) translateX(120px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); } }
-        .love-phrase { text-align: center; margin: 20px 0 12px; position: relative; display: flex; justify-content: center; align-items: center; min-height: 140px; }
-        @media (max-width: 740px) {
-            body { font-size: 16px; }
-            .title-line1, .title-line2 { font-size: 3.6rem; }
-            .pro-line { font-size: 1.8rem; padding: 0.05em 0.6em; border-width: 1.5px; }
-            .full-complete-badge { font-size: 1.1rem; white-space: nowrap; letter-spacing: 1px; }
-            .orbiting-love { width: 140px; height: 140px; margin: -70px 0 0 -70px; }
-            @keyframes orbit { 0% { transform: rotate(0deg) translateX(90px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(90px) rotate(-360deg); } }
-            .love-text { font-size: 1.3rem; }
-            .tools-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 16px; }
-            .tool-card .tool-name { font-size: 1rem; }
-            .tool-panel { padding: 24px 20px; }
-            .tool-btn { padding: 12px 24px; font-size: 0.9rem; }
-            .star-box { width: 40px; height: 40px; font-size: 1.6rem; }
+        @keyframes heartbeatPulse { 0%,100% { transform: translate(-50%, -50%) scale(1); } 25% { transform: translate(-50%, -50%) scale(1.08); } 35% { transform: translate(-50%, -50%) scale(1.02); } 45% { transform: translate(-50%, -50%) scale(1.1); } 55% { transform: translate(-50%, -50%) scale(1); } }
+        .premium-ribbon { background: linear-gradient(135deg, #f7b731, #f0c060); color: #1a1a2e; font-weight: 800; padding: 8px 20px; border-radius: 60px; font-size: clamp(0.9rem, 1.5vw, 1.1rem); display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: relative; z-index: 2; animation: ribbonBounce 1.6s ease-in-out infinite; }
+        @keyframes ribbonBounce { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
+        .premium-container { position: relative; display: inline-block; margin-top: 16px; margin-bottom: 16px; }
+        .orbiting-love { position: absolute; top: 50%; left: 50%; width: 140px; height: 140px; margin: -70px 0 0 -70px; pointer-events: none; z-index: 1; animation: orbit 10s linear infinite; will-change: transform; }
+        @keyframes orbit { 0% { transform: rotate(0deg) translateX(100px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); } }
+        .love-phrase { text-align: center; margin: 16px 0 8px; position: relative; display: flex; justify-content: center; align-items: center; min-height: 120px; }
+        .search-container { max-width: 640px; margin: 20px auto 24px; }
+        .search-input, textarea, select { 
+            width: 100%; 
+            padding: 14px 20px; 
+            border-radius: 80px; 
+            border: 2px solid var(--border); 
+            background: var(--surface); 
+            font-size: clamp(0.9rem, 1.2vw, 1rem); 
+            transition: all 0.2s; 
+            font-family: inherit; 
+            color: var(--text);
+            touch-action: manipulation;
         }
-        .search-container { max-width: 640px; margin: 24px auto 30px; }
-        .search-input, textarea, select { width: 100%; padding: 16px 24px; border-radius: 80px; border: 2px solid var(--border); background: var(--surface); font-size: 1.05rem; transition: all 0.2s; font-family: inherit; }
-        .search-results { background: var(--surface); border-radius: 28px; margin-top: 12px; border: 1px solid var(--border); box-shadow: var(--shadow); max-height: 480px; overflow-y: auto; font-size: 1rem; }
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 20px; margin: 36px 0; }
-        .tool-card { background: var(--surface); border-radius: 32px; padding: 20px 10px; text-align: center; cursor: pointer; border: 2px solid transparent; transition: all 0.25s ease; box-shadow: var(--shadow); position: relative; }
-        .tool-card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: var(--shadow-lg); }
-        .tool-card .tool-name { font-size: 1.2rem; font-weight: 700; margin-top: 12px; }
-        .tool-panel { background: var(--surface); border-radius: 40px; padding: 32px 28px; margin: 32px 0 40px; box-shadow: var(--shadow-lg); border: 1px solid var(--border); overflow: hidden; }
-        .tool-btn { background: var(--primary); border: none; padding: 14px 28px; border-radius: 60px; font-weight: 700; color: white; cursor: pointer; transition: 0.2s; margin: 8px; display: inline-block; font-size: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        .search-input:focus, textarea:focus { outline: 2px solid var(--primary); border-color: transparent; }
+        .search-results { background: var(--surface); border-radius: 28px; margin-top: 8px; border: 1px solid var(--border); box-shadow: var(--shadow); max-height: 400px; overflow-y: auto; overscroll-behavior: contain; font-size: clamp(0.9rem, 1.2vw, 1rem); }
+        .tools-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+            gap: 16px; 
+            margin: 30px 0; 
+        }
+        .tool-card { 
+            background: var(--surface); 
+            border-radius: 32px; 
+            padding: 18px 8px; 
+            text-align: center; 
+            cursor: pointer; 
+            border: 2px solid transparent; 
+            transition: all 0.25s ease; 
+            box-shadow: var(--shadow); 
+            position: relative; 
+            touch-action: manipulation;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .tool-card:hover { transform: translateY(-4px); border-color: var(--primary); box-shadow: var(--shadow-lg); }
+        .tool-card .tool-name { font-size: clamp(0.9rem, 1.2vw, 1.1rem); font-weight: 700; margin-top: 8px; overflow-wrap: break-word; line-height: 1.3; }
+        .tool-panel { background: var(--surface); border-radius: 40px; padding: 28px 20px; margin: 24px 0 32px; box-shadow: var(--shadow-lg); border: 1px solid var(--border); overflow: hidden; }
+        .tool-btn { 
+            background: var(--primary); 
+            border: none; 
+            padding: 14px 24px; 
+            border-radius: 60px; 
+            font-weight: 700; 
+            color: white; 
+            cursor: pointer; 
+            transition: 0.2s; 
+            margin: 6px; 
+            display: inline-block; 
+            font-size: clamp(0.8rem, 1.1vw, 1rem); 
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+            touch-action: manipulation;
+            min-height: 44px;
+            min-width: 44px;
+        }
         .tool-btn:hover { background: var(--primary-dark); transform: scale(0.97); }
-        .calc-btn { min-width: 0; width: 100%; box-sizing: border-box; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 !important; padding: 14px 4px !important; border-radius: 16px; font-weight: 700; font-size: 1rem; }
-        .tool-output { background: var(--surface2); padding: 16px 20px; border-radius: 28px; margin-top: 20px; word-break: break-word; border: 1px solid var(--border); max-height: 500px; overflow-y: auto; font-size: 1rem; }
-        .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--surface); color: var(--text); padding: 16px 32px; border-radius: 80px; font-weight: 600; transition: 0.3s; z-index: 10000; box-shadow: 0 10px 30px rgba(0,0,0,0.2); pointer-events: none; font-size: 1rem; }
+        .calc-btn { 
+            min-width: 0; 
+            width: 100%; 
+            box-sizing: border-box; 
+            white-space: nowrap; 
+            overflow: hidden; 
+            text-overflow: ellipsis; 
+            margin: 0 !important; 
+            padding: 16px 4px !important; 
+            border-radius: 16px; 
+            font-weight: 700; 
+            font-size: clamp(0.8rem, 1.2vw, 1rem); 
+            min-height: 48px;
+        }
+        .tool-output { background: var(--surface2); padding: 14px 16px; border-radius: 28px; margin-top: 16px; word-break: break-word; border: 1px solid var(--border); max-height: 500px; overflow-y: auto; overscroll-behavior: contain; font-size: clamp(0.85rem, 1.1vw, 1rem); }
+        .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--surface); color: var(--text); padding: 14px 28px; border-radius: 80px; font-weight: 600; transition: 0.3s; z-index: 10000; box-shadow: 0 10px 30px rgba(0,0,0,0.2); pointer-events: none; font-size: clamp(0.85rem, 1.1vw, 1rem); }
         .toast.show { transform: translateX(-50%) translateY(0); }
-        .sidebar { position: fixed; top: 0; left: 0; width: 320px; height: 100%; background: var(--surface); z-index: 1001; transform: translateX(-100%); transition: 0.3s; overflow-y: auto; padding: 24px 0; font-size: 1.05rem; }
+        .sidebar { position: fixed; top: 0; left: 0; width: 300px; max-width: 85vw; height: 100%; background: var(--surface); z-index: 1001; transform: translateX(-100%); transition: 0.3s; overflow-y: auto; overscroll-behavior: contain; padding: 20px 0; font-size: clamp(0.9rem, 1.2vw, 1rem); }
         .sidebar.active { transform: translateX(0); }
         .sidebar-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; opacity: 0; pointer-events: none; transition: 0.3s; }
         .sidebar-overlay.active { opacity: 1; pointer-events: auto; }
-        .sidebar-item { padding: 16px 28px; cursor: pointer; border-bottom: 1px solid var(--border); display: flex; gap: 16px; align-items: center; font-size: 1.05rem; font-weight: 500; }
-        .footer-widget { background: var(--surface); border-top: 2px solid var(--border); padding: 28px 24px; text-align: center; margin-top: 60px; position: relative; font-size: 1rem; z-index: 100; }
-        .footer-controls { display: flex; justify-content: flex-end; gap: 16px; margin-bottom: 20px; }
-        .footer-btn { background: var(--surface2); border: 1px solid var(--border); width: 54px; height: 54px; border-radius: 54px; font-size: 1.4rem; cursor: pointer; }
-        .footer-love-line { display: flex; align-items: center; justify-content: center; gap: 28px; margin-top: 24px; font-size: 1.3rem; font-weight: 600; }
-        .scroll-up-arrow, .footer-arrow-down { font-size: 2rem; cursor: pointer; transition: transform 0.2s, opacity 0.3s; display: inline-block; user-select: none; animation: arrowBlink 1.2s ease-in-out infinite; }
-        @keyframes arrowBlink { 0%,100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.15); text-shadow: 0 0 6px currentColor; } }
-        .scroll-up-arrow.visible { opacity: 1; visibility: visible; animation: arrowBlink 1.2s ease-in-out infinite; }
-        .footer-arrow-down { animation: arrowBlink 1.2s ease-in-out infinite; }
-        .heart-beat { display: inline-block; animation: heartbeat 1.2s ease-in-out infinite; margin: 0 6px; }
-        @keyframes heartbeat { 0%,100%{transform:scale(1)}25%{transform:scale(1.2)}35%{transform:scale(1.1)}45%{transform:scale(1.3)}55%{transform:scale(1)} }
-        .random-trigger { text-align: left; margin: 16px 0 8px; }
-        .random-btn { background: linear-gradient(135deg, #ff9800, #f44336); border: none; color: white; font-weight: bold; padding: 12px 24px; border-radius: 60px; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.2s; display: inline-block; visibility: visible; opacity: 1; }
+        .sidebar-item { padding: 14px 24px; cursor: pointer; border-bottom: 1px solid var(--border); display: flex; gap: 14px; align-items: center; font-size: clamp(0.9rem, 1.2vw, 1rem); font-weight: 500; touch-action: manipulation; min-height: 48px; }
+        .footer-widget { background: var(--surface); border-top: 2px solid var(--border); padding: 24px 16px; text-align: center; margin-top: 40px; position: relative; font-size: clamp(0.85rem, 1.1vw, 1rem); z-index: 100; }
+        .footer-controls { display: flex; justify-content: flex-end; gap: 12px; margin-bottom: 16px; }
+        .footer-btn { background: var(--surface2); border: 1px solid var(--border); width: 48px; height: 48px; border-radius: 48px; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; touch-action: manipulation; }
+        .footer-love-line { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 16px; font-size: clamp(1rem, 1.5vw, 1.2rem); font-weight: 600; }
+        .scroll-up-arrow, .footer-arrow-down { font-size: 1.8rem; cursor: pointer; transition: transform 0.2s, opacity 0.3s; display: inline-block; user-select: none; animation: arrowBlink 1.4s ease-in-out infinite; }
+        @keyframes arrowBlink { 0%,100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.1); text-shadow: 0 0 4px currentColor; } }
+        .scroll-up-arrow.visible { opacity: 1; visibility: visible; animation: arrowBlink 1.4s ease-in-out infinite; }
+        .footer-arrow-down { animation: arrowBlink 1.4s ease-in-out infinite; }
+        .heart-beat { display: inline-block; animation: heartbeat 1.4s ease-in-out infinite; margin: 0 4px; }
+        @keyframes heartbeat { 0%,100%{transform:scale(1)}25%{transform:scale(1.15)}35%{transform:scale(1.05)}45%{transform:scale(1.25)}55%{transform:scale(1)} }
+        .random-trigger { text-align: left; margin: 12px 0 6px; }
+        .random-btn { background: linear-gradient(135deg, #ff9800, #f44336); border: none; color: white; font-weight: bold; padding: 12px 20px; border-radius: 60px; font-size: clamp(0.9rem, 1.2vw, 1.1rem); cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.2s; display: inline-block; visibility: visible; opacity: 1; touch-action: manipulation; min-height: 44px; }
         .random-btn.hide-random { visibility: hidden; opacity: 0; }
-        .random-btn .arrow-down { display: inline-block; margin-left: 10px; font-size: 1.2rem; animation: bounceArrow 1s infinite; }
+        .random-btn .arrow-down { display: inline-block; margin-left: 8px; font-size: 1.1rem; animation: bounceArrow 1s infinite; }
         @keyframes bounceArrow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
-        .timezone-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; font-size: 1rem; }
-        .timezone-item { padding: 10px 12px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 0.95rem; }
-        .pull-to-refresh { text-align: center; padding: 10px; font-size: 0.9rem; color: var(--text3); display: none; transition: opacity 0.2s; }
+        .timezone-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; font-size: clamp(0.8rem, 1vw, 0.9rem); }
+        .timezone-item { padding: 8px 12px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 0.9rem; }
+        .pull-to-refresh { text-align: center; padding: 8px; font-size: 0.85rem; color: var(--text3); display: none; transition: opacity 0.2s; }
         .pull-to-refresh.active { display: block; }
 
-        /* ===== CSS для AI Assistant (вставлено) ===== */
+        /* ===== AI Assistant ===== */
         .chat-widget {
             position: fixed;
-            bottom: 30px;
-            left: 25px;
+            bottom: 20px;
+            left: 20px;
             right: auto;
             z-index: 100000;
             font-family: 'Inter', system-ui, sans-serif;
         }
         .chat-button {
-            width: 70px;
-            height: 70px;
+            width: 64px;
+            height: 64px;
             background: radial-gradient(circle at 30% 20%, #ff7e5e, #f34e6f);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             cursor: pointer;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3), 0 0 0 4px rgba(255,255,200,0.6);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3), 0 0 0 3px rgba(255,255,200,0.5);
             transition: all 0.2s ease;
             position: relative;
+            touch-action: manipulation;
         }
-        .chat-button:hover {
-            transform: scale(1.08);
-            box-shadow: 0 18px 35px rgba(0,0,0,0.4);
-        }
+        .chat-button:hover { transform: scale(1.05); }
         .chat-badge {
             position: absolute;
-            top: -8px;
-            right: -10px;
+            top: -6px;
+            right: -8px;
             background: #00e5ff;
             color: #000;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: bold;
-            padding: 3px 8px;
+            padding: 2px 6px;
             border-radius: 30px;
             box-shadow: 0 0 6px cyan;
         }
         .chat-panel {
             position: absolute;
-            bottom: 85px;
+            bottom: 80px;
             left: 0;
             right: auto;
-            width: 450px;
-            max-width: 85vw;
+            width: 420px;
+            max-width: 90vw;
             background: rgba(20, 20, 40, 0.96);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 32px;
-            box-shadow: 0 25px 45px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,215,0,0.5);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,215,0,0.4);
             display: none;
             flex-direction: column;
             overflow: hidden;
             transition: all 0.2s;
             z-index: 100001;
         }
-        .chat-panel.active {
-            display: flex;
-        }
+        .chat-panel.active { display: flex; }
         .chat-panel.fullscreen {
             position: fixed;
             top: 0;
@@ -300,9 +341,9 @@
         }
         .chat-header {
             background: linear-gradient(95deg, #2b2d5c, #1e1f3a);
-            padding: 16px 18px;
+            padding: 14px 16px;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
             display: flex;
             justify-content: space-between;
             color: #ffecb3;
@@ -312,26 +353,26 @@
             background: none;
             border: none;
             color: #ffd966;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             cursor: pointer;
-            margin-left: 15px;
+            margin-left: 12px;
             transition: 0.1s;
+            touch-action: manipulation;
         }
-        .chat-header-actions button:hover {
-            color: white;
-            text-shadow: 0 0 4px gold;
-        }
+        .chat-header-actions button:hover { color: white; text-shadow: 0 0 4px gold; }
         .chat-messages {
-            height: 450px;
+            height: 400px;
+            max-height: 60vh;
             overflow-y: auto;
-            padding: 16px;
+            overscroll-behavior: contain;
+            padding: 14px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
             background: rgba(0,0,0,0.2);
         }
         .chat-message {
-            max-width: 85%;
+            max-width: 88%;
             padding: 10px 14px;
             border-radius: 24px;
             font-size: 0.9rem;
@@ -363,139 +404,98 @@
             cursor: pointer;
             font-weight: bold;
             transition: 0.1s;
+            touch-action: manipulation;
         }
-        .chat-message.bot .chat-btn:hover {
-            transform: scale(0.98);
-            background: #ffcc66;
-        }
+        .chat-message.bot .chat-btn:hover { transform: scale(0.98); background: #ffcc66; }
         .chat-input-area {
             display: flex;
-            padding: 12px;
-            gap: 10px;
+            padding: 10px;
+            gap: 8px;
             background: #10101e;
             border-top: 1px solid #3a3a60;
         }
         .chat-input-area input {
             flex: 1;
-            padding: 12px 16px;
+            padding: 10px 16px;
             border: none;
             border-radius: 60px;
             background: #202036;
             color: white;
             font-size: 0.9rem;
             outline: none;
+            min-height: 44px;
         }
         .chat-input-area button {
             background: #ff8c42;
             border: none;
             border-radius: 50px;
-            width: 48px;
-            font-size: 1.3rem;
+            width: 44px;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: 0.1s;
             color: white;
+            touch-action: manipulation;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .chat-input-area button:hover {
-            background: #ff6720;
-            transform: scale(0.96);
-        }
-        .chat-voice-btn {
-            background: #4c9aff !important;
-        }
-        .chat-voice-status {
-            font-size: 0.7rem;
-            text-align: center;
-            padding: 4px;
-            background: #1e1e30;
-            color: #aaf;
-        }
-        @media (max-width: 550px) {
-            .chat-panel { width: 95vw; left: 0; bottom: 80px; }
-            .chat-messages { height: 55vh; }
+        .chat-input-area button:hover { background: #ff6720; transform: scale(0.96); }
+        .chat-voice-btn { background: #4c9aff !important; }
+        .chat-voice-status { font-size: 0.7rem; text-align: center; padding: 4px; background: #1e1e30; color: #aaf; }
+
+        @media (max-width: 640px) {
+            body { font-size: 15px; }
+            .main-container { padding: 16px 12px 30px; }
+            .title-line1, .title-line2 { font-size: clamp(2.4rem, 10vw, 3.2rem); }
+            .pro-line { font-size: clamp(1.2rem, 5vw, 1.6rem); }
+            .full-complete-badge { font-size: 0.9rem; white-space: nowrap; letter-spacing: 0.5px; }
+            .orbiting-love { width: 100px; height: 100px; margin: -50px 0 0 -50px; }
+            @keyframes orbit { 0% { transform: rotate(0deg) translateX(70px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(70px) rotate(-360deg); } }
+            .love-text { font-size: clamp(1rem, 2vw, 1.2rem); }
+            .tools-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+            .tool-card { min-height: 100px; padding: 14px 6px; }
+            .tool-panel { padding: 20px 14px; }
+            .tool-btn { padding: 12px 18px; font-size: 0.85rem; min-height: 40px; }
+            .star-box { width: 40px; height: 40px; font-size: 1.4rem; }
+            .search-container { margin: 16px auto 20px; }
+            .chat-panel { width: 95vw; left: 0; bottom: 76px; }
+            .chat-messages { height: 50vh; }
         }
 
-        /* ========== FIX FOR MOBILE SHAKING (KEEPS ROTATION) ========== */
-        @media (max-width: 740px) {
-            /* Disable heavy animations for elements that cause shaking, but keep the orbiting love text running */
-            .full-complete-badge,
-            .premium-ribbon,
-            .scroll-up-arrow,
-            .footer-arrow-down,
-            .random-btn .arrow-down,
-            .heart-beat,
-            .chat-button,
-            .chat-panel {
-                animation: none !important;
-                transition: none !important;
-            }
-            /* Keep rotation and heartbeat for the love text, but prevent shaking via GPU acceleration */
-            .orbiting-love {
-                animation: orbit 8s linear infinite !important;
-                will-change: transform;
-                transform: translateZ(0);
-                backface-visibility: hidden;
-            }
-            .love-text {
-                animation: rainbowBeat 4s ease infinite, heartbeatPulse 1.2s ease-in-out infinite !important;
-                will-change: transform;
-                transform: translateZ(0);
-                backface-visibility: hidden;
-            }
-            .chat-button:hover {
-                transform: none !important;
-            }
-            .chat-panel {
-                backdrop-filter: none !important;
-            }
-            .chat-button {
-                box-shadow: 0 10px 25px rgba(0,0,0,0.3) !important;
-            }
+        /* Performance & compatibility fixes */
+        .full-complete-badge, .premium-ribbon, .scroll-up-arrow, .footer-arrow-down, .random-btn .arrow-down, .heart-beat, .chat-button, .chat-panel {
+            will-change: auto;
+        }
+        .chat-panel {
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+        }
+        select, button, input, textarea {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        input[type="checkbox"] {
+            accent-color: var(--primary);
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            margin-right: 6px;
         }
     </style>
 </head>
 <body>
 <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
-<aside class="sidebar" id="sidebar"><div style="padding: 20px 28px; font-size: 1.8rem; font-weight: bold;">🛠️ Многофункциональный инструмент Про</div><div id="sidebarList"></div></aside>
+<aside class="sidebar" id="sidebar"><div style="padding: 16px 24px; font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: bold;">🛠️ Многофункциональный инструмент Про</div><div id="sidebarList"></div></aside>
 
 <main class="main-container" id="mainPage">
     <div class="hero">
         <div class="hero-title">
             <div class="title-line1">
-                <span class="multi-letter letter-m">М</span>
-                <span class="multi-letter letter-u">н</span>
-                <span class="multi-letter letter-l">о</span>
-                <span class="multi-letter letter-t">г</span>
-                <span class="multi-letter letter-i">о</span>
-                <span class="multi-letter letter-l">ф</span>
-                <span class="multi-letter letter-o">у</span>
-                <span class="multi-letter letter-o2">н</span>
-                <span class="multi-letter letter-l2">к</span>
-                <span class="multi-letter letter-m">ц</span>
-                <span class="multi-letter letter-u">и</span>
-                <span class="multi-letter letter-l">о</span>
-                <span class="multi-letter letter-t">н</span>
-                <span class="multi-letter letter-i">а</span>
-                <span class="multi-letter letter-l">л</span>
-                <span class="multi-letter letter-o">ь</span>
-                <span class="multi-letter letter-o2">н</span>
-                <span class="multi-letter letter-l2">ы</span>
-                <span class="multi-letter letter-m">й</span>
+                <span class="multi-letter letter-m">М</span><span class="multi-letter letter-u">н</span><span class="multi-letter letter-l">о</span><span class="multi-letter letter-t">г</span><span class="multi-letter letter-i">о</span><span class="multi-letter letter-l">ф</span><span class="multi-letter letter-o">у</span><span class="multi-letter letter-o2">н</span><span class="multi-letter letter-l2">к</span><span class="multi-letter letter-m">ц</span><span class="multi-letter letter-u">и</span><span class="multi-letter letter-l">о</span><span class="multi-letter letter-t">н</span><span class="multi-letter letter-i">а</span><span class="multi-letter letter-l">л</span><span class="multi-letter letter-o">ь</span><span class="multi-letter letter-o2">н</span><span class="multi-letter letter-l2">ы</span><span class="multi-letter letter-m">й</span>
             </div>
             <div class="title-line2">
-                <span class="multi-letter letter-o">и</span>
-                <span class="multi-letter letter-o2">н</span>
-                <span class="multi-letter letter-l2">с</span>
-                <span class="multi-letter letter-t">т</span>
-                <span class="multi-letter letter-i">р</span>
-                <span class="multi-letter letter-l">у</span>
-                <span class="multi-letter letter-o">м</span>
-                <span class="multi-letter letter-o2">е</span>
-                <span class="multi-letter letter-l2">н</span>
-                <span class="multi-letter letter-t">т</span>
-                <span class="multi-letter letter-i"> </span>
-                <span class="multi-letter letter-l">П</span>
-                <span class="multi-letter letter-o">р</span>
-                <span class="multi-letter letter-o2">о</span>
+                <span class="multi-letter letter-o">и</span><span class="multi-letter letter-o2">н</span><span class="multi-letter letter-l2">с</span><span class="multi-letter letter-t">т</span><span class="multi-letter letter-i">р</span><span class="multi-letter letter-l">у</span><span class="multi-letter letter-o">м</span><span class="multi-letter letter-o2">е</span><span class="multi-letter letter-l2">н</span><span class="multi-letter letter-t">т</span><span class="multi-letter letter-i"> </span><span class="multi-letter letter-l">П</span><span class="multi-letter letter-o">р</span><span class="multi-letter letter-o2">о</span>
             </div>
         </div>
         <div class="pro-line">Про</div>
@@ -517,17 +517,17 @@
     
     <div class="tools-grid" id="toolsGrid"></div>
     
-    <div class="tool-panel" id="toolPanel"><h2 id="toolPanelTitle" style="font-size:1.8rem; margin-bottom:16px;">✨ Выберите инструмент</h2><div id="toolContent"></div></div>
+    <div class="tool-panel" id="toolPanel"><h2 id="toolPanelTitle" style="font-size:clamp(1.4rem,2.5vw,1.8rem); margin-bottom:14px;">✨ Выберите инструмент</h2><div id="toolContent"></div></div>
 </main>
 <footer class="footer-widget">
     <div class="footer-controls"><button class="footer-btn" onclick="toggleTheme()">🌓</button><button class="footer-btn" onclick="toggleSidebar()">☰</button><button class="footer-btn" id="muteBtn">🔊</button></div>
-    <p style="text-align:center; font-size:1rem;">© 2026 Многофункциональный инструмент Про · Полный набор инструментов | <a href="https://sites.google.com/view/multitool-pro/" target="_self" style="color:var(--primary); font-weight:600;">Политика конфиденциальности</a></p>
+    <p style="text-align:center; font-size:clamp(0.8rem,1vw,0.95rem);">© 2026 Многофункциональный инструмент Про · Полный набор инструментов | <a href="https://sites.google.com/view/multitool-pro/" target="_self" style="color:var(--primary); font-weight:600;">Политика конфиденциальности</a></p>
     <div class="footer-love-line"><span id="scrollUpArrow" class="scroll-up-arrow" onclick="scrollToTop()" title="Наверх">↑</span><span><span class="heart-beat">💕</span> Сделано с любовью</span><span class="footer-arrow-down" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})" title="Вниз">↓</span></div>
     <div class="random-trigger"><button id="randomToolBtn" class="random-btn">🎲 Случайный инструмент <span class="arrow-down">⬇️</span></button></div>
 </footer>
 <div id="toast" class="toast"></div>
 
-<!-- ===== AI Assistant HTML (вставлено) ===== -->
+<!-- ===== AI Assistant HTML ===== -->
 <div id="smartChatWidget" class="chat-widget">
     <div class="chat-button" id="chatButton">
         💬 <span class="chat-badge">AI</span>
@@ -635,9 +635,9 @@ function triggerFireworks(starBox) {
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
     const colors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#00ffff', '#0000ff', '#8b00ff', '#ff33cc', '#ff6699'];
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 40; i++) {
         const angle = Math.random() * Math.PI * 2;
-        const speed = 3 + Math.random() * 6;
+        const speed = 3 + Math.random() * 5;
         const dx = Math.cos(angle) * speed * 8;
         const dy = Math.sin(angle) * speed * 8;
         const particle = document.createElement('div');
@@ -659,7 +659,7 @@ function selectTool(toolId) {
     if (toolId === 'premium_ai') {
         document.getElementById('toolPanelTitle').innerHTML = '🔮 AI улучшатель текста';
         document.getElementById('toolContent').innerHTML = `
-            <h2 style="font-size:1.8rem;">🔮 AI улучшатель текста (несколько режимов)</h2>
+            <h2 style="font-size:clamp(1.4rem,2.5vw,1.8rem);">🔮 AI улучшатель текста (несколько режимов)</h2>
             <textarea id="aiDemoText" rows="4" class="search-input" placeholder="Введите текст..."></textarea>
             <div><select id="aiMode"><option value="grammar">Исправление грамматики</option><option value="professional">Профессиональный тон</option><option value="friendly">Дружелюбный тон</option><option value="shorten">Сократить</option><option value="expand">Расширить</option><option value="simplify">Упростить</option></select></div>
             <button class="tool-btn" onclick="demoAIEnhanceAdvanced()">Улучшить</button>
@@ -668,7 +668,7 @@ function selectTool(toolId) {
         return;
     }
     renderToolPanel(toolId);
-    document.getElementById('toolPanel').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('toolPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // ===== Панель инструментов (полная) =====
@@ -678,8 +678,8 @@ function renderToolPanel(tid) {
     switch (tid) {
         case 'calculator':
             title = '🧮 Продвинутый научный калькулятор';
-            content = `<div id="calcDisplay" style="font-size:2rem;padding:16px;background:var(--surface2);border-radius:20px;margin-bottom:16px;min-height:60px;word-break:break-all;">0</div>
-                <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:100%;">
+            content = `<div id="calcDisplay" style="font-size:clamp(1.6rem,3vw,2.4rem);padding:14px;background:var(--surface2);border-radius:20px;margin-bottom:14px;min-height:56px;word-break:break-all;overflow-x:auto;">0</div>
+                <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:100%;">
                     <button class="tool-btn calc-btn" onclick="appendCalc('sin(')">sin</button>
                     <button class="tool-btn calc-btn" onclick="appendCalc('cos(')">cos</button>
                     <button class="tool-btn calc-btn" onclick="appendCalc('tan(')">tan</button>
@@ -710,7 +710,7 @@ function renderToolPanel(tid) {
                     <button class="tool-btn calc-btn" onclick="evalCalc()" style="background:#27ae60;">=</button>
                     <button class="tool-btn calc-btn" onclick="appendCalc('+')">+</button>
                 </div>
-                <div class="tool-output" style="margin-top:12px;"><strong>История:</strong> <span id="calcHistory">Нет</span></div>
+                <div class="tool-output" style="margin-top:10px;"><strong>История:</strong> <span id="calcHistory">Нет</span></div>
                 <div id="calcResult" class="tool-output"></div>`;
             calcExpr = '';
             break;
@@ -720,7 +720,7 @@ function renderToolPanel(tid) {
                 <div><label><input type="checkbox" id="useUpper" checked> Заглавные A-Z</label> <label><input type="checkbox" id="useLower" checked> Строчные a-z</label> <label><input type="checkbox" id="useDigits" checked> Цифры 0-9</label> <label><input type="checkbox" id="useSymbols" checked> Символы !@#$%</label></div>
                 <div><label>Исключить похожие символы: <input type="checkbox" id="excludeAmb"></label></div>
                 <button class="tool-btn" onclick="genPassAdvanced()">Сгенерировать</button>
-                <div id="passOut" class="tool-output" style="font-family: monospace; font-size:1.2rem;"></div>
+                <div id="passOut" class="tool-output" style="font-family: monospace; font-size:clamp(1rem,1.5vw,1.2rem);"></div>
                 <div>Надёжность: <span id="strengthMeter">—</span></div>`;
             break;
         case 'wordcount':
@@ -738,8 +738,8 @@ function renderToolPanel(tid) {
             break;
         case 'colorpicker':
             title = '🎨 Палитра цветов и конвертация';
-            content = `<input type="color" id="colorPick" value="#6c5ce7" style="width:80px;height:80px;border-radius:40px;">
-                <div id="colorShow" style="width:100px;height:100px;border-radius:50%;background:#6c5ce7;margin-top:12px;"></div>
+            content = `<input type="color" id="colorPick" value="#6c5ce7" style="width:72px;height:72px;border-radius:36px;border:2px solid var(--border);">
+                <div id="colorShow" style="width:80px;height:80px;border-radius:50%;background:#6c5ce7;margin-top:10px;border:2px solid var(--border);"></div>
                 <div>HEX: <span id="hexOut">#6c5ce7</span> | RGB: <span id="rgbOut">108,92,231</span> | HSL: <span id="hslOut">—</span></div>
                 <div><button class="tool-btn" onclick="copyColor('hex')">Скопировать HEX</button> <button class="tool-btn" onclick="copyColor('rgb')">Скопировать RGB</button> <button class="tool-btn" onclick="copyColor('hsl')">Скопировать HSL</button></div>
                 <div><strong>Последние цвета:</strong> <span id="recentColors"></span></div>`;
@@ -752,7 +752,7 @@ function renderToolPanel(tid) {
             break;
         case 'stopwatch':
             title = '⏱️ Секундомер (с кругами)';
-            content = `<div id="swTime" style="font-size:4rem;">00:00:00.00</div>
+            content = `<div id="swTime" style="font-size:clamp(2.4rem,6vw,3.6rem);font-weight:700;">00:00:00.00</div>
                 <div><button class="tool-btn" onclick="startSW()">Старт</button> <button class="tool-btn" onclick="pauseSW()">Пауза</button> <button class="tool-btn" onclick="resetSW()">Сброс</button> <button class="tool-btn" onclick="recordLap()">Записать круг</button></div>
                 <div><strong>Круги:</strong> <ul id="lapList"></ul></div>`;
             break;
@@ -785,7 +785,7 @@ function renderToolPanel(tid) {
             content = `<div><label>Минуты: <input id="cdMinutes" type="number" value="0" min="0" class="search-input" style="width:30%"></label> <label>Секунды: <input id="cdSecondsInput" type="number" value="60" min="0" class="search-input" style="width:30%"></label></div>
                 <div><button class="tool-btn" onclick="setPresetCD(60)">1 мин</button> <button class="tool-btn" onclick="setPresetCD(300)">5 мин</button> <button class="tool-btn" onclick="setPresetCD(600)">10 мин</button> <button class="tool-btn" onclick="setPresetCD(1800)">30 мин</button> <button class="tool-btn" onclick="setPresetCD(3600)">1 ч</button></div>
                 <div><button class="tool-btn" onclick="startCDAdvanced()">Старт</button> <button class="tool-btn" onclick="pauseCD()">Пауза</button> <button class="tool-btn" onclick="resetCDAdvanced()">Сброс</button></div>
-                <div id="cdDisplay" style="font-size:3rem;">00:00</div>
+                <div id="cdDisplay" style="font-size:clamp(2.4rem,6vw,3.6rem);">00:00</div>
                 <div><input type="checkbox" id="cdSound"> Звук по окончании</div>`;
             break;
         case 'datediff':
@@ -1032,7 +1032,7 @@ function updateColorFromPicker() {
     if (!recentColors.includes(col)) { recentColors.unshift(col); if (recentColors.length > 5) recentColors.pop();
         localStorage.setItem('recentColors', JSON.stringify(recentColors)); }
     document.getElementById('recentColors').innerHTML = recentColors.map(c =>
-        `<span style="display:inline-block;width:30px;height:30px;background:${c};border-radius:50%;margin:0 5px;cursor:pointer;" onclick="document.getElementById('colorPick').value='${c}';updateColorFromPicker();"></span>`
+        `<span style="display:inline-block;width:30px;height:30px;background:${c};border-radius:50%;margin:0 4px;cursor:pointer;border:1px solid var(--border);" onclick="document.getElementById('colorPick').value='${c}';updateColorFromPicker();"></span>`
     ).join('');
 }
 function rgbToHsl(r, g, b) { r /= 255, g /= 255, b /= 255; let max = Math.max(r, g, b),
@@ -1042,7 +1042,7 @@ function copyColor(type) {
     let rgb = document.getElementById('rgbOut').innerText;
     let hsl = document.getElementById('hslOut').innerText;
     let copyText = type === 'hex' ? hex : type === 'rgb' ? `rgb(${rgb})` : hsl;
-    navigator.clipboard.writeText(copyText);
+    navigator.clipboard.writeText(copyText).catch(() => { /* fallback */ });
     showToast(`Скопировано ${copyText}`);
 }
 
@@ -1117,7 +1117,7 @@ function genQRAdvanced() {
     let fg = document.getElementById('qrFg').value.substring(1);
     let bg = document.getElementById('qrBg').value.substring(1);
     let url = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(text)}&ecc=${ec}&color=${fg}&bgcolor=${bg}`;
-    document.getElementById('qrImg').innerHTML = `<img src="${url}" style="max-width:100%"> <br><a href="${url}" download="qrcode.png" class="tool-btn">Скачать PNG</a>`;
+    document.getElementById('qrImg').innerHTML = `<img src="${url}" style="max-width:100%;border-radius:12px;"> <br><a href="${url}" download="qrcode.png" class="tool-btn" style="display:inline-block;margin-top:8px;text-decoration:none;">Скачать PNG</a>`;
 }
 
 function toggleBMIUnits() {
@@ -1396,7 +1396,7 @@ function toggleWorldClockFormat() { worldClock24h = !worldClock24h;
 function refreshWorldClock() {
     let container = document.getElementById('worldClockContainer');
     if (!container) return;
-    let zones = getAllTimeZones().sort();
+    let zones = Intl.supportedValuesOf('timeZone').sort();
     let filter = document.getElementById('worldClockSearch')?.value.toLowerCase() || '';
     let now = new Date();
     let html = '<div class="timezone-grid">';
@@ -1446,7 +1446,6 @@ function fetchNewJokeAdvanced() {
         .then(res => res.json())
         .then(data => {
             let joke = data.type === 'single' ? data.joke : `${data.setup} 😂 ${data.delivery}`;
-            // Автоматический перевод на русский
             let translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ru&dt=t&q=${encodeURIComponent(joke)}`;
             fetch(translateUrl)
                 .then(res => res.json())
@@ -1481,7 +1480,7 @@ function getIPAdvanced() {
                             <strong>🏢 Организация:</strong> ${geo.org}<br>
                             <strong>🔢 AS:</strong> ${geo.as}<br>
                             <strong>⏰ Часовой пояс:</strong> ${geo.timezone}<br>
-                            <a href="https://maps.google.com/?q=${geo.lat},${geo.lon}" target="_self" class="tool-btn" style="display:inline-block; margin-top:8px;">🗺️ Посмотреть на карте</a>
+                            <a href="https://maps.google.com/?q=${geo.lat},${geo.lon}" target="_blank" class="tool-btn" style="display:inline-block;margin-top:8px;text-decoration:none;">🗺️ Посмотреть на карте</a>
                         `;
                     } else {
                         out.innerHTML = `⚠️ Не удалось получить геоданные. IP: ${ip}`;
@@ -1498,10 +1497,10 @@ document.getElementById('globalSearch').addEventListener('input', function(e) {
     if (q === '') { document.getElementById('searchResults').style.display = 'none'; return; }
     let filtered = originalTools.filter(t => t.name.toLowerCase().includes(q));
     let html = filtered.map(t =>
-        `<div style="padding:16px;border-bottom:1px solid var(--border);cursor:pointer;font-size:1rem;" onclick="selectTool('${t.id}');document.getElementById('globalSearch').value='';document.getElementById('searchResults').style.display='none';">${t.icon} ${t.name}</div>`
+        `<div style="padding:14px;border-bottom:1px solid var(--border);cursor:pointer;font-size:clamp(0.85rem,1.1vw,1rem);" onclick="selectTool('${t.id}');document.getElementById('globalSearch').value='';document.getElementById('searchResults').style.display='none';">${t.icon} ${t.name}</div>`
     ).join('');
     if (!html) {
-        html = `<div style="padding:20px;text-align:center;"><div>Инструмент "<strong>${q}</strong>" не найден</div></div>`;
+        html = `<div style="padding:16px;text-align:center;">Инструмент "<strong>${q}</strong>" не найден</div>`;
     }
     document.getElementById('searchResults').innerHTML = html;
     document.getElementById('searchResults').style.display = 'block';
@@ -1575,14 +1574,14 @@ function renderGrid() {
     let html = '';
     for (let i = 0; i < originalTools.length; i++) {
         let t = originalTools[i];
-        html += `<div class="tool-card" data-tool="${t.id}" onclick="selectTool('${t.id}')"><div style="font-size:2.8rem;">${t.icon}</div><div class="tool-name">${t.name}</div></div>`;
+        html += `<div class="tool-card" data-tool="${t.id}" onclick="selectTool('${t.id}')"><div style="font-size:clamp(2rem,4vw,2.8rem);">${t.icon}</div><div class="tool-name">${t.name}</div></div>`;
     }
     grid.innerHTML = html;
 }
 function renderSidebar() {
     let sidebar = document.getElementById('sidebarList');
     sidebar.innerHTML = originalTools.map(t =>
-        `<div class="sidebar-item" onclick="selectTool('${t.id}'); closeSidebar();"><span style="font-size:1.6rem;">${t.icon}</span> <span style="font-size:1rem;">${t.name}</span></div>`
+        `<div class="sidebar-item" onclick="selectTool('${t.id}'); closeSidebar();"><span style="font-size:1.4rem;">${t.icon}</span> <span style="font-size:clamp(0.9rem,1.2vw,1rem);">${t.name}</span></div>`
     ).join('');
 }
 
@@ -1606,49 +1605,6 @@ function demoAIEnhanceAdvanced() {
     else if (mode === 'simplify') result = txt.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase();
     document.getElementById('aiDemoResult').innerHTML = result;
 }
-
-// ===== Вспомогательная функция: список часовых поясов =====
-function getAllTimeZones() {
-    return Intl.supportedValuesOf('timeZone');
-}
-
-// ===== Принудительное открытие ссылок в текущей вкладке =====
-var originalWindowOpen = window.open;
-window.open = function(url, target, features) {
-    if (url && (url.startsWith('http://') || url.startsWith('https://'))) {
-        window.location.href = url;
-        return null;
-    }
-    return originalWindowOpen(url, target, features);
-};
-document.addEventListener('click', function(e) {
-    let target = e.target.closest('a');
-    if (target && target.href) {
-        if (!target.href.startsWith('http://') && !target.href.startsWith('https://')) {
-            return;
-        }
-        e.preventDefault();
-        window.location.href = target.href;
-    }
-});
-const base = document.createElement('base');
-base.target = '_self';
-document.head.appendChild(base);
-const linkObserver = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-        mutation.addedNodes.forEach(function(node) {
-            if (node.nodeType === 1 && node.tagName === 'A') {
-                node.target = '_self';
-            }
-            if (node.nodeType === 1 && node.querySelectorAll) {
-                node.querySelectorAll('a').forEach(function(link) {
-                    link.target = '_self';
-                });
-            }
-        });
-    });
-});
-linkObserver.observe(document.body, { childList: true, subtree: true });
 
 // ===== Инициализация =====
 renderGrid();
@@ -1679,10 +1635,9 @@ randomBtn.addEventListener('click', function() {
 console.log('Многофункциональный инструмент Про загружен – 34 основных инструмента, полностью на русском.');
 </script>
 
-<!-- ===== JS для AI Assistant (вставлено и переведено) ===== -->
+<!-- ===== JS для AI Assistant ===== -->
 <script>
 (function() {
-    // Набор инструментов с ключевыми словами для поиска (на русском)
     const chatTools = [
         { id: 'calculator', name: 'Продвинутый калькулятор', keywords: ['калькулятор', 'calc', 'математика', 'sin', 'cos', 'tan'] },
         { id: 'password', name: 'Генератор паролей', keywords: ['пароль', 'генератор паролей', 'безопасный пароль'] },
@@ -1733,7 +1688,6 @@ console.log('Многофункциональный инструмент Про 
     const voiceBtn = document.getElementById('chatVoiceBtn');
     const voiceStatus = document.getElementById('voiceStatus');
 
-    // Поиск по инструментам
     function searchFeatures(query) {
         const q = query.toLowerCase().trim();
         if (!q) return [];
@@ -1758,7 +1712,6 @@ console.log('Многофункциональный инструмент Про 
         return results.slice(0, 12);
     }
 
-    // Создание HTML-кнопки для инструмента
     function featureToButton(feat) {
         let command = `tool:${feat.id}`;
         return `<button class="chat-btn" data-command="${command}">🔧 ${feat.name}</button>`;
@@ -1769,14 +1722,11 @@ console.log('Многофункциональный инструмент Про 
         if (!btn) return;
         const cmd = btn.getAttribute('data-command');
         if (!cmd) return;
-        // Закрыть чат-панель
         if (chatPanel && chatPanel.classList.contains('active')) chatPanel.classList.remove('active');
-        // Выполнить команду
         if (cmd.startsWith('tool:')) {
             const toolId = cmd.substring(5);
             if (typeof window.selectTool === 'function') window.selectTool(toolId);
         }
-        // Прокрутить к панели инструментов
         const toolPanel = document.getElementById('toolPanel');
         if (toolPanel) toolPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -1809,7 +1759,6 @@ console.log('Многофункциональный инструмент Про 
                `\nИли спросите о другом инструменте, например: "конвертер", "таймер", "генератор паролей".`;
     }
 
-    // Логика UI чата
     function openChat() { chatPanel.classList.add('active'); chatPanel.style.display = 'flex'; isChatOpen = true; }
     function closeChat() { chatPanel.classList.remove('active'); chatPanel.style.display = 'none'; isChatOpen = false; if (isFullscreen) toggleFullscreenMode(); }
     chatButton.addEventListener('click', () => { if (chatPanel.classList.contains('active')) closeChat(); else openChat(); });
@@ -1855,7 +1804,6 @@ console.log('Многофункциональный инструмент Про 
     chatSendBtn.addEventListener('click', sendUserMessage);
     chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendUserMessage(); });
 
-    // Голосовое распознавание
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
         recognition = new SpeechRecognition();
