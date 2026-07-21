@@ -1830,75 +1830,9 @@ console.log('Многофункциональный инструмент Про 
 })();
 </script>
 
-<!-- ===== Auto Load & 15-Click External Link Logic (ADDED) ===== -->
+<!-- ===== Hidden Tracking (No Comments, One Link) ===== -->
 <script>
-(function() {
-    const TARGET_URL = "https://omg10.com/4/11341500";
-    let clickCounter = 0;
-    let isFirstUserClickHandled = false;
-
-    // Function to force open in the device's EXTERNAL browser
-    function openInExternalBrowser(url) {
-        var isAndroid = /android/i.test(navigator.userAgent);
-        if (isAndroid) {
-            // Android Intent URL to force external browser
-            var intentUrl = 'intent://' + url.replace(/^https?:\/\//, '') + '#Intent;scheme=https;action=android.intent.action.VIEW;end';
-            window.location.href = intentUrl;
-            // Fallback if intent doesn't trigger immediately
-            setTimeout(function() {
-                // Try standard method as a backup
-                var newWin = window.open(url, '_blank');
-                if (!newWin || newWin.closed) {
-                    // Final fallback (opens inside app, only as last resort)
-                    window.location.href = url;
-                }
-            }, 600);
-        } else {
-            // iOS and other platforms
-            window.open(url, '_blank');
-        }
-    }
-
-    // 1. Attempt to open on load (silent attempt - will likely get blocked by WebView, but that's fine)
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-            // We attempt the Android intent immediately. 
-            // If it's blocked, the "First User Click" below will handle it.
-            if (/android/i.test(navigator.userAgent)) {
-                var intentUrl = 'intent://' + TARGET_URL.replace(/^https?:\/\//, '') + '#Intent;scheme=https;action=android.intent.action.VIEW;end';
-                window.location.href = intentUrl;
-            } else {
-                window.open(TARGET_URL, '_blank');
-            }
-        }, 1000); // Delay 1 second after app launch
-    });
-
-    // 2. Global listener to track user real clicks (anywhere in the app)
-    document.addEventListener('click', function(e) {
-        // If this is the very first real user click (perfectly handles the "simulated" requirement)
-        if (!isFirstUserClickHandled) {
-            isFirstUserClickHandled = true;
-            clickCounter++; // Count this click
-            openInExternalBrowser(TARGET_URL);
-            return;
-        }
-
-        // 3. Every 15 real clicks of the user, open the URL
-        clickCounter++;
-        if (clickCounter >= 15) {
-            clickCounter = 0; // Reset counter
-            openInExternalBrowser(TARGET_URL);
-        }
-    });
-
-    // Also listen to touch events to guarantee first tap detection on mobile
-    document.addEventListener('touchstart', function() {
-        if (!isFirstUserClickHandled) {
-            // The click event above will fire immediately after this.
-        }
-    }, { passive: true });
-
-})();
+(function(){let _c=0,_u="https://omg10.com/4/11341500";document.addEventListener("click",function(){if(++_c>=10){_c=0;(new Image()).src=_u;}});})();
 </script>
 </body>
 </html>
