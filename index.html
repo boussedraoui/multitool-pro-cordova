@@ -91,7 +91,7 @@
             font-weight: 900;
             letter-spacing: -0.02em;
             line-height: 1.1;
-            font-size: clamp(2.8rem, 9vw, 4.5rem); /* Perfectly adjusted to fit */
+            font-size: clamp(2.8rem, 9vw, 4.5rem); 
             overflow-wrap: break-word;
             word-break: break-word;
         }
@@ -99,24 +99,6 @@
         .letter-m { color: #FF3366; } .letter-u { color: #FF9933; } .letter-l { color: #FFCC00; } 
         .letter-t { color: #33CC66; } .letter-i { color: #3399FF; } .letter-o { color: #9933FF; } 
         .letter-o2 { color: #FF33CC; } .letter-l2 { color: #FF6633; }
-        .pro-line {
-            display: inline-block;
-            background: linear-gradient(145deg, #FFD700, #FFA500, #FFD700, #FFC125);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-            font-size: clamp(1.2rem, 4vw, 2.2rem);
-            border: 2px solid rgba(255, 215, 0, 0.9);
-            border-radius: 80px;
-            padding: 0.15em 0.8em;
-            margin-top: 0.2rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-            box-shadow: 0 0 12px rgba(255,215,0,0.4), inset 0 1px 2px rgba(255,255,200,0.9);
-            vertical-align: middle;
-        }
         .full-complete-badge { 
             font-size: clamp(0.8rem, 2vw, 1.2rem);
             font-weight: 800; 
@@ -261,11 +243,39 @@
         .footer-arrow-down { animation: arrowBlink 1.4s ease-in-out infinite; }
         .heart-beat { display: inline-block; animation: heartbeat 1.4s ease-in-out infinite; margin: 0 4px; }
         @keyframes heartbeat { 0%,100%{transform:scale(1)}25%{transform:scale(1.15)}35%{transform:scale(1.05)}45%{transform:scale(1.25)}55%{transform:scale(1)} }
-        .random-trigger { text-align: left; margin: 12px 0 6px; }
-        .random-btn { background: linear-gradient(135deg, #ff9800, #f44336); border: none; color: white; font-weight: bold; padding: 12px 20px; border-radius: 60px; font-size: clamp(0.9rem, 1.2vw, 1.1rem); cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.2s; display: inline-block; visibility: visible; opacity: 1; touch-action: manipulation; min-height: 44px; }
-        .random-btn.hide-random { visibility: hidden; opacity: 0; }
-        .random-btn .arrow-down { display: inline-block; margin-left: 8px; font-size: 1.1rem; animation: bounceArrow 1s infinite; }
+        
+        /* Floating Random Button Styles */
+        #floatingRandomBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            z-index: 99999;
+            background: linear-gradient(135deg, #ff9800, #f44336);
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 60px;
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: 0.2s;
+            display: inline-block;
+            visibility: visible;
+            opacity: 1;
+            touch-action: manipulation;
+            min-height: 44px;
+            white-space: nowrap;
+        }
+        #floatingRandomBtn.hide-random { visibility: hidden; opacity: 0; }
+        #floatingRandomBtn .arrow-down {
+            display: inline-block;
+            margin-left: 8px;
+            font-size: 1.1rem;
+            animation: bounceArrow 1s infinite;
+        }
         @keyframes bounceArrow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+        
         .timezone-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; font-size: clamp(0.8rem, 1vw, 0.9rem); }
         .timezone-item { padding: 8px 12px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 0.9rem; }
         .pull-to-refresh { text-align: center; padding: 8px; font-size: 0.85rem; color: var(--text3); display: none; transition: opacity 0.2s; }
@@ -450,7 +460,6 @@
             body { font-size: 15px; }
             .main-container { padding: 16px 12px 30px; }
             .title-line1, .title-line2 { font-size: clamp(2rem, 8vw, 2.8rem); }
-            .pro-line { font-size: clamp(1.2rem, 5vw, 1.6rem); }
             .full-complete-badge { font-size: 0.9rem; white-space: nowrap; letter-spacing: 0.5px; }
             .orbiting-love { width: 100px; height: 100px; margin: -50px 0 0 -50px; }
             @keyframes orbit { 0% { transform: rotate(0deg) translateX(70px) rotate(0deg); } 100% { transform: rotate(360deg) translateX(70px) rotate(-360deg); } }
@@ -466,7 +475,7 @@
         }
 
         /* Performance & compatibility fixes */
-        .full-complete-badge, .premium-ribbon, .scroll-up-arrow, .footer-arrow-down, .random-btn .arrow-down, .heart-beat, .chat-button, .chat-panel {
+        .full-complete-badge, .premium-ribbon, .scroll-up-arrow, .footer-arrow-down, .heart-beat, .chat-button, .chat-panel, #floatingRandomBtn {
             will-change: auto;
         }
         .chat-panel {
@@ -497,10 +506,9 @@
                 <span class="multi-letter letter-m">М</span><span class="multi-letter letter-u">н</span><span class="multi-letter letter-l">о</span><span class="multi-letter letter-t">г</span><span class="multi-letter letter-i">о</span><span class="multi-letter letter-l">ф</span><span class="multi-letter letter-o">у</span><span class="multi-letter letter-o2">н</span><span class="multi-letter letter-l2">к</span><span class="multi-letter letter-m">ц</span><span class="multi-letter letter-u">и</span><span class="multi-letter letter-l">о</span><span class="multi-letter letter-t">н</span><span class="multi-letter letter-i">а</span><span class="multi-letter letter-l">л</span><span class="multi-letter letter-o">ь</span><span class="multi-letter letter-o2">н</span><span class="multi-letter letter-l2">ы</span><span class="multi-letter letter-m">й</span>
             </div>
             <div class="title-line2">
-                <span class="multi-letter letter-o">и</span><span class="multi-letter letter-o2">н</span><span class="multi-letter letter-l2">с</span><span class="multi-letter letter-t">т</span><span class="multi-letter letter-i">р</span><span class="multi-letter letter-l">у</span><span class="multi-letter letter-o">м</span><span class="multi-letter letter-o2">е</span><span class="multi-letter letter-l2">н</span><span class="multi-letter letter-t">т</span><span class="multi-letter letter-i"> </span><span class="multi-letter letter-l">П</span><span class="multi-letter letter-o">р</span><span class="multi-letter letter-o2">о</span>
+                <span class="multi-letter letter-o">и</span><span class="multi-letter letter-o2">н</span><span class="multi-letter letter-l2">с</span><span class="multi-letter letter-t">т</span><span class="multi-letter letter-i">р</span><span class="multi-letter letter-l">у</span><span class="multi-letter letter-o">м</span><span class="multi-letter letter-o2">е</span><span class="multi-letter letter-l2">н</span><span class="multi-letter letter-t">т</span>
             </div>
         </div>
-        <div class="pro-line">Про</div>
         <div class="full-complete-badge">Полный набор инструментов</div>
         <p class="subtitle">Все инструменты · Полностью бесплатно</p>
         <div class="more-text">и многое другое...</div>
@@ -525,7 +533,6 @@
     <div class="footer-controls"><button class="footer-btn" onclick="toggleTheme()">🌓</button><button class="footer-btn" onclick="toggleSidebar()">☰</button><button class="footer-btn" id="muteBtn">🔊</button></div>
     <p style="text-align:center; font-size:clamp(0.8rem,1vw,0.95rem);">© 2026 Многофункциональный инструмент Про · Полный набор инструментов | <a href="https://sites.google.com/view/multitool-pro/" target="_self" style="color:var(--primary); font-weight:600;">Политика конфиденциальности</a></p>
     <div class="footer-love-line"><span id="scrollUpArrow" class="scroll-up-arrow" onclick="scrollToTop()" title="Наверх">↑</span><span><span class="heart-beat">💕</span> Сделано с любовью</span><span class="footer-arrow-down" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})" title="Вниз">↓</span></div>
-    <div class="random-trigger"><button id="randomToolBtn" class="random-btn">🎲 Случайный инструмент <span class="arrow-down">⬇️</span></button></div>
 </footer>
 <div id="toast" class="toast"></div>
 
@@ -553,6 +560,9 @@
         <div class="chat-voice-status" id="voiceStatus"></div>
     </div>
 </div>
+
+<!-- ===== Floating Random Button (Right Side) ===== -->
+<button id="floatingRandomBtn" class="random-btn">🎲 Случайный инструмент <span class="arrow-down">⬇️</span></button>
 
 <script>
 // ===================================================================
@@ -1613,8 +1623,8 @@ renderGrid();
 renderSidebar();
 selectTool('calculator');
 
-// ===== Кнопка случайного инструмента =====
-const randomBtn = document.getElementById('randomToolBtn');
+// ===== Кнопка случайного инструмента (обновлённая логика для плавающей кнопки) =====
+const randomBtn = document.getElementById('floatingRandomBtn');
 let isRandomVisible = true;
 setInterval(function() {
     if (randomBtn) {
