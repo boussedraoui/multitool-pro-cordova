@@ -572,7 +572,13 @@
         <button class="footer-btn" onclick="toggleSidebar()">☰</button>
         <button class="footer-btn" id="muteBtn">🔊</button>
     </div>
-    <p style="text-align:center; font-size:clamp(0.8rem,1vw,0.95rem);" data-i18n="footer_copyright">© 2026 Multifunctional Tool Pro · Complete Tool Set | <a href="https://sites.google.com/view/multitool-pro/" target="_self" style="color:var(--primary); font-weight:600;" data-i18n="privacy_policy">Privacy Policy</a></p>
+
+    <!-- Privacy Policy above copyright -->
+    <div style="text-align:center; font-size:clamp(0.8rem,1vw,0.95rem); margin-bottom:4px;">
+        <a href="https://sites.google.com/view/multitool-pro/" target="_self" style="color:var(--primary); font-weight:600;" data-i18n="privacy_policy">Privacy Policy</a>
+    </div>
+    <p style="text-align:center; font-size:clamp(0.8rem,1vw,0.95rem);" data-i18n="footer_copyright">© 2026 Multifunctional Tool Pro · Complete Tool Set</p>
+
     <div class="footer-love-line"><span id="scrollUpArrow" class="scroll-up-arrow" onclick="scrollToTop()" title="Up">↑</span><span><span class="heart-beat">💕</span> <span data-i18n="made_with_love">Made with love</span></span><span class="footer-arrow-down" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})" title="Down">↓</span></div>
 </footer>
 <div id="toast" class="toast"></div>
@@ -620,14 +626,13 @@ const TRANSLATIONS = {
         love_text: "Love 💗 Tools",
         search_placeholder: "🔍 Search tools... Calculator, World Clock, Converter...",
         select_tool: "✨ Choose a tool",
-        footer_copyright: "© 2026 Multifunctional Tool Pro · Complete Tool Set | ",
+        footer_copyright: "© 2026 Multifunctional Tool Pro · Complete Tool Set",
         privacy_policy: "Privacy Policy",
         made_with_love: "Made with love",
         ai_assistant_title: "🤖 Multifunctional AI Assistant",
         ai_welcome: "👋 Welcome to Multifunctional Tool Pro! I know <b>every tool</b> in this app. Tell me what you need – I'll give you working buttons. Try: <code>calculator</code>, <code>joke</code>, <code>IP</code> or even a single letter like <code>c</code>.",
         ai_input_placeholder: "Ask me anything... e.g. 'translate', 'joke', 'IP'",
         random_tool_btn: "🎲 Random Tool ⬇️",
-        // Tool names (34)
         tool_calculator: "Advanced Calculator",
         tool_password: "Password Generator",
         tool_wordcount: "Word & Character Counter",
@@ -662,7 +667,6 @@ const TRANSLATIONS = {
         tool_ai_keywords: "Keyword Extractor",
         tool_ai_readability: "Readability Checker",
         tool_premium_ai: "AI Text Enhancer",
-        // Additional tool panel texts
         calc_title: "🧮 Advanced Scientific Calculator",
         calc_history: "History:",
         calc_result: "Result:",
@@ -879,7 +883,6 @@ const TRANSLATIONS = {
         ai_mode_simplify: "Simplify",
         ai_enter_text: "Enter text...",
         ai_result: "Result:",
-        // Toast messages
         toast_sound_off: "Sound off",
         toast_sound_on: "Sound on",
         toast_copied: "Copied",
@@ -905,7 +908,6 @@ const TRANSLATIONS = {
         toast_ip_failed: "Could not get IP info. Check network.",
         toast_random_selected: "🎲 Random Tool: "
     },
-    // ----- Chinese (zh) -----
     zh: {
         sidebar_title: "🛠️ 多功能工具专业版",
         badge_complete: "完整工具套装",
@@ -915,7 +917,7 @@ const TRANSLATIONS = {
         love_text: "热爱 💗 工具",
         search_placeholder: "🔍 搜索工具... 计算器、世界时钟、转换器...",
         select_tool: "✨ 选择工具",
-        footer_copyright: "© 2026 多功能工具专业版 · 完整工具套装 | ",
+        footer_copyright: "© 2026 多功能工具专业版 · 完整工具套装",
         privacy_policy: "隐私政策",
         made_with_love: "用心打造",
         ai_assistant_title: "🤖 多功能AI助手",
@@ -1197,7 +1199,6 @@ const TRANSLATIONS = {
         toast_ip_failed: "无法获取IP信息。检查网络。",
         toast_random_selected: "🎲 随机工具："
     },
-    // ----- Japanese (ja) -----
     ja: {
         sidebar_title: "🛠️ 多機能ツールプロ",
         badge_complete: "完全なツールセット",
@@ -1207,7 +1208,7 @@ const TRANSLATIONS = {
         love_text: "ツールを 💗 愛しています",
         search_placeholder: "🔍 ツールを検索... 電卓、世界時計、コンバーター...",
         select_tool: "✨ ツールを選択",
-        footer_copyright: "© 2026 多機能ツールプロ · 完全なツールセット | ",
+        footer_copyright: "© 2026 多機能ツールプロ · 完全なツールセット",
         privacy_policy: "プライバシーポリシー",
         made_with_love: "愛を込めて",
         ai_assistant_title: "🤖 多機能AIアシスタント",
@@ -1489,7 +1490,6 @@ const TRANSLATIONS = {
         toast_ip_failed: "IP情報を取得できませんでした。ネットワークを確認してください。",
         toast_random_selected: "🎲 ランダムツール："
     },
-    // ----- Russian (ru) -----
     ru: {
         sidebar_title: "🛠️ Многофункциональный инструмент Про",
         badge_complete: "Полный набор инструментов",
@@ -1499,7 +1499,7 @@ const TRANSLATIONS = {
         love_text: "Люблю 💗 инструменты",
         search_placeholder: "🔍 Поиск инструментов... Калькулятор, Мировые часы, Перевод...",
         select_tool: "✨ Выберите инструмент",
-        footer_copyright: "© 2026 Многофункциональный инструмент Про · Полный набор инструментов | ",
+        footer_copyright: "© 2026 Многофункциональный инструмент Про · Полный набор инструментов",
         privacy_policy: "Политика конфиденциальности",
         made_with_love: "Сделано с любовью",
         ai_assistant_title: "🤖 Многофункциональный ИИ-помощник",
@@ -1781,7 +1781,6 @@ const TRANSLATIONS = {
         toast_ip_failed: "Не удалось получить IP информацию. Проверьте сетевое подключение.",
         toast_random_selected: "🎲 Случайный инструмент: "
     },
-    // ----- German (de) -----
     de: {
         sidebar_title: "🛠️ Multifunktionales Tool Pro",
         badge_complete: "Komplettes Tool-Set",
@@ -1791,7 +1790,7 @@ const TRANSLATIONS = {
         love_text: "Liebe 💗 Tools",
         search_placeholder: "🔍 Tools suchen... Taschenrechner, Weltuhr, Konverter...",
         select_tool: "✨ Wählen Sie ein Tool",
-        footer_copyright: "© 2026 Multifunktionales Tool Pro · Komplettes Tool-Set | ",
+        footer_copyright: "© 2026 Multifunktionales Tool Pro · Komplettes Tool-Set",
         privacy_policy: "Datenschutzrichtlinie",
         made_with_love: "Mit Liebe gemacht",
         ai_assistant_title: "🤖 Multifunktionaler KI-Assistent",
@@ -2073,7 +2072,6 @@ const TRANSLATIONS = {
         toast_ip_failed: "IP-Informationen konnten nicht abgerufen werden. Netzwerk prüfen.",
         toast_random_selected: "🎲 Zufälliges Tool: "
     },
-    // ----- Arabic (ar) -----
     ar: {
         sidebar_title: "🛠️ أداة متعددة الوظائف برو",
         badge_complete: "مجموعة أدوات كاملة",
@@ -2083,7 +2081,7 @@ const TRANSLATIONS = {
         love_text: "أحب 💗 الأدوات",
         search_placeholder: "🔍 ابحث عن الأدوات... حاسبة، ساعة عالمية، محول...",
         select_tool: "✨ اختر أداة",
-        footer_copyright: "© 2026 أداة متعددة الوظائف برو · مجموعة أدوات كاملة | ",
+        footer_copyright: "© 2026 أداة متعددة الوظائف برو · مجموعة أدوات كاملة",
         privacy_policy: "سياسة الخصوصية",
         made_with_love: "صنع بحب",
         ai_assistant_title: "🤖 مساعد الذكاء الاصطناعي متعدد الوظائف",
@@ -2365,7 +2363,6 @@ const TRANSLATIONS = {
         toast_ip_failed: "تعذر الحصول على معلومات IP. تحقق من الشبكة.",
         toast_random_selected: "🎲 أداة عشوائية: "
     },
-    // ----- Spanish (es) -----
     es: {
         sidebar_title: "🛠️ Herramienta Multifuncional Pro",
         badge_complete: "Conjunto completo de herramientas",
@@ -2375,7 +2372,7 @@ const TRANSLATIONS = {
         love_text: "Amo 💗 las herramientas",
         search_placeholder: "🔍 Buscar herramientas... Calculadora, Reloj mundial, Conversor...",
         select_tool: "✨ Elige una herramienta",
-        footer_copyright: "© 2026 Herramienta Multifuncional Pro · Conjunto completo de herramientas | ",
+        footer_copyright: "© 2026 Herramienta Multifuncional Pro · Conjunto completo de herramientas",
         privacy_policy: "Política de privacidad",
         made_with_love: "Hecho con amor",
         ai_assistant_title: "🤖 Asistente de IA Multifuncional",
@@ -2657,7 +2654,6 @@ const TRANSLATIONS = {
         toast_ip_failed: "No se pudo obtener información IP. Verifica la red.",
         toast_random_selected: "🎲 Herramienta aleatoria: "
     },
-    // ----- French (fr) -----
     fr: {
         sidebar_title: "🛠️ Outil Multifonction Pro",
         badge_complete: "Ensemble d'outils complet",
@@ -2667,7 +2663,7 @@ const TRANSLATIONS = {
         love_text: "J'aime 💗 les outils",
         search_placeholder: "🔍 Rechercher des outils... Calculatrice, Horloge mondiale, Convertisseur...",
         select_tool: "✨ Choisir un outil",
-        footer_copyright: "© 2026 Outil Multifonction Pro · Ensemble d'outils complet | ",
+        footer_copyright: "© 2026 Outil Multifonction Pro · Ensemble d'outils complet",
         privacy_policy: "Politique de confidentialité",
         made_with_love: "Fait avec amour",
         ai_assistant_title: "🤖 Assistant IA Multifonction",
@@ -2949,7 +2945,6 @@ const TRANSLATIONS = {
         toast_ip_failed: "Impossible d'obtenir les informations IP. Vérifiez le réseau.",
         toast_random_selected: "🎲 Outil aléatoire : "
     },
-    // ----- Portuguese (pt) -----
     pt: {
         sidebar_title: "🛠️ Ferramenta Multifuncional Pro",
         badge_complete: "Conjunto completo de ferramentas",
@@ -2959,7 +2954,7 @@ const TRANSLATIONS = {
         love_text: "Amo 💗 ferramentas",
         search_placeholder: "🔍 Pesquisar ferramentas... Calculadora, Relógio mundial, Conversor...",
         select_tool: "✨ Escolha uma ferramenta",
-        footer_copyright: "© 2026 Ferramenta Multifuncional Pro · Conjunto completo de ferramentas | ",
+        footer_copyright: "© 2026 Ferramenta Multifuncional Pro · Conjunto completo de ferramentas",
         privacy_policy: "Política de privacidade",
         made_with_love: "Feito com amor",
         ai_assistant_title: "🤖 Assistente de IA Multifuncional",
@@ -3241,7 +3236,6 @@ const TRANSLATIONS = {
         toast_ip_failed: "Não foi possível obter informações IP. Verifique a rede.",
         toast_random_selected: "🎲 Ferramenta aleatória: "
     },
-    // ----- Hindi (hi) -----
     hi: {
         sidebar_title: "🛠️ बहुक्रियाशील उपकरण प्रो",
         badge_complete: "संपूर्ण उपकरण सेट",
@@ -3251,7 +3245,7 @@ const TRANSLATIONS = {
         love_text: "उपकरणों से 💗 प्यार",
         search_placeholder: "🔍 उपकरण खोजें... कैलकुलेटर, विश्व घड़ी, कनवर्टर...",
         select_tool: "✨ एक उपकरण चुनें",
-        footer_copyright: "© 2026 बहुक्रियाशील उपकरण प्रो · संपूर्ण उपकरण सेट | ",
+        footer_copyright: "© 2026 बहुक्रियाशील उपकरण प्रो · संपूर्ण उपकरण सेट",
         privacy_policy: "गोपनीयता नीति",
         made_with_love: "प्यार से बनाया गया",
         ai_assistant_title: "🤖 बहुक्रियाशील AI सहायक",
