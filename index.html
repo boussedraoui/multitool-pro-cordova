@@ -2429,5 +2429,301 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
     <a href="https://lookingfortools.com/projects/multifunctional-tool-pro?utm_source=badge" target="_blank" rel="noopener noreferrer">
   <img src="https://r2.direasy-multi-tenant.focusapps.app/uploads/616d0b1a-3979-4b8c-94d1-b4f1fedd3ead/1783232956807/nynif7cioz/featured-on-light.svg" alt="Featured on Looking For Tools" style="height:44px;width:auto"/>
 </a>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ===== PREMIUM SUBSCRIPTION BLOCK (START) ===== -->
+<style>
+    #premiumModal {
+        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.85); z-index: 999999;
+        display: none; align-items: center; justify-content: center;
+        backdrop-filter: blur(6px); padding: 20px;
+    }
+    #premiumModal.active { display: flex; }
+    #premiumModal .modal-box {
+        background: #1e1e1e; border: 1px solid #3a3a3c; border-radius: 16px;
+        padding: 30px; max-width: 400px; width: 100%; text-align: center;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.8);
+    }
+    #premiumModal h2 { color: #4ecdc4; margin-bottom: 16px; font-size: 22px; }
+    #premiumModal p { color: #e0e0e0; margin: 20px 0; line-height: 1.5; }
+    #premiumModal .btn-subscribe {
+        display: block; width: 100%; padding: 14px; margin: 8px 0;
+        background: #4ecdc4; color: #000; font-weight: bold; border-radius: 40px;
+        border: none; font-size: 16px; cursor: pointer; transition: transform 0.2s;
+    }
+    #premiumModal .btn-subscribe:hover { transform: scale(1.02); }
+    #premiumModal .btn-close {
+        background: transparent; border: 1px solid #3a3a3c; color: #e0e0e0;
+        padding: 8px 20px; border-radius: 30px; margin-top: 14px; cursor: pointer;
+    }
+    #paypal-button-container { width: 100%; margin: 15px 0; min-height: 50px; }
+    #unlockPremiumBtn {
+        background: #4ecdc4; border: none; color: #000; font-weight: bold;
+        padding: 10px 24px; border-radius: 40px; cursor: pointer;
+        font-size: 1rem; transition: 0.2s;
+    }
+    #unlockPremiumBtn:hover { transform: scale(1.02); }
+</style>
+
+<div id="premiumModal">
+    <div class="modal-box">
+        <h2>🔓 Unlock Premium</h2>
+        <p id="modalMessage">This is to develop the app more and more.</p>
+        <div id="paypal-button-container"></div>
+        <button class="btn-close" id="premiumCancelBtn">Maybe later</button>
+    </div>
+</div>
+
+<script>
+(function() {
+    // ----------------------------------------------------------
+    // PAYPAL CREDENTIALS (your live keys)
+    // ----------------------------------------------------------
+    const PAYPAL_CLIENT_ID = "AV2UKMpbf8suLviBQRBw-wFWoreeDlF74RdNWpnSzFXhVuadtMAKw4ukv6bftV3o6lcTEiBRQLRikvIN";
+    const PAYPAL_PLAN_ID   = "P-00P45881CJ9839056NJKUXLQ";
+
+    // ----------------------------------------------------------
+    // LOCALIZATION (title and message)
+    // ----------------------------------------------------------
+    const translations = {
+        en: { title: "🔓 Unlock Premium", message: "This is to develop the app more and more." },
+        fr: { title: "🔓 Débloquez Premium", message: "Ceci est pour développer l'application davantage." },
+        ar: { title: "🔓 افتح المميزات", message: "هذا من أجل تطوير التطبيق أكثر فأكثر." },
+        es: { title: "🔓 Desbloquear Premium", message: "Esto es para desarrollar la aplicación más y más." },
+        de: { title: "🔓 Premium freischalten", message: "Dies dient dazu, die App weiterzuentwickeln." },
+        it: { title: "🔓 Sblocca Premium", message: "Questo è per sviluppare l'app sempre di più." },
+        pt: { title: "🔓 Desbloquear Premium", message: "Isto é para desenvolver o aplicativo cada vez mais." },
+        ru: { title: "🔓 Разблокировать Premium", message: "Это для дальнейшего развития приложения." },
+        zh: { title: "🔓 解锁高级版", message: "这是为了进一步发展应用程序。" },
+        ja: { title: "🔓 プレミアムを解除", message: "これはアプリをさらに開発するためのものです。" },
+        ko: { title: "🔓 프리미엄 잠금 해제", message: "이것은 앱을 더욱 발전시키기 위한 것입니다." },
+        hi: { title: "🔓 प्रीमियम अनलॉक करें", message: "यह ऐप को और अधिक विकसित करने के लिए है।" }
+    };
+
+    function getBrowserLang() {
+        let lang = (navigator.language || navigator.browserLanguage || 'en').split('-')[0].toLowerCase();
+        return translations[lang] ? lang : 'en';
+    }
+
+    let isPremium = false;
+
+    // ----------------------------------------------------------
+    // PREMIUM STATE MANAGEMENT
+    // ----------------------------------------------------------
+    function checkPremium() {
+        const expiry = localStorage.getItem('multitool_premium_expiry');
+        if (expiry && new Date().getTime() < parseInt(expiry)) {
+            isPremium = true;
+            updateUI();
+            applyLock();
+            return true;
+        }
+        localStorage.removeItem('multitool_premium_expiry');
+        isPremium = false;
+        updateUI();
+        applyLock();
+        return false;
+    }
+
+    function setPremium(durationMs = 30 * 24 * 60 * 60 * 1000) {
+        const expiry = new Date().getTime() + durationMs;
+        localStorage.setItem('multitool_premium_expiry', expiry.toString());
+        isPremium = true;
+        updateUI();
+        applyLock();
+        document.getElementById('premiumModal').classList.remove('active');
+    }
+
+    function updateUI() {
+        const btn = document.getElementById('unlockPremiumBtn');
+        if (btn) btn.textContent = isPremium ? '✅ Premium' : '🔓 Unlock Premium';
+    }
+
+    // ----------------------------------------------------------
+    // PAYPAL BUTTON
+    // ----------------------------------------------------------
+    function loadPayPalSDK() {
+        if (typeof paypal !== 'undefined') {
+            renderPayPalButton();
+            return;
+        }
+        const script = document.createElement('script');
+        script.src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&vault=true&intent=subscription`;
+        script.async = true;
+        script.onload = () => renderPayPalButton();
+        document.body.appendChild(script);
+    }
+
+    function renderPayPalButton() {
+        const container = document.getElementById('paypal-button-container');
+        if (!container || typeof paypal === 'undefined') return;
+        container.innerHTML = '';
+        paypal.Buttons({
+            style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
+            createSubscription: function(data, actions) {
+                return actions.subscription.create({ plan_id: PAYPAL_PLAN_ID });
+            },
+            onApprove: function(data, actions) {
+                setPremium();
+                alert('✅ Subscription successful! Premium unlocked.');
+            },
+            onCancel: function() {
+                alert('Payment cancelled. You can try again anytime.');
+            },
+            onError: function(err) {
+                console.error(err);
+                alert('PayPal error. Please try again.');
+            }
+        }).render(container);
+    }
+
+    function showPremiumModal() {
+        const lang = getBrowserLang();
+        const loc = translations[lang] || translations.en;
+        document.querySelector('#premiumModal h2').textContent = loc.title;
+        document.getElementById('modalMessage').textContent = loc.message;
+
+        document.getElementById('premiumModal').classList.add('active');
+        setTimeout(() => loadPayPalSDK(), 300);
+    }
+
+    // ----------------------------------------------------------
+    // LOCKING PREMIUM FEATURES
+    // ----------------------------------------------------------
+    function applyLock() {
+        const isPro = isPremium;
+
+        // These selectors identify the premium elements to lock
+        const premiumSelectors = [
+            // AI Tools (locked via selectTool override, but also visually dim them)
+            '.tool-card[data-tool="ai_paraphraser"]',
+            '.tool-card[data-tool="ai_grammar"]',
+            '.tool-card[data-tool="ai_summarizer"]',
+            '.tool-card[data-tool="ai_sentiment"]',
+            '.tool-card[data-tool="ai_keywords"]',
+            '.tool-card[data-tool="ai_readability"]',
+            '.tool-card[data-tool="premium_ai"]',
+            // Chat Widget
+            '#chatButton',
+            // Floating Random Button
+            '#floatingRandomBtn',
+            // Language Selector buttons
+            '.lang-btn'
+        ];
+
+        // Apply opacity and pointer events to these elements
+        premiumSelectors.forEach(sel => {
+            document.querySelectorAll(sel).forEach(el => {
+                if (isPro) {
+                    el.style.opacity = '1';
+                    el.style.pointerEvents = 'auto';
+                } else {
+                    el.style.opacity = '0.4';
+                    el.style.pointerEvents = 'none';
+                }
+            });
+        });
+
+        // Also lock the chat panel from opening
+        const chatPanel = document.getElementById('chatPanel');
+        if (chatPanel && !isPro) {
+            chatPanel.classList.remove('active');
+            chatPanel.style.display = 'none';
+        }
+    }
+
+    // Intercept clicks on premium buttons
+    function setupPremiumGuard() {
+        // Override the selectTool function to lock AI tools
+        if (typeof window.selectTool === 'function') {
+            const originalSelectTool = window.selectTool;
+            window.selectTool = function(toolId) {
+                const premiumIds = ['ai_paraphraser', 'ai_grammar', 'ai_summarizer', 'ai_sentiment', 'ai_keywords', 'ai_readability', 'premium_ai'];
+                if (premiumIds.includes(toolId) && !isPremium) {
+                    showPremiumModal();
+                    return;
+                }
+                originalSelectTool.call(this, toolId);
+            };
+        }
+
+        // Block the Floating Random Button
+        const randomBtn = document.getElementById('floatingRandomBtn');
+        if (randomBtn) {
+            randomBtn.addEventListener('click', function(e) {
+                if (!isPremium) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    showPremiumModal();
+                }
+            }, true);
+        }
+
+        // Block the Chat Button
+        const chatButton = document.getElementById('chatButton');
+        if (chatButton) {
+            chatButton.addEventListener('click', function(e) {
+                if (!isPremium) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    showPremiumModal();
+                }
+            }, true);
+        }
+
+        // Block Language Selector buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (!isPremium) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    showPremiumModal();
+                }
+            }, true);
+        });
+    }
+
+    // ----------------------------------------------------------
+    // INIT
+    // ----------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', function() {
+        // Inject the Unlock Premium button into the footer controls
+        const footerControls = document.querySelector('.footer-controls');
+        if (footerControls && !document.getElementById('unlockPremiumBtn')) {
+            const btn = document.createElement('button');
+            btn.id = 'unlockPremiumBtn';
+            btn.textContent = '🔓 Unlock Premium';
+            btn.style.cssText = 'background:#4ecdc4;border:none;color:#000;font-weight:bold;padding:10px 24px;border-radius:40px;cursor:pointer;font-size:1rem;transition:0.2s;';
+            btn.addEventListener('click', showPremiumModal);
+            footerControls.appendChild(btn);
+        }
+
+        document.getElementById('premiumCancelBtn').addEventListener('click', function() {
+            document.getElementById('premiumModal').classList.remove('active');
+        });
+
+        // Initialize
+        checkPremium();
+        setupPremiumGuard();
+        
+        // Close modal if clicking outside
+        document.getElementById('premiumModal').addEventListener('click', function(e) {
+            if (e.target === this) this.classList.remove('active');
+        });
+    });
+})();
+</script>
+<!-- ===== PREMIUM SUBSCRIPTION BLOCK (END) ===== -->
 </body>
 </html>
