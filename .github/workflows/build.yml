@@ -23,7 +23,7 @@ jobs:
       - run: npm install -g cordova
       - run: cordova create app com.multitool.proz "MultiTool Pro"
       - run: cp index.html app/www/index.html
-      - run: cp config.xml app/config.xml
+      - run: cp config.xml app/config.xml && cp image.png app/image.png
       - run: keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias -storepass 123456 -keypass 123456 -dname "CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown"
       - run: cd app && cordova platform add android@13.0.0
       - run: cd app && cordova build android --release -- --keystore ../my-release-key.jks --storePassword=123456 --alias=my-alias --password=123456 --packageType=apk
