@@ -22,4 +22,5 @@
 <icon src="image.png" density="xhdpi" />
 <icon src="image.png" density="xxhdpi" />
 <splash src="image.png" />
+<preference name="SplashScreenDelay" value="0" />
 </widget>
