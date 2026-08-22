@@ -12,6 +12,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
       - run: npm install -g cordova
       - run: cordova create app com.multitool.proz "MultiTool Pro"
       - run: cp index.html app/www/index.html
