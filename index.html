@@ -2760,5 +2760,31 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
         window.chartboost.setUp("6a88d9763b934fd10f5d8f8", "7587c2bb09af006f4f6ece7da0c30ce3006fe8");
     }, false);
 </script>
+
+    <script>
+    document.addEventListener("deviceready", function(){
+        // Initialize Chartboost
+        window.chartboost.setUp("6a88d9763b934fd10f5d8f8", "7587c2bb09af006f4f6ece7da0c30ce3006fe8");
+
+        // 1. Show ad on app entry
+        window.chartboost.showInterstitialAd('main_menu_ad');
+
+        // 2. Show ad on pull-to-refresh
+        window.addEventListener('touchmove', function() {
+            if (window.scrollY < -50) {
+                window.chartboost.showInterstitialAd('main_menu_ad');
+            }
+        }, { passive: true });
+
+        // 3. Show ad after every 5 clicks
+        let clickCount = 0;
+        document.addEventListener('click', function() {
+            clickCount++;
+            if (clickCount % 5 === 0) {
+                window.chartboost.showInterstitialAd('main_menu_ad');
+            }
+        });
+    }, false);
+</script>
 </body>
 </html>
