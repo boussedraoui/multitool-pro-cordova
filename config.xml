@@ -15,4 +15,5 @@
     
     <!-- Added plugin to handle links inside the app -->
     <plugin name="cordova-plugin-inappbrowser" spec="5.0.0" />
+    <gap:plugin name="cordova-plugin-ad-chartboost" source="npm" />
 </widget>
