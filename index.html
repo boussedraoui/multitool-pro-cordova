@@ -2754,5 +2754,15 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
 })();
 </script>
 <!-- ===== PREMIUM SUBSCRIPTION BLOCK (END) ===== -->
+
+    <script type="text/javascript" src="cordova.js"></script>
+<script>
+    document.addEventListener("deviceready", function(){
+        // Replace with your actual App ID and Signature from Chartboost
+        var appId = "6a88d9763b934fd10f5bd8f8";
+        var appSignature = "7587fc2bb09af006f4f6ecec7da0c30ce30066e8";
+        window.chartboost.setUp(appId, appSignature);
+    }, false);
+</script>
 </body>
 </html>
