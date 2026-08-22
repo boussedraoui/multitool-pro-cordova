@@ -21,4 +21,5 @@
 <icon src="image.png" density="hdpi" />
 <icon src="image.png" density="xhdpi" />
 <icon src="image.png" density="xxhdpi" />
+<splash src="image.png" />
 </widget>
