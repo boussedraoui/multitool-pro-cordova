@@ -15,7 +15,7 @@
 
     <!-- Added plugin to handle links inside the app -->
     <plugin name="cordova-plugin-inappbrowser" spec="5.0.0" />
-    <plugin name="cordova-plugin-ad-chartboost" source="npm" spec="1.0.83" />
+    <plugin name="cordova-plugin-ad-chartboost" source="npm" />
 
     <icon src="image.png" density="mdpi" />
     <icon src="image.png" density="hdpi" />
