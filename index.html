@@ -2843,20 +2843,38 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
 
 
 
-    <div id="payment-message" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center;">
-    <div style="background: white; padding: 30px; border-radius: 10px; text-align: center;">
-        <p>To use the full version, please purchase MultiTool Pro AI KIT Utilities:</p>
+    <div id="payment-message" style="display:block; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
+    <div style="background:white; padding:30px; border-radius:10px; text-align:center;">
+        <p>TEST: To use the full version, please purchase MultiTool Pro AI KIT Utilities:</p>
         <a href="https://apps.microsoft.com/detail/9NX05LS91R47" target="_blank">Microsoft Store</a><br><br>
         <a href="https://www.amazon.com/gp/product/B0H6NVY1SD" target="_blank">Amazon</a>
     </div>
 </div>
 
 <script>
-    if (window.cordova || window.location.protocol === 'file:' || window.location.protocol === 'cdvfile:') {
-        document.getElementById('payment-message').style.display = 'none';
-    } else {
-        document.getElementById('payment-message').style.display = 'flex';
+    // This will hide the message ONLY if we detect a real app
+    function isRealApp() {
+        // 1. Cordova / PhoneGap
+        if (window.cordova || window.PhoneGap) return true;
+
+        // 2. Loaded from local file (Amazon, Microsoft, etc.)
+        if (window.location.protocol === 'file:' || window.location.protocol === 'cdvfile:') return true;
+
+        // 3. Standalone installed app (PWABuilder, Median.co production)
+        if (window.matchMedia('(display-mode: standalone)').matches) return true;
+        if (navigator.standalone === true) return true; // iOS Safari
+
+        // 4. Android WebView / TWA
+        if (/; wv/.test(navigator.userAgent)) return true;
+        if (/twa/i.test(navigator.userAgent)) return true;
+
+        return false;
     }
+
+    if (isRealApp()) {
+        document.getElementById('payment-message').style.display = 'none';
+    }
+    // If not a real app, the message stays visible (default style)
 </script>
 </body>
 </html>
