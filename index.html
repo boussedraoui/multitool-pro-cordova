@@ -2836,5 +2836,38 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
 
 
     <script type="text/javascript" src="cordova.js"></script>
+
+
+
+
+
+
+
+    <!-- Hidden payment message (shown only in web browsers) -->
+<div id="payment-message" style="display: none;">
+    <p>To use the full version, please purchase MultiTool Pro AI KIT Utilities:</p>
+    <a href="https://apps.microsoft.com/detail/9NX05LS91R47" target="_blank">Microsoft Store</a><br><br>
+    <a href="https://www.amazon.com/gp/product/B0H6NVY1SD" target="_blank">Amazon</a>
+</div>
+
+<script>
+    // Detect if the page is running inside a real app (Cordova/WebView)
+    function isInApp() {
+        var ua = navigator.userAgent.toLowerCase();
+        return (window.cordova) || 
+               (ua.indexOf('amazon') !== -1) || 
+               (ua.indexOf('msapp') !== -1) || 
+               (window.location.protocol === 'file:' || window.location.protocol === 'cdvfile:');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var message = document.getElementById('payment-message');
+        // If NOT in an app (i.e., a web browser), show the message
+        if (!isInApp()) {
+            message.style.display = 'block';
+        }
+        // If in an app, do nothing – message remains hidden
+    });
+</script>
 </body>
 </html>
