@@ -2851,23 +2851,13 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
 </div>
 
 <script>
-    // Detect if the page is running inside a real app (Cordova/WebView)
-    function isInApp() {
-        var ua = navigator.userAgent.toLowerCase();
-        return (window.cordova) || 
-               (ua.indexOf('amazon') !== -1) || 
-               (ua.indexOf('msapp') !== -1) || 
-               (window.location.protocol === 'file:' || window.location.protocol === 'cdvfile:');
-    }
+    // Detect if the page is loaded from a web server (http/https) → browser
+    var isWeb = (window.location.protocol === 'http:' || window.location.protocol === 'https:');
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var message = document.getElementById('payment-message');
-        // If NOT in an app (i.e., a web browser), show the message
-        if (!isInApp()) {
-            message.style.display = 'block';
-        }
-        // If in an app, do nothing – message remains hidden
-    });
+    // If it's a web browser, show the message; if it's an app (file/cdvfile), do nothing
+    if (isWeb) {
+        document.getElementById('payment-message').style.display = 'block';
+    }
 </script>
 </body>
 </html>
