@@ -2843,20 +2843,16 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
 
 
 
-    <!-- Hidden payment message (shown only in web browsers) -->
-<div id="payment-message" style="display: none;">
+    <div id="payment-message" style="display:block;">
     <p>To use the full version, please purchase MultiTool Pro AI KIT Utilities:</p>
     <a href="https://apps.microsoft.com/detail/9NX05LS91R47" target="_blank">Microsoft Store</a><br><br>
     <a href="https://www.amazon.com/gp/product/B0H6NVY1SD" target="_blank">Amazon</a>
 </div>
 
 <script>
-    // Detect if the page is loaded from a web server (http/https) → browser
-    var isWeb = (window.location.protocol === 'http:' || window.location.protocol === 'https:');
-
-    // If it's a web browser, show the message; if it's an app (file/cdvfile), do nothing
-    if (isWeb) {
-        document.getElementById('payment-message').style.display = 'block';
+    // Hide only if inside an app (Cordova/WebView)
+    if (window.cordova || window.location.protocol === 'file:' || window.location.protocol === 'cdvfile:') {
+        document.getElementById('payment-message').style.display = 'none';
     }
 </script>
 </body>
