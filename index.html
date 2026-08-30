@@ -2806,6 +2806,15 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
 })();
 </script>
 <!-- ===== PREMIUM SUBSCRIPTION BLOCK (END) ===== -->
+
+
+
+
+
+
+
+
+
     
     <script>
     document.addEventListener("deviceready", function(){
@@ -2841,6 +2850,35 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
 
     <script type="text/javascript" src="cordova.js"></script>
 
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let allElements = document.body.getElementsByTagName('*');
+        let calculatorElement = null;
+        for (let el of allElements) {
+            if (el.innerText && el.innerText.includes('Advanced Scientific Calculator')) {
+                calculatorElement = el;
+                break;
+            }
+        }
+
+        if (calculatorElement) {
+            calculatorElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 100);
+        } else {
+            setTimeout(function() {
+                window.scrollTo({ top: 400, behavior: 'smooth' });
+            }, 100);
+        }
+    });
+</script>
 
 
 
