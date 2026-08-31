@@ -2857,6 +2857,37 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
 
 
 
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let allElements = document.body.getElementsByTagName('*');
+        let calculatorElement = null;
+        for (let el of allElements) {
+            if (el.innerText && el.innerText.includes('Advanced Scientific Calculator')) {
+                calculatorElement = el;
+                break;
+            }
+        }
+
+        if (calculatorElement) {
+            calculatorElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 100);
+        } else {
+            setTimeout(function() {
+                window.scrollTo({ top: 400, behavior: 'smooth' });
+            }, 100);
+        }
+    });
+</script>
+
+    
+
+
+
+
     <div id="payment-message" style="display:block; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
     <div style="background:white; padding:30px; border-radius:10px; text-align:center;">
         <p>TEST: To use the full version, please purchase MultiTool Pro AI KIT Utilities:</p>
@@ -2889,36 +2920,6 @@ console.log('Multifunctional Tool Pro loaded – 34 tools, full i18n for 10 lang
         document.getElementById('payment-message').style.display = 'none';
     }
     // If not a real app, the message stays visible (default style)
-</script>
-
-
-
-
-
-
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let allElements = document.body.getElementsByTagName('*');
-        let calculatorElement = null;
-        for (let el of allElements) {
-            if (el.innerText && el.innerText.includes('Advanced Scientific Calculator')) {
-                calculatorElement = el;
-                break;
-            }
-        }
-
-        if (calculatorElement) {
-            calculatorElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            setTimeout(function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }, 100);
-        } else {
-            setTimeout(function() {
-                window.scrollTo({ top: 400, behavior: 'smooth' });
-            }, 100);
-        }
-    });
 </script>
 </body>
 </html>
